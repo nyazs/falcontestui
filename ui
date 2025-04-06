@@ -128,5 +128,3 @@ local function OBDPHLQ_fake_script() -- Execute.LocalScript
     end)
 end
 coroutine.wrap(OBDPHLQ_fake_script)()
-
-print("hey robloxheck")
