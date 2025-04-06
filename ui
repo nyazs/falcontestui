@@ -1,433 +1,356 @@
--- Designed & Developed by urdad
+--[=[
+C REATED BY TRENCH
+]=]
 
--- // INSTANCES: 43 | SCRIPTS: 8 | MODULES: 0 \\ --
+local TR = {};
 
-local UI = {}
+-- StarterGui.ScreenGui
+TR["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"), game:WaitForChild("CoreGui"));
+TR["1"]["IgnoreGuiInset"] = true;
+TR["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+TR["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+TR["1"]["ClipToDeviceSafeArea"] = false;
 
--- // StarterGui.ScreenGui \\ --
-UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"), game:WaitForChild("CoreGui"), gethui())
-UI["1"]["IgnoreGuiInset"] = true
-UI["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets
-UI["1"]["ClipToDeviceSafeArea"] = false
+-- StarterGui.ScreenGui.BG
+TR["2"] = Instance.new("Frame", TR["1"]);
+TR["2"]["BorderSizePixel"] = 0;
+TR["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+TR["2"]["Size"] = UDim2.new(0, 448, 0, 298);
+TR["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["2"]["Position"] = UDim2.new(0.14991925656795502, 0, 0.08368659764528275, 0);
+TR["2"]["Visible"] = false;
+TR["2"]["Name"] = [[BG]];
 
--- // StarterGui.ScreenGui.Tabs \\ --
-UI["2"] = Instance.new("Frame", UI["1"])
-UI["2"]["Visible"] = false
-UI["2"]["BorderSizePixel"] = 0
-UI["2"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19)
-UI["2"]["Size"] = UDim2.new(0, 500, 0, 298)
-UI["2"]["Position"] = UDim2.new(0.10798, 0, 0.08357, 0)
-UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["2"]["Name"] = [[Tabs]]
+-- StarterGui.ScreenGui.BG.UICorner
+TR["3"] = Instance.new("UICorner", TR["2"]);
+TR["3"]["CornerRadius"] = UDim.new(0, 13);
 
--- // StarterGui.ScreenGui.Tabs.UICorner \\ --
-UI["3"] = Instance.new("UICorner", UI["2"])
-UI["3"]["CornerRadius"] = UDim.new(0, 10)
+-- StarterGui.ScreenGui.BG.UIStroke
+TR["4"] = Instance.new("UIStroke", TR["2"]);
+TR["4"]["Color"] = Color3.fromRGB(85, 85, 85);
+TR["4"]["Thickness"] = 1.5;
 
--- // StarterGui.ScreenGui.Tabs.Title \\ --
-UI["4"] = Instance.new("Frame", UI["2"])
-UI["4"]["BorderSizePixel"] = 0
-UI["4"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["4"]["Size"] = UDim2.new(0, 95, 0, 30)
-UI["4"]["Position"] = UDim2.new(0.026, 0, 0.03356, 0)
-UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["4"]["Name"] = [[Title]]
+-- StarterGui.ScreenGui.BG.Line
+TR["5"] = Instance.new("Frame", TR["2"]);
+TR["5"]["BorderSizePixel"] = 0;
+TR["5"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["5"]["Size"] = UDim2.new(0, 435, 0, 2);
+TR["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["5"]["Position"] = UDim2.new(0.013392857275903225, 0, 0.13522738218307495, 0);
+TR["5"]["Name"] = [[Line]];
 
--- // StarterGui.ScreenGui.Tabs.Title.UICorner \\ --
-UI["5"] = Instance.new("UICorner", UI["4"])
-UI["5"]["CornerRadius"] = UDim.new(0, 10)
+-- StarterGui.ScreenGui.BG.Line.Line #2
+TR["6"] = Instance.new("Frame", TR["5"]);
+TR["6"]["BorderSizePixel"] = 0;
+TR["6"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["6"]["Size"] = UDim2.new(0, 2, 0, 248);
+TR["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["6"]["Position"] = UDim2.new(0.09308292716741562, 0, 0.641937255859375, 0);
+TR["6"]["Name"] = [[Line #2]];
 
--- // StarterGui.ScreenGui.Tabs.Title.Title \\ --
-UI["6"] = Instance.new("TextLabel", UI["4"])
-UI["6"]["BorderSizePixel"] = 0
-UI["6"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["6"]["TextSize"] = 19
-UI["6"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["6"]["BackgroundTransparency"] = 1
-UI["6"]["Size"] = UDim2.new(0, 87, 0, 30)
-UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["6"]["Text"] = [[Falcon]]
-UI["6"]["Name"] = [[Title]]
-UI["6"]["Position"] = UDim2.new(0.08421, 0, 0, 0)
+-- StarterGui.ScreenGui.BG.Line.Line #2.3
+TR["7"] = Instance.new("Frame", TR["6"]);
+TR["7"]["BorderSizePixel"] = 0;
+TR["7"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["7"]["Size"] = UDim2.new(0, 35, 0, 35);
+TR["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["7"]["Position"] = UDim2.new(-20.24553680419922, 0, 0.032258063554763794, 0);
+TR["7"]["Name"] = [[3]];
 
--- // StarterGui.ScreenGui.Tabs.Home \\ --
-UI["7"] = Instance.new("Frame", UI["2"])
-UI["7"]["BorderSizePixel"] = 0
-UI["7"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["7"]["Size"] = UDim2.new(0, 30, 0, 30)
-UI["7"]["Position"] = UDim2.new(0.232, 0, 0.03356, 0)
-UI["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["7"]["Name"] = [[Home]]
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.UICorner
+TR["8"] = Instance.new("UICorner", TR["7"]);
+TR["8"]["CornerRadius"] = UDim.new(0, 10);
 
--- // StarterGui.ScreenGui.Tabs.Home.UICorner \\ --
-UI["8"] = Instance.new("UICorner", UI["7"])
-UI["8"]["CornerRadius"] = UDim.new(0, 10)
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X
+TR["9"] = Instance.new("ImageButton", TR["7"]);
+TR["9"]["BorderSizePixel"] = 0;
+TR["9"]["ScaleType"] = Enum.ScaleType.Fit;
+TR["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["9"]["Image"] = [[rbxassetid://16898788248]];
+TR["9"]["ImageRectSize"] = Vector2.new(256, 256);
+TR["9"]["Size"] = UDim2.new(0, 17, 0, 34);
+TR["9"]["Name"] = [[X]];
+TR["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["9"]["ImageRectOffset"] = Vector2.new(514, 257);
+TR["9"]["Position"] = UDim2.new(0.2523476779460907, 0, 0, 0);
+TR["9"]["BackgroundTransparency"] = 1;
 
--- // StarterGui.ScreenGui.Tabs.Home.Home \\ --
-UI["9"] = Instance.new("ImageButton", UI["7"])
-UI["9"]["BorderSizePixel"] = 0
-UI["9"]["ScaleType"] = Enum.ScaleType.Fit
-UI["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["9"]["Image"] = [[rbxassetid://16898673271]]
-UI["9"]["ImageRectSize"] = Vector2.new(256, 256)
-UI["9"]["Size"] = UDim2.new(0, 29, 0, 15)
-UI["9"]["BackgroundTransparency"] = 1
-UI["9"]["Name"] = [[Home]]
-UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["9"]["ImageRectOffset"] = Vector2.new(257, 514)
-UI["9"]["Position"] = UDim2.new(0, 0, 0.23333, 0)
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display
+TR["a"] = Instance.new("Frame", TR["9"]);
+TR["a"]["BorderSizePixel"] = 0;
+TR["a"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["a"]["Size"] = UDim2.new(0, 385, 0, 200);
+TR["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["a"]["Position"] = UDim2.new(2.3741769790649414, 0, 0, 0);
+TR["a"]["Name"] = [[Textbox Display]];
 
--- // StarterGui.ScreenGui.Tabs.Home.Home.Home Tab \\ --
-UI["a"] = Instance.new("Frame", UI["9"])
-UI["a"]["BorderSizePixel"] = 0
-UI["a"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["a"]["Size"] = UDim2.new(0, 471, 0, 236)
-UI["a"]["Position"] = UDim2.new(-3.55172, 0, 2.06667, 0)
-UI["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["a"]["Name"] = [[Home Tab]]
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.UICorner
+TR["b"] = Instance.new("UICorner", TR["a"]);
+TR["b"]["CornerRadius"] = UDim.new(0, 15);
 
--- // StarterGui.ScreenGui.Tabs.Home.Home.Home Tab.UICorner \\ --
-UI["b"] = Instance.new("UICorner", UI["a"])
-UI["b"]["CornerRadius"] = UDim.new(0, 10)
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.TextBox
+TR["c"] = Instance.new("TextBox", TR["a"]);
+TR["c"]["CursorPosition"] = -1;
+TR["c"]["PlaceholderColor3"] = Color3.fromRGB(215, 215, 215);
+TR["c"]["BorderSizePixel"] = 0;
+TR["c"]["TextSize"] = 13;
+TR["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+TR["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+TR["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["c"]["TextColor3"] = Color3.fromRGB(78, 255, 0);
+TR["c"]["FontFace"] = Font.new([[rbxassetid://16658246179]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+TR["c"]["BackgroundTransparency"] = 1;
+TR["c"]["PlaceholderText"] = [[have fun exploiting :>]];
+TR["c"]["Size"] = UDim2.new(0, 365, 0, 186);
+TR["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["c"]["Text"] = [[]];
+TR["c"]["Position"] = UDim2.new(0.023376623168587685, 0, 0.03414352238178253, 0);
 
--- // StarterGui.ScreenGui.Tabs.Home.Home.Home Tab.Title Unavailable \\ --
-UI["c"] = Instance.new("TextLabel", UI["a"])
-UI["c"]["TextWrapped"] = true
-UI["c"]["BorderSizePixel"] = 0
-UI["c"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["c"]["TextYAlignment"] = Enum.TextYAlignment.Top
-UI["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["c"]["TextSize"] = 17
-UI["c"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["c"]["BackgroundTransparency"] = 1
-UI["c"]["Size"] = UDim2.new(0, 451, 0, 81)
-UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["c"]["Text"] = [[Unavailable]]
-UI["c"]["Name"] = [[Title Unavailable]]
-UI["c"]["Position"] = UDim2.new(0.01699, 0, 0.03538, 0)
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear
+TR["d"] = Instance.new("Frame", TR["a"]);
+TR["d"]["BorderSizePixel"] = 0;
+TR["d"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["d"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["d"]["Position"] = UDim2.new(0, 0, 1.0299999713897705, 0);
+TR["d"]["Name"] = [[Clear]];
 
--- // StarterGui.ScreenGui.Tabs.Home.Home.LocalScript \\ --
-UI["d"] = Instance.new("LocalScript", UI["9"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.UICorner
+TR["e"] = Instance.new("UICorner", TR["d"]);
+TR["e"]["CornerRadius"] = UDim.new(0, 10);
 
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN
+TR["f"] = Instance.new("TextButton", TR["d"]);
+TR["f"]["BorderSizePixel"] = 0;
+TR["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["f"]["TextSize"] = 18;
+TR["f"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+TR["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["f"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["f"]["Name"] = [[BTN]];
+TR["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["f"]["Text"] = [[Clear]];
+TR["f"]["BackgroundTransparency"] = 1;
 
--- // StarterGui.ScreenGui.Tabs.Executor \\ --
-UI["e"] = Instance.new("Frame", UI["2"])
-UI["e"]["BorderSizePixel"] = 0
-UI["e"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["e"]["Size"] = UDim2.new(0, 30, 0, 30)
-UI["e"]["Position"] = UDim2.new(0.304, 0, 0.03356, 0)
-UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["e"]["Name"] = [[Executor]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.UICorner \\ --
-UI["f"] = Instance.new("UICorner", UI["e"])
-UI["f"]["CornerRadius"] = UDim.new(0, 10)
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor \\ --
-UI["10"] = Instance.new("ImageButton", UI["e"])
-UI["10"]["BorderSizePixel"] = 0
-UI["10"]["ScaleType"] = Enum.ScaleType.Fit
-UI["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["10"]["Image"] = [[rbxassetid://16898788248]]
-UI["10"]["ImageRectSize"] = Vector2.new(256, 256)
-UI["10"]["Size"] = UDim2.new(0, 29, 0, 15)
-UI["10"]["BackgroundTransparency"] = 1
-UI["10"]["Name"] = [[Executor]]
-UI["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["10"]["ImageRectOffset"] = Vector2.new(514, 257)
-UI["10"]["Position"] = UDim2.new(0, 0, 0.23333, 0)
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab \\ --
-UI["11"] = Instance.new("Frame", UI["10"])
-UI["11"]["Visible"] = false
-UI["11"]["BorderSizePixel"] = 0
-UI["11"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["11"]["Size"] = UDim2.new(0, 471, 0, 236)
-UI["11"]["Position"] = UDim2.new(-4.7931, 0, 2.06667, 0)
-UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["11"]["Name"] = [[Executor Tab]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.UICorner \\ --
-UI["12"] = Instance.new("UICorner", UI["11"])
-UI["12"]["CornerRadius"] = UDim.new(0, 10)
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG \\ --
-UI["13"] = Instance.new("Frame", UI["11"])
-UI["13"]["BorderSizePixel"] = 0
-UI["13"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53)
-UI["13"]["Size"] = UDim2.new(0, 455, 0, 183)
-UI["13"]["Position"] = UDim2.new(0.01699, 0, 0.04237, 0)
-UI["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["13"]["Name"] = [[TextBox-BG]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.UICorner \\ --
-UI["14"] = Instance.new("UICorner", UI["13"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN.LocalScript
+TR["10"] = Instance.new("LocalScript", TR["f"]);
 
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.TextBox \\ --
-UI["15"] = Instance.new("TextBox", UI["13"])
-UI["15"]["CursorPosition"] = -1
-UI["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["15"]["BorderSizePixel"] = 0
-UI["15"]["TextXAlignment"] = Enum.TextXAlignment.Left
-UI["15"]["TextSize"] = 14
-UI["15"]["TextYAlignment"] = Enum.TextYAlignment.Top
-UI["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["15"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["15"]["PlaceholderText"] = [[Created by Team Falcon]]
-UI["15"]["Size"] = UDim2.new(0, 442, 0, 169)
-UI["15"]["Position"] = UDim2.new(0.01494, 0, 0.03825, 0)
-UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["15"]["Text"] = [[]]
-UI["15"]["BackgroundTransparency"] = 1
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy
+TR["11"] = Instance.new("Frame", TR["a"]);
+TR["11"]["BorderSizePixel"] = 0;
+TR["11"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["11"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["11"]["Position"] = UDim2.new(0.2103896141052246, 0, 1.0299999713897705, 0);
+TR["11"]["Name"] = [[Copy]];
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Clear \\ --
-UI["16"] = Instance.new("Frame", UI["13"])
-UI["16"]["BorderSizePixel"] = 0
-UI["16"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53)
-UI["16"]["Size"] = UDim2.new(0, 75, 0, 29)
-UI["16"]["Position"] = UDim2.new(0, 0, 1.04035, 0)
-UI["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["16"]["Name"] = [[Clear]]
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.UICorner
+TR["12"] = Instance.new("UICorner", TR["11"]);
+TR["12"]["CornerRadius"] = UDim.new(0, 10);
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Clear.UICorner \\ --
-UI["17"] = Instance.new("UICorner", UI["16"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN
+TR["13"] = Instance.new("TextButton", TR["11"]);
+TR["13"]["BorderSizePixel"] = 0;
+TR["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["13"]["TextSize"] = 18;
+TR["13"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+TR["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["13"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["13"]["Name"] = [[BTN]];
+TR["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["13"]["Text"] = [[Copy]];
+TR["13"]["BackgroundTransparency"] = 1;
 
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Clear.BTN Clear \\ --
-UI["18"] = Instance.new("TextButton", UI["16"])
-UI["18"]["BorderSizePixel"] = 0
-UI["18"]["TextSize"] = 18
-UI["18"]["TextColor3"] = Color3.fromRGB(253, 253, 253)
-UI["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["18"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["18"]["Size"] = UDim2.new(0, 75, 0, 29)
-UI["18"]["BackgroundTransparency"] = 1
-UI["18"]["Name"] = [[BTN Clear]]
-UI["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["18"]["Text"] = [[Clear]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Clear.BTN Clear.LocalScript \\ --
-UI["19"] = Instance.new("LocalScript", UI["18"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN.LocalScript
+TR["14"] = Instance.new("LocalScript", TR["13"]);
 
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Paste \\ --
-UI["1a"] = Instance.new("Frame", UI["13"])
-UI["1a"]["BorderSizePixel"] = 0
-UI["1a"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53)
-UI["1a"]["Size"] = UDim2.new(0, 75, 0, 29)
-UI["1a"]["Position"] = UDim2.new(0.18681, 0, 1.04035, 0)
-UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["1a"]["Name"] = [[Paste]]
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste
+TR["15"] = Instance.new("Frame", TR["a"]);
+TR["15"]["BorderSizePixel"] = 0;
+TR["15"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["15"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["15"]["Position"] = UDim2.new(0.41818180680274963, 0, 1.0299999713897705, 0);
+TR["15"]["Name"] = [[Paste]];
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Paste.UICorner \\ --
-UI["1b"] = Instance.new("UICorner", UI["1a"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.UICorner
+TR["16"] = Instance.new("UICorner", TR["15"]);
+TR["16"]["CornerRadius"] = UDim.new(0, 10);
 
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN
+TR["17"] = Instance.new("TextButton", TR["15"]);
+TR["17"]["BorderSizePixel"] = 0;
+TR["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["17"]["TextSize"] = 18;
+TR["17"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+TR["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["17"]["Size"] = UDim2.new(0, 74, 0, 34);
+TR["17"]["Name"] = [[BTN]];
+TR["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["17"]["Text"] = [[Paste]];
+TR["17"]["BackgroundTransparency"] = 1;
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Paste.BTN Paste \\ --
-UI["1c"] = Instance.new("TextButton", UI["1a"])
-UI["1c"]["BorderSizePixel"] = 0
-UI["1c"]["TextSize"] = 18
-UI["1c"]["TextColor3"] = Color3.fromRGB(253, 253, 253)
-UI["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["1c"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["1c"]["Size"] = UDim2.new(0, 75, 0, 29)
-UI["1c"]["BackgroundTransparency"] = 1
-UI["1c"]["Name"] = [[BTN Paste]]
-UI["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["1c"]["Text"] = [[Paste]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Paste.BTN Paste.LocalScript \\ --
-UI["1d"] = Instance.new("LocalScript", UI["1c"])
-
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute \\ --
-UI["1e"] = Instance.new("Frame", UI["13"])
-UI["1e"]["BorderSizePixel"] = 0
-UI["1e"]["BackgroundColor3"] = Color3.fromRGB(53, 53, 53)
-UI["1e"]["Size"] = UDim2.new(0, 85, 0, 29)
-UI["1e"]["Position"] = UDim2.new(0.37582, 0, 1.04035, 0)
-UI["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["1e"]["Name"] = [[Execute]]
-
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute.UICorner \\ --
-UI["1f"] = Instance.new("UICorner", UI["1e"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN.LocalScript
+TR["18"] = Instance.new("LocalScript", TR["17"]);
 
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute.BTN Execute \\ --
-UI["20"] = Instance.new("TextButton", UI["1e"])
-UI["20"]["BorderSizePixel"] = 0
-UI["20"]["TextSize"] = 18
-UI["20"]["TextColor3"] = Color3.fromRGB(253, 253, 253)
-UI["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["20"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["20"]["Size"] = UDim2.new(0, 85, 0, 29)
-UI["20"]["BackgroundTransparency"] = 1
-UI["20"]["Name"] = [[BTN Execute]]
-UI["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["20"]["Text"] = [[Execute]]
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute
+TR["19"] = Instance.new("Frame", TR["a"]);
+TR["19"]["BorderSizePixel"] = 0;
+TR["19"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
+TR["19"]["Size"] = UDim2.new(0, 93, 0, 34);
+TR["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["19"]["Position"] = UDim2.new(0.6259739995002747, 0, 1.0299999713897705, 0);
+TR["19"]["Name"] = [[Execute]];
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute.BTN Execute.LocalScript \\ --
-UI["21"] = Instance.new("LocalScript", UI["20"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.UICorner
+TR["1a"] = Instance.new("UICorner", TR["19"]);
+TR["1a"]["CornerRadius"] = UDim.new(0, 10);
 
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN
+TR["1b"] = Instance.new("TextButton", TR["19"]);
+TR["1b"]["BorderSizePixel"] = 0;
+TR["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["1b"]["TextSize"] = 18;
+TR["1b"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+TR["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["1b"]["Size"] = UDim2.new(0, 93, 0, 34);
+TR["1b"]["Name"] = [[BTN]];
+TR["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["1b"]["Text"] = [[Execute]];
+TR["1b"]["BackgroundTransparency"] = 1;
 
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.LocalScript \\ --
-UI["22"] = Instance.new("LocalScript", UI["10"])
-
-
--- // StarterGui.ScreenGui.Tabs.Exit \\ --
-UI["23"] = Instance.new("Frame", UI["2"])
-UI["23"]["BorderSizePixel"] = 0
-UI["23"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["23"]["Size"] = UDim2.new(0, 30, 0, 30)
-UI["23"]["Position"] = UDim2.new(0.908, 0, 0.03356, 0)
-UI["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["23"]["Name"] = [[Exit]]
-
--- // StarterGui.ScreenGui.Tabs.Exit.UICorner \\ --
-UI["24"] = Instance.new("UICorner", UI["23"])
-UI["24"]["CornerRadius"] = UDim.new(0, 10)
-
--- // StarterGui.ScreenGui.Tabs.Exit.Exit \\ --
-UI["25"] = Instance.new("ImageButton", UI["23"])
-UI["25"]["BorderSizePixel"] = 0
-UI["25"]["ScaleType"] = Enum.ScaleType.Fit
-UI["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["25"]["Image"] = [[rbxassetid://16898791349]]
-UI["25"]["ImageRectSize"] = Vector2.new(256, 256)
-UI["25"]["Size"] = UDim2.new(0, 29, 0, 15)
-UI["25"]["BackgroundTransparency"] = 1
-UI["25"]["Name"] = [[Exit]]
-UI["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["25"]["ImageRectOffset"] = Vector2.new(257, 0)
-UI["25"]["Position"] = UDim2.new(0, 0, 0.23333, 0)
-
--- // StarterGui.ScreenGui.Tabs.Exit.Exit.LocalScript \\ --
-UI["26"] = Instance.new("LocalScript", UI["25"])
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN.LocalScript
+TR["1c"] = Instance.new("LocalScript", TR["1b"]);
 
 
--- // StarterGui.ScreenGui.Tabs.LocalScript \\ --
-UI["27"] = Instance.new("LocalScript", UI["2"])
+-- StarterGui.ScreenGui.BG.Line.Title
+TR["1d"] = Instance.new("TextLabel", TR["5"]);
+TR["1d"]["BorderSizePixel"] = 0;
+TR["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+TR["1d"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+TR["1d"]["TextSize"] = 21;
+TR["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["1d"]["Size"] = UDim2.new(0, 182, 0, 40);
+TR["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["1d"]["Text"] = [[Falcon]];
+TR["1d"]["Name"] = [[Title]];
+TR["1d"]["BackgroundTransparency"] = 1;
+TR["1d"]["Position"] = UDim2.new(0.020756302401423454, 0, -20.153491973876953, 0);
+
+-- StarterGui.ScreenGui.BG.Line.Title.X
+TR["1e"] = Instance.new("ImageButton", TR["1d"]);
+TR["1e"]["BorderSizePixel"] = 0;
+TR["1e"]["ScaleType"] = Enum.ScaleType.Fit;
+TR["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["1e"]["Image"] = [[rbxassetid://16898791349]];
+TR["1e"]["ImageRectSize"] = Vector2.new(256, 256);
+TR["1e"]["Size"] = UDim2.new(0, 17, 0, 39);
+TR["1e"]["Name"] = [[X]];
+TR["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["1e"]["ImageRectOffset"] = Vector2.new(257, 0);
+TR["1e"]["Position"] = UDim2.new(2.223776340484619, 0, 0.0002305984526174143, 0);
+TR["1e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.ScreenGui.BG.Line.Title.X.LocalScript
+TR["1f"] = Instance.new("LocalScript", TR["1e"]);
 
 
--- // StarterGui.ScreenGui.Open Gui \\ --
-UI["28"] = Instance.new("Frame", UI["1"])
-UI["28"]["BorderSizePixel"] = 0
-UI["28"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36)
-UI["28"]["Size"] = UDim2.new(0, 101, 0, 28)
-UI["28"]["Position"] = UDim2.new(0.82582, 0, 0.02507, 0)
-UI["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["28"]["Name"] = [[Open Gui]]
-
--- // StarterGui.ScreenGui.Open Gui.UICorner \\ --
-UI["29"] = Instance.new("UICorner", UI["28"])
+-- StarterGui.ScreenGui.BG.LocalScript
+TR["20"] = Instance.new("LocalScript", TR["2"]);
 
 
--- // StarterGui.ScreenGui.Open Gui.Button Open \\ --
-UI["2a"] = Instance.new("TextButton", UI["28"])
-UI["2a"]["BorderSizePixel"] = 0
-UI["2a"]["TextSize"] = 18
-UI["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
-UI["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["2a"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["2a"]["Size"] = UDim2.new(0, 100, 0, 28)
-UI["2a"]["BackgroundTransparency"] = 1
-UI["2a"]["Name"] = [[Button Open]]
-UI["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["2a"]["Text"] = [[Open Falcon]]
+-- StarterGui.ScreenGui.Open
+TR["21"] = Instance.new("Frame", TR["1"]);
+TR["21"]["BorderSizePixel"] = 0;
+TR["21"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+TR["21"]["Size"] = UDim2.new(0, 144, 0, 21);
+TR["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["21"]["Position"] = UDim2.new(0.3868548572063446, 0, 0.016713092103600502, 0);
+TR["21"]["Name"] = [[Open]];
 
--- // StarterGui.ScreenGui.Open Gui.Button Open.LocalScript \\ --
-UI["2b"] = Instance.new("LocalScript", UI["2a"])
+-- StarterGui.ScreenGui.Open.UICorner
+TR["22"] = Instance.new("UICorner", TR["21"]);
+TR["22"]["CornerRadius"] = UDim.new(0, 6);
+
+-- StarterGui.ScreenGui.Open.Open
+TR["23"] = Instance.new("TextButton", TR["21"]);
+TR["23"]["BorderSizePixel"] = 0;
+TR["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+TR["23"]["TextSize"] = 14;
+TR["23"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
+TR["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+TR["23"]["Size"] = UDim2.new(0, 144, 0, 21);
+TR["23"]["Name"] = [[Open]];
+TR["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+TR["23"]["Text"] = [[Open Falcon]];
+TR["23"]["BackgroundTransparency"] = 1;
 
 
--- Trench Core Scripts
--- Automatically Generated
-local function SCRIPT_d()
-local script = UI["d"]
-	local code = script.Parent.Parent.Parent.Executor.Executor["Executor Tab"]
-	local home = script.Parent.Parent.Parent.Home.Home["Home Tab"]
-	
+-- Trench Scripts
+-- StarterGui.ScreenGui.Open.Open.LocalScript
+TR["24"] = Instance.new("LocalScript", TR["23"]);
+
+
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN.LocalScript
+local function C_10()
+local script = TR["10"];
 	script.Parent.MouseButton1Click:Connect(function()
-		code.Visible = false
-		home.Visible = true
+		script.Parent.Parent.Parent.TextBox.Text = ""
 	end)
-end
-task.spawn(SCRIPT_d)
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Clear.BTN Clear.LocalScript \\ --
-local function SCRIPT_19()
-local script = UI["19"]
-	local txtbox = script.Parent.Parent.Parent.TextBox
-	
+end;
+task.spawn(C_10);
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN.LocalScript
+local function C_14()
+local script = TR["14"];
 	script.Parent.MouseButton1Click:Connect(function()
-		txtbox.Text = ""
+		setclipboard(script.Parent.Parent.Parent.TextBox.Text)
 	end)
-end
-task.spawn(SCRIPT_19)
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Paste.BTN Paste.LocalScript \\ --
-local function SCRIPT_1d()
-local script = UI["1d"]
-	local txtbox = script.Parent.Parent.Parent.TextBox
-	
+end;
+task.spawn(C_14);
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN.LocalScript
+local function C_18()
+local script = TR["18"];
 	script.Parent.MouseButton1Click:Connect(function()
-		txtbox.Text = getclipboard()
+		script.Parent.Parent.Parent.TextBox.Text = getclipboard()
 	end)
-end
-task.spawn(SCRIPT_1d)
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute.BTN Execute.LocalScript \\ --
-local function SCRIPT_21()
-local script = UI["21"]
-	local txtbox = script.Parent.Parent.TextBox
-	
+end;
+task.spawn(C_18);
+-- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN.LocalScript
+local function C_1c()
+local script = TR["1c"];
 	script.Parent.MouseButton1Click:Connect(function()
-		mb_schedscript(txtbox.Text)
+		mb_schedscript(script.Parent.Parent.Parent.TextBox.Text)
 	end)
-end
-task.spawn(SCRIPT_21)
--- // StarterGui.ScreenGui.Tabs.Executor.Executor.LocalScript \\ --
-local function SCRIPT_22()
-local script = UI["22"]
-	local home = script.Parent.Parent.Parent.Home.Home["Home Tab"]
-	local code = script.Parent.Parent.Executor["Executor Tab"]
-	
+end;
+task.spawn(C_1c);
+-- StarterGui.ScreenGui.BG.Line.Title.X.LocalScript
+local function C_1f()
+local script = TR["1f"];
 	script.Parent.MouseButton1Click:Connect(function()
-		home.Visible = false
-		code.Visible = true
+		script.Parent.Parent.Parent.Parent.Parent.BG.Visible = false
+		script.Parent.Parent.Parent.Parent.Parent.Open.Visible = true
 	end)
-end
-task.spawn(SCRIPT_22)
--- // StarterGui.ScreenGui.Tabs.Exit.Exit.LocalScript \\ --
-local function SCRIPT_26()
-local script = UI["26"]
-	local execui = script.Parent.Parent.Parent.Parent.Tabs
-	local opengui = script.Parent.Parent.Parent.Parent["Open Gui"]
-	
+end;
+task.spawn(C_1f);
+-- StarterGui.ScreenGui.BG.LocalScript
+local function C_20()
+local script = TR["20"];
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end;
+task.spawn(C_20);
+-- StarterGui.ScreenGui.Open.Open.LocalScript
+local function C_24()
+local script = TR["24"];
 	script.Parent.MouseButton1Click:Connect(function()
-		execui.Visible = false
-		opengui.Visible = true
+		script.Parent.Parent.Parent.BG.Visible = true
+		script.Parent.Parent.Parent.Open.Visible = false
 	end)
-end
-task.spawn(SCRIPT_26)
--- // StarterGui.ScreenGui.Tabs.LocalScript \\ --
-local function SCRIPT_27()
-local script = UI["27"]
-	bg = script.Parent
-	bg.Draggable = true
-	bg.Active = true
-end
-task.spawn(SCRIPT_27)
--- // StarterGui.ScreenGui.Open Gui.Button Open.LocalScript \\ --
-local function SCRIPT_2b()
-local script = UI["2b"]
-	local execui = script.Parent.Parent.Parent.Tabs
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		execui.Visible = true
-		script.Parent.Parent.Parent["Open Gui"].Visible = false
-	end)
-end
-task.spawn(SCRIPT_2b)
+end;
+task.spawn(C_24);
 
-return UI["1"], require;
+return TR["1"], require;
