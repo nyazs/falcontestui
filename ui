@@ -105,7 +105,7 @@ UI["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["c"]["BackgroundTransparency"] = 1
 UI["c"]["Size"] = UDim2.new(0, 451, 0, 81)
 UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["c"]["Text"] = [[Home is unavailable for this version as this is detected a beta version of Trench]]
+UI["c"]["Text"] = [[Unavaliable]]
 UI["c"]["Name"] = [[Title Unavailable]]
 UI["c"]["Position"] = UDim2.new(0.01699, 0, 0.03538, 0)
 
