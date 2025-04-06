@@ -1,4 +1,4 @@
--- Designed & Developed by Trench
+-- Designed & Developed by urdad
 
 -- // INSTANCES: 43 | SCRIPTS: 8 | MODULES: 0 \\ --
 
@@ -105,7 +105,7 @@ UI["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["c"]["BackgroundTransparency"] = 1
 UI["c"]["Size"] = UDim2.new(0, 451, 0, 81)
 UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["c"]["Text"] = [[Unavaliable]]
+UI["c"]["Text"] = [[Unavailable]]
 UI["c"]["Name"] = [[Title Unavailable]]
 UI["c"]["Position"] = UDim2.new(0.01699, 0, 0.03538, 0)
 
@@ -177,7 +177,7 @@ UI["15"]["TextSize"] = 14
 UI["15"]["TextYAlignment"] = Enum.TextYAlignment.Top
 UI["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
 UI["15"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-UI["15"]["PlaceholderText"] = [[Created by TeamTrench]]
+UI["15"]["PlaceholderText"] = [[Created by Team Falcon]]
 UI["15"]["Size"] = UDim2.new(0, 442, 0, 169)
 UI["15"]["Position"] = UDim2.new(0.01494, 0, 0.03825, 0)
 UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
@@ -337,7 +337,7 @@ UI["2a"]["Size"] = UDim2.new(0, 100, 0, 28)
 UI["2a"]["BackgroundTransparency"] = 1
 UI["2a"]["Name"] = [[Button Open]]
 UI["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
-UI["2a"]["Text"] = [[Open Gui]]
+UI["2a"]["Text"] = [[Open Falcon]]
 
 -- // StarterGui.ScreenGui.Open Gui.Button Open.LocalScript \\ --
 UI["2b"] = Instance.new("LocalScript", UI["2a"])
