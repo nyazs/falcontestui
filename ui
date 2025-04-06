@@ -379,7 +379,7 @@ task.spawn(SCRIPT_1d)
 -- // StarterGui.ScreenGui.Tabs.Executor.Executor.Executor Tab.TextBox-BG.Execute.BTN Execute.LocalScript \\ --
 local function SCRIPT_21()
 local script = UI["21"]
-	local txtbox = script.Parent.Parent.Parent.TextBox
+	local txtbox = script.Parent.Parent.TextBox
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		mb_schedscript(txtbox.Text)
