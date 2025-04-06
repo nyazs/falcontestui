@@ -3,7 +3,7 @@
 
 -- Instances:
 
-print("hi robloxheck")
+print("falcon")
 print(game.PlaceId)
 
 local MobileBlox = Instance.new('ScreenGui')
