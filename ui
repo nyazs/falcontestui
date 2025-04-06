@@ -30,24 +30,22 @@ ImageLabel.Transparency = 1
 ImageLabel.Image = "rbxassetid://95230561681172"
 ImageLabel.Parent = Frame
 
-local execframe = Instance.new("Frame")
-execframe.Name = "execframe"
-execframe.Position = UDim2.new(0, 0, 0.102452, 0)
-execframe.Size = UDim2.new(0, 617, 0, 326)
-execframe.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
-execframe.BorderSizePixel = 0
-execframe.BorderColor3 = Color3.new(0, 0, 0)
-execframe.ZIndex = 101
-execframe.Parent = Frame
-
-local UICorner2 = Instance.new("UICorner")
-UICorner2.Name = "UICorner"
-
-UICorner2.Parent = execframe
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Name = "ImageButton"
+ImageButton.Position = UDim2.new(0.933549, 0, 0.0164835, 0)
+ImageButton.Size = UDim2.new(0, 33, 0, 30)
+ImageButton.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageButton.BackgroundTransparency = 1
+ImageButton.BorderSizePixel = 0
+ImageButton.BorderColor3 = Color3.new(0, 0, 0)
+ImageButton.Transparency = 1
+ImageButton.Image = "rbxassetid://4988112250"
+ImageButton.Parent = Frame
 
 local ScrollingFrame = Instance.new("ScrollingFrame")
 ScrollingFrame.Name = "ScrollingFrame"
-ScrollingFrame.Size = UDim2.new(0, 610, 0, 282)
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0164835, 0)
+ScrollingFrame.Size = UDim2.new(0, 610, 0, 276)
 ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
 ScrollingFrame.BackgroundTransparency = 1
 ScrollingFrame.BorderSizePixel = 0
@@ -56,7 +54,7 @@ ScrollingFrame.ZIndex = 101
 ScrollingFrame.Transparency = 1
 ScrollingFrame.Active = true
 ScrollingFrame.ScrollBarImageColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.Parent = execframe
+ScrollingFrame.Parent = Frame
 
 local TextBox = Instance.new("ScrollingFrame")
 TextBox.Name = "TextBox"
@@ -77,13 +75,14 @@ TextBox.Parent = ScrollingFrame
 
 local Source = Instance.new("TextBox")
 Source.Name = "Source"
-Source.Size = UDim2.new(1, 0, 1, 0)
+Source.Position = UDim2.new(5.27682e-08, 0, 0.0215208, 0)
+Source.Size = UDim2.new(1.57003, 0, 0.976552, 0)
 Source.BackgroundColor3 = Color3.new(1, 1, 1)
 Source.BackgroundTransparency = 1
 Source.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
 Source.ZIndex = 3
 Source.Transparency = 1
-Source.Text = "--[[Falcon1.0]]--"
+Source.Text = "--[[Falcon]]--"
 Source.TextColor3 = Color3.new(0.8, 0.8, 0.8)
 Source.TextSize = 15
 Source.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
@@ -230,8 +229,8 @@ UIListLayout.Parent = TextBox
 
 local Lines = Instance.new("TextLabel")
 Lines.Name = "Lines"
-Lines.Position = UDim2.new(0, 0, 2.81368e-06, 0)
-Lines.Size = UDim2.new(0.0360656, 0, 100.23, 0)
+Lines.Position = UDim2.new(0, 0, 0.0593186, 0)
+Lines.Size = UDim2.new(0.0360656, 0, 111.906, 0)
 Lines.BackgroundColor3 = Color3.new(1, 1, 1)
 Lines.BackgroundTransparency = 1
 Lines.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
@@ -257,12 +256,12 @@ TextButton.Text = "Execute"
 TextButton.TextColor3 = Color3.new(1, 1, 1)
 TextButton.TextSize = 14
 TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton.Parent = execframe
+TextButton.Parent = Frame
 
-local UICorner3 = Instance.new("UICorner")
-UICorner3.Name = "UICorner"
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Name = "UICorner"
 
-UICorner3.Parent = TextButton
+UICorner2.Parent = TextButton
 
 local TextButton2 = Instance.new("TextButton")
 TextButton2.Name = "TextButton"
@@ -276,12 +275,12 @@ TextButton2.Text = "Clear"
 TextButton2.TextColor3 = Color3.new(1, 1, 1)
 TextButton2.TextSize = 14
 TextButton2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton2.Parent = execframe
+TextButton2.Parent = Frame
 
-local UICorner4 = Instance.new("UICorner")
-UICorner4.Name = "UICorner"
+local UICorner3 = Instance.new("UICorner")
+UICorner3.Name = "UICorner"
 
-UICorner4.Parent = TextButton2
+UICorner3.Parent = TextButton2
 
 local TextButton3 = Instance.new("TextButton")
 TextButton3.Name = "TextButton"
@@ -295,22 +294,10 @@ TextButton3.Text = "Execute From Clipboard"
 TextButton3.TextColor3 = Color3.new(1, 1, 1)
 TextButton3.TextSize = 14
 TextButton3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton3.Parent = execframe
+TextButton3.Parent = Frame
 
-local UICorner5 = Instance.new("UICorner")
-UICorner5.Name = "UICorner"
+local UICorner4 = Instance.new("UICorner")
+UICorner4.Name = "UICorner"
 
-UICorner5.Parent = TextButton3
-
-local ImageButton = Instance.new("ImageButton")
-ImageButton.Name = "ImageButton"
-ImageButton.Position = UDim2.new(0.933549, 0, 0.0164835, 0)
-ImageButton.Size = UDim2.new(0, 33, 0, 30)
-ImageButton.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageButton.BackgroundTransparency = 1
-ImageButton.BorderSizePixel = 0
-ImageButton.BorderColor3 = Color3.new(0, 0, 0)
-ImageButton.Transparency = 1
-ImageButton.Image = "rbxassetid://4988112250"
-ImageButton.Parent = Frame
+UICorner4.Parent = TextButton3
 
