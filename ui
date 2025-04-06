@@ -1,574 +1,1330 @@
-local Falcon = Instance.new("ScreenGui")
-Falcon.Name = "Falcon"
-Falcon.IgnoreGuiInset = true
-Falcon.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Falcon.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-local Overlay = Instance.new("Frame")
-Overlay.Name = "Overlay"
-Overlay.Size = UDim2.new(0, 703, 0, 312)
-Overlay.BackgroundColor3 = Color3.new(0, 0, 0)
-Overlay.BorderSizePixel = 0
-Overlay.BorderColor3 = Color3.new(0, 0, 0)
-Overlay.ZIndex = 100
-Overlay.Parent = Falcon
-
-local ImageButton = Instance.new("ImageButton")
-ImageButton.Name = "ImageButton"
-ImageButton.Position = UDim2.new(0, 26, 0, 13)
-ImageButton.Size = UDim2.new(0, 67, 0, 57)
-ImageButton.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageButton.BackgroundTransparency = 1
-ImageButton.BorderSizePixel = 0
-ImageButton.BorderColor3 = Color3.new(0, 0, 0)
-ImageButton.ZIndex = 101
-ImageButton.Transparency = 1
-ImageButton.Image = "rbxassetid://95230561681172"
-ImageButton.ScaleType = Enum.ScaleType.Fit
-ImageButton.Parent = Overlay
-
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint.AspectRatio = 1.175438642501831
-UIAspectRatioConstraint.Parent = ImageButton
-
-local exec = Instance.new("Frame")
-exec.Name = "exec"
-exec.Position = UDim2.new(0, 63, 0, 104)
-exec.Size = UDim2.new(0, 31, 0, 30)
-exec.BackgroundColor3 = Color3.new(1, 1, 1)
-exec.BackgroundTransparency = 0.8999999761581421
-exec.BorderSizePixel = 0
-exec.BorderColor3 = Color3.new(0, 0, 0)
-exec.ZIndex = 101
-exec.AnchorPoint = Vector2.new(0.5, 0.5)
-exec.ClipsDescendants = true
-exec.Transparency = 0.8999999761581421
-exec.Parent = Overlay
-
-local UICorner = Instance.new("UICorner")
-UICorner.Name = "UICorner"
-
-UICorner.Parent = exec
-
-local ImageButton2 = Instance.new("ImageButton")
-ImageButton2.Name = "ImageButton"
-ImageButton2.Position = UDim2.new(0, 16, 0, 16)
-ImageButton2.Size = UDim2.new(0, 21, 0, 21)
-ImageButton2.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageButton2.BackgroundTransparency = 1
-ImageButton2.BorderSizePixel = 0
-ImageButton2.BorderColor3 = Color3.new(0, 0, 0)
-ImageButton2.ZIndex = 101
-ImageButton2.AnchorPoint = Vector2.new(0.5, 0.5)
-ImageButton2.Transparency = 1
-ImageButton2.Image = "rbxassetid://16499078293"
-ImageButton2.ScaleType = Enum.ScaleType.Crop
-ImageButton2.Parent = exec
-
-local UICorner2 = Instance.new("UICorner")
-UICorner2.Name = "UICorner"
-
-UICorner2.Parent = ImageButton2
-
-local UIAspectRatioConstraint2 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint2.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint2.AspectRatio = 1.0145562887191772
-UIAspectRatioConstraint2.Parent = ImageButton2
-
-local UIAspectRatioConstraint3 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint3.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint3.AspectRatio = 1.0266343355178833
-UIAspectRatioConstraint3.Parent = exec
-
-local Scripts = Instance.new("Frame")
-Scripts.Name = "Scripts"
-Scripts.Position = UDim2.new(0, 64, 0, 160)
-Scripts.Size = UDim2.new(0, 31, 0, 30)
-Scripts.BackgroundColor3 = Color3.new(1, 1, 1)
-Scripts.BackgroundTransparency = 0.8999999761581421
-Scripts.BorderSizePixel = 0
-Scripts.BorderColor3 = Color3.new(0, 0, 0)
-Scripts.ZIndex = 101
-Scripts.AnchorPoint = Vector2.new(0.5, 0.5)
-Scripts.ClipsDescendants = true
-Scripts.Transparency = 0.8999999761581421
-Scripts.Parent = Overlay
-
-local UICorner3 = Instance.new("UICorner")
-UICorner3.Name = "UICorner"
-
-UICorner3.Parent = Scripts
-
-local ImageButton3 = Instance.new("ImageButton")
-ImageButton3.Name = "ImageButton"
-ImageButton3.Position = UDim2.new(0, 16, 0, 16)
-ImageButton3.Size = UDim2.new(0, 21, 0, 17)
-ImageButton3.BackgroundColor3 = Color3.new(1, 1, 1)
-ImageButton3.BackgroundTransparency = 1
-ImageButton3.BorderSizePixel = 0
-ImageButton3.BorderColor3 = Color3.new(0, 0, 0)
-ImageButton3.ZIndex = 101
-ImageButton3.AnchorPoint = Vector2.new(0.5, 0.5)
-ImageButton3.Transparency = 1
-ImageButton3.Image = "rbxassetid://16499094223"
-ImageButton3.ScaleType = Enum.ScaleType.Crop
-ImageButton3.Parent = Scripts
-
-local UICorner4 = Instance.new("UICorner")
-UICorner4.Name = "UICorner"
-
-UICorner4.Parent = ImageButton3
-
-local UIAspectRatioConstraint4 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint4.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint4.AspectRatio = 1.268195390701294
-UIAspectRatioConstraint4.Parent = ImageButton3
-
-local UIAspectRatioConstraint5 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint5.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint5.AspectRatio = 1.0266343355178833
-UIAspectRatioConstraint5.Parent = Scripts
-
-local execframe = Instance.new("Frame")
-execframe.Name = "execframe"
-execframe.Position = UDim2.new(0, 100, 0, 21)
-execframe.Size = UDim2.new(0, 559, 0, 283)
-execframe.BackgroundColor3 = Color3.new(0, 0, 0)
-execframe.BorderSizePixel = 0
-execframe.BorderColor3 = Color3.new(0, 0, 0)
-execframe.ZIndex = 101
-execframe.Parent = Overlay
-
-local UICorner5 = Instance.new("UICorner")
-UICorner5.Name = "UICorner"
-
-UICorner5.Parent = execframe
-
-local ScrollingFrame = Instance.new("ScrollingFrame")
-ScrollingFrame.Name = "ScrollingFrame"
-ScrollingFrame.Size = UDim2.new(0, 558, 0, 244)
-ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
-ScrollingFrame.BackgroundTransparency = 1
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.ZIndex = 101
-ScrollingFrame.Transparency = 1
-ScrollingFrame.Active = true
-ScrollingFrame.ScrollBarImageColor3 = Color3.new(0, 0, 0)
-ScrollingFrame.Parent = execframe
-
-local TextBox = Instance.new("ScrollingFrame")
-TextBox.Name = "TextBox"
-TextBox.Position = UDim2.new(0, 22, 0, 0)
-TextBox.Size = UDim2.new(0, 577, 0, 2788)
-TextBox.BackgroundColor3 = Color3.new(0.145098, 0.145098, 0.145098)
-TextBox.BackgroundTransparency = 1
-TextBox.BorderColor3 = Color3.new(0.243137, 0.243137, 0.243137)
-TextBox.ZIndex = 3
-TextBox.Transparency = 1
-TextBox.CanvasSize = UDim2.new(0, 908, 0, 180)
-TextBox.ScrollBarThickness = 5
-TextBox.BottomImage = "rbxassetid://148970562"
-TextBox.MidImage = "rbxassetid://148970562"
-TextBox.TopImage = "rbxassetid://148970562"
-TextBox.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-TextBox.Parent = ScrollingFrame
-
-local Source = Instance.new("TextBox")
-Source.Name = "Source"
-Source.Size = UDim2.new(0, 908, 0, 2782)
-Source.BackgroundColor3 = Color3.new(1, 1, 1)
-Source.BackgroundTransparency = 1
-Source.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Source.ZIndex = 3
-Source.Transparency = 1
-Source.Text = "--[[FalconV1.0]]--"
-Source.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-Source.TextSize = 15
-Source.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Source.TextXAlignment = Enum.TextXAlignment.Left
-Source.TextYAlignment = Enum.TextYAlignment.Top
-Source.RichText = true
-Source.ClearTextOnFocus = false
-Source.MultiLine = true
-Source.PlaceholderColor3 = Color3.new(0.8, 0.8, 0.8)
-Source.Parent = TextBox
-
-local Script = Instance.new("Script")
-Script.Name = "Script"
-
-Script.Parent = Source
-
-local RemoteEvent = Instance.new("RemoteEvent")
-RemoteEvent.Name = "RemoteEvent"
-
-RemoteEvent.Parent = Source
-
-local Tokens_ = Instance.new("TextLabel")
-Tokens_.Name = "Tokens_"
-Tokens_.Size = UDim2.new(0, 908, 0, 2782)
-Tokens_.BackgroundColor3 = Color3.new(1, 1, 1)
-Tokens_.BackgroundTransparency = 1
-Tokens_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Tokens_.ZIndex = 5
-Tokens_.Transparency = 1
-Tokens_.Text = ""
-Tokens_.TextColor3 = Color3.new(1, 1, 1)
-Tokens_.TextSize = 15
-Tokens_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Tokens_.TextXAlignment = Enum.TextXAlignment.Left
-Tokens_.TextYAlignment = Enum.TextYAlignment.Top
-Tokens_.Parent = Source
-
-local UIAspectRatioConstraint6 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint6.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint6.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint6.Parent = Tokens_
-
-local Numbers_ = Instance.new("TextLabel")
-Numbers_.Name = "Numbers_"
-Numbers_.Size = UDim2.new(0, 908, 0, 2782)
-Numbers_.BackgroundColor3 = Color3.new(1, 1, 1)
-Numbers_.BackgroundTransparency = 1
-Numbers_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Numbers_.ZIndex = 4
-Numbers_.Transparency = 1
-Numbers_.Text = ""
-Numbers_.TextColor3 = Color3.new(1, 0.615686, 0.172549)
-Numbers_.TextSize = 15
-Numbers_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Numbers_.TextXAlignment = Enum.TextXAlignment.Left
-Numbers_.TextYAlignment = Enum.TextYAlignment.Top
-Numbers_.Parent = Source
-
-local UIAspectRatioConstraint7 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint7.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint7.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint7.Parent = Numbers_
-
-local Keywords_ = Instance.new("TextLabel")
-Keywords_.Name = "Keywords_"
-Keywords_.Size = UDim2.new(0, 908, 0, 2782)
-Keywords_.BackgroundColor3 = Color3.new(1, 1, 1)
-Keywords_.BackgroundTransparency = 1
-Keywords_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Keywords_.ZIndex = 5
-Keywords_.Transparency = 1
-Keywords_.Text = ""
-Keywords_.TextColor3 = Color3.new(0.352941, 0.341176, 0.701961)
-Keywords_.TextSize = 15
-Keywords_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Keywords_.TextXAlignment = Enum.TextXAlignment.Left
-Keywords_.TextYAlignment = Enum.TextYAlignment.Top
-Keywords_.Parent = Source
-
-local UIAspectRatioConstraint8 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint8.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint8.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint8.Parent = Keywords_
-
-local Globals_ = Instance.new("TextLabel")
-Globals_.Name = "Globals_"
-Globals_.Size = UDim2.new(0, 908, 0, 2782)
-Globals_.BackgroundColor3 = Color3.new(1, 1, 1)
-Globals_.BackgroundTransparency = 1
-Globals_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Globals_.ZIndex = 5
-Globals_.Transparency = 1
-Globals_.Text = ""
-Globals_.TextColor3 = Color3.new(0.282353, 0.666667, 0.603922)
-Globals_.TextSize = 15
-Globals_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Globals_.TextXAlignment = Enum.TextXAlignment.Left
-Globals_.TextYAlignment = Enum.TextYAlignment.Top
-Globals_.Parent = Source
-
-local UIAspectRatioConstraint9 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint9.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint9.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint9.Parent = Globals_
-
-local Strings_ = Instance.new("TextLabel")
-Strings_.Name = "Strings_"
-Strings_.Size = UDim2.new(0, 908, 0, 2782)
-Strings_.BackgroundColor3 = Color3.new(1, 1, 1)
-Strings_.BackgroundTransparency = 1
-Strings_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Strings_.ZIndex = 5
-Strings_.Transparency = 1
-Strings_.Text = ""
-Strings_.TextColor3 = Color3.new(0.678431, 0.945098, 0.584314)
-Strings_.TextSize = 15
-Strings_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Strings_.TextXAlignment = Enum.TextXAlignment.Left
-Strings_.TextYAlignment = Enum.TextYAlignment.Top
-Strings_.Parent = Source
-
-local UIAspectRatioConstraint10 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint10.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint10.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint10.Parent = Strings_
-
-local Comments_ = Instance.new("TextLabel")
-Comments_.Name = "Comments_"
-Comments_.Size = UDim2.new(0, 908, 0, 2782)
-Comments_.BackgroundColor3 = Color3.new(1, 1, 1)
-Comments_.BackgroundTransparency = 1
-Comments_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Comments_.ZIndex = 5
-Comments_.Transparency = 1
-Comments_.Text = ""
-Comments_.TextColor3 = Color3.new(0.52549, 0.513726, 0.486275)
-Comments_.TextSize = 15
-Comments_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Comments_.TextXAlignment = Enum.TextXAlignment.Left
-Comments_.TextYAlignment = Enum.TextYAlignment.Top
-Comments_.Parent = Source
-
-local UIAspectRatioConstraint11 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint11.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint11.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint11.Parent = Comments_
-
-local Vars_ = Instance.new("TextLabel")
-Vars_.Name = "Vars_"
-Vars_.Size = UDim2.new(0, 908, 0, 2782)
-Vars_.BackgroundColor3 = Color3.new(1, 1, 1)
-Vars_.BackgroundTransparency = 1
-Vars_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Vars_.ZIndex = 5
-Vars_.Transparency = 1
-Vars_.Text = ""
-Vars_.TextColor3 = Color3.new(0.517647, 0.839216, 0.968628)
-Vars_.TextSize = 15
-Vars_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Vars_.TextXAlignment = Enum.TextXAlignment.Left
-Vars_.TextYAlignment = Enum.TextYAlignment.Top
-Vars_.Parent = Source
-
-local UIAspectRatioConstraint12 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint12.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint12.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint12.Parent = Vars_
-
-local UIAspectRatioConstraint13 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint13.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint13.AspectRatio = 0.32638388872146606
-UIAspectRatioConstraint13.Parent = Source
-
-local SourceText = Instance.new("StringValue")
-SourceText.Name = "SourceText"
-
-SourceText.Parent = TextBox
-
-local UIListLayout = Instance.new("UIListLayout")
-UIListLayout.Name = "UIListLayout"
-UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Parent = TextBox
-
-local UIAspectRatioConstraint14 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint14.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint14.AspectRatio = 0.20695839822292328
-UIAspectRatioConstraint14.Parent = TextBox
-
-local Lines = Instance.new("TextLabel")
-Lines.Name = "Lines"
-Lines.Size = UDim2.new(0, 21, 0, 28277)
-Lines.BackgroundColor3 = Color3.new(1, 1, 1)
-Lines.BackgroundTransparency = 1
-Lines.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
-Lines.ZIndex = 4
-Lines.Transparency = 1
-Lines.Active = true
-Lines.Text = "1"
-Lines.TextColor3 = Color3.new(1, 1, 1)
-Lines.TextSize = 15
-Lines.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-Lines.TextYAlignment = Enum.TextYAlignment.Top
-Lines.Parent = ScrollingFrame
-
-local UIAspectRatioConstraint15 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint15.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint15.AspectRatio = 0.0007426530355587602
-UIAspectRatioConstraint15.Parent = Lines
-
-local UIAspectRatioConstraint16 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint16.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint16.AspectRatio = 2.282301664352417
-UIAspectRatioConstraint16.Parent = ScrollingFrame
-
-local TextButton = Instance.new("TextButton")
-TextButton.Name = "TextButton"
-TextButton.Position = UDim2.new(0, 8, 0, 295)
-TextButton.Size = UDim2.new(0, 75, 0, 18)
-TextButton.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.333333)
-TextButton.BorderSizePixel = 0
-TextButton.BorderColor3 = Color3.new(0, 0, 0)
-TextButton.ZIndex = 102
-TextButton.Text = "Execute"
-TextButton.TextColor3 = Color3.new(1, 1, 1)
-TextButton.TextSize = 14
-TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton.Parent = execframe
-
-local UICorner6 = Instance.new("UICorner")
-UICorner6.Name = "UICorner"
-
-UICorner6.Parent = TextButton
-
-local UIAspectRatioConstraint17 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint17.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint17.AspectRatio = 4.166666507720947
-UIAspectRatioConstraint17.Parent = TextButton
-
-local TextButton2 = Instance.new("TextButton")
-TextButton2.Name = "TextButton"
-TextButton2.Position = UDim2.new(0, 96, 0, 295)
-TextButton2.Size = UDim2.new(0, 75, 0, 18)
-TextButton2.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.333333)
-TextButton2.BorderSizePixel = 0
-TextButton2.BorderColor3 = Color3.new(0, 0, 0)
-TextButton2.ZIndex = 102
-TextButton2.Text = "Clear"
-TextButton2.TextColor3 = Color3.new(1, 1, 1)
-TextButton2.TextSize = 14
-TextButton2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton2.Parent = execframe
-
-local UICorner7 = Instance.new("UICorner")
-UICorner7.Name = "UICorner"
-
-UICorner7.Parent = TextButton2
-
-local UIAspectRatioConstraint18 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint18.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint18.AspectRatio = 4.166666507720947
-UIAspectRatioConstraint18.Parent = TextButton2
-
-local TextButton3 = Instance.new("TextButton")
-TextButton3.Name = "TextButton"
-TextButton3.Position = UDim2.new(0, 185, 0, 295)
-TextButton3.Size = UDim2.new(0, 120, 0, 18)
-TextButton3.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.333333)
-TextButton3.BorderSizePixel = 0
-TextButton3.BorderColor3 = Color3.new(0, 0, 0)
-TextButton3.ZIndex = 102
-TextButton3.Text = "Execute From Clipboard"
-TextButton3.TextColor3 = Color3.new(1, 1, 1)
-TextButton3.TextSize = 14
-TextButton3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton3.Parent = execframe
-
-local UICorner8 = Instance.new("UICorner")
-UICorner8.Name = "UICorner"
-
-UICorner8.Parent = TextButton3
-
-local UIAspectRatioConstraint19 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint19.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint19.AspectRatio = 6.666666507720947
-UIAspectRatioConstraint19.Parent = TextButton3
-
-local UIAspectRatioConstraint20 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint20.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint20.AspectRatio = 1.977502703666687
-UIAspectRatioConstraint20.Parent = execframe
-
-local scriptsframe = Instance.new("Frame")
-scriptsframe.Name = "scriptsframe"
-scriptsframe.Position = UDim2.new(0, 100, 0, 19)
-scriptsframe.Size = UDim2.new(0, 559, 0, 283)
-scriptsframe.BackgroundColor3 = Color3.new(0, 0, 0)
-scriptsframe.BorderSizePixel = 0
-scriptsframe.BorderColor3 = Color3.new(0, 0, 0)
-scriptsframe.Visible = false
-scriptsframe.ZIndex = 101
-scriptsframe.Parent = Overlay
-
-local UICorner9 = Instance.new("UICorner")
-UICorner9.Name = "UICorner"
-
-UICorner9.Parent = scriptsframe
-
-local UIListLayout2 = Instance.new("UIListLayout")
-UIListLayout2.Name = "UIListLayout"
-UIListLayout2.Padding = UDim.new(0, 4)
-UIListLayout2.FillDirection = Enum.FillDirection.Horizontal
-UIListLayout2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout2.Parent = scriptsframe
-
-local TextLabel = Instance.new("TextLabel")
-TextLabel.Name = "TextLabel"
-TextLabel.Position = UDim2.new(0, 0, 0, 19)
-TextLabel.Size = UDim2.new(0, 182, 0, 43)
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.BorderSizePixel = 0
-TextLabel.BorderColor3 = Color3.new(0, 0, 0)
-TextLabel.Transparency = 1
-TextLabel.Text = "Unavailable"
-TextLabel.TextColor3 = Color3.new(1, 1, 1)
-TextLabel.TextSize = 14
-TextLabel.FontFace = Font.new("rbxassetid://11702779517", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-TextLabel.Parent = scriptsframe
-
-local UIAspectRatioConstraint21 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint21.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint21.AspectRatio = 4.232558250427246
-UIAspectRatioConstraint21.Parent = TextLabel
-
-local UIAspectRatioConstraint22 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint22.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint22.AspectRatio = 1.9752650260925293
-UIAspectRatioConstraint22.Parent = scriptsframe
-
-local UIAspectRatioConstraint23 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint23.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint23.AspectRatio = 2.2549619674682617
-UIAspectRatioConstraint23.Parent = Overlay
-
-local Frame = Instance.new("Frame")
-Frame.Name = "Frame"
-Frame.Position = UDim2.new(0, 240, 0, 371)
-Frame.Size = UDim2.new(0, 233, 0, 5)
-Frame.BackgroundColor3 = Color3.new(0.027451, 0.0745098, 0.113725)
-Frame.BorderSizePixel = 0
-Frame.BorderColor3 = Color3.new(0, 0, 0)
-Frame.ZIndex = 102
-Frame.ClipsDescendants = true
-Frame.Parent = Falcon
-
-local UICorner10 = Instance.new("UICorner")
-UICorner10.Name = "UICorner"
-
-UICorner10.Parent = Frame
-
-local TextButton4 = Instance.new("TextButton")
-TextButton4.Name = "TextButton"
-TextButton4.Size = UDim2.new(0, 223, 0, 5)
-TextButton4.BackgroundColor3 = Color3.new(0.0313726, 0.0156863, 0.101961)
-TextButton4.BorderSizePixel = 0
-TextButton4.BorderColor3 = Color3.new(0, 0, 0)
-TextButton4.Text = ""
-TextButton4.TextColor3 = Color3.new(0, 0, 0)
-TextButton4.TextSize = 14
-TextButton4.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-TextButton4.Parent = Frame
-
-local UICorner11 = Instance.new("UICorner")
-UICorner11.Name = "UICorner"
-
-UICorner11.Parent = TextButton4
-
-local UIAspectRatioConstraint24 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint24.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint24.AspectRatio = 44.73910903930664
-UIAspectRatioConstraint24.Parent = TextButton4
-
-local UIAspectRatioConstraint25 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint25.Name = "UIAspectRatioConstraint"
-UIAspectRatioConstraint25.AspectRatio = 44.73910903930664
-UIAspectRatioConstraint25.Parent = Frame
 
+local fg19gc2fh0fhg39 = {
+	ebdbafb6d48hbae50c4c29f3d = Instance.new("ScreenGui"),
+	d170aa95g8129dd6d5b26 = Instance.new("Frame"),
+	hffca6359ff1ah3 = Instance.new("ImageButton"),
+	b0fb6f4742b93ac549h = Instance.new("Frame"),
+	c3bh3dc46431hehbg3ebbb6 = Instance.new("UICorner"),
+	g838ae42fdg = Instance.new("ImageButton"),
+	a2804 = Instance.new("UICorner"),
+	faa1g9c184906f79e4ehf10833hh7g = Instance.new("UIAspectRatioConstraint"),
+	faae48dh056060e40b = Instance.new("Frame"),
+	a5af206fg0gea05f1 = Instance.new("UICorner"),
+	d5dbe62ga5569 = Instance.new("ImageButton"),
+	aeg0d40fa6c9d1gbc31 = Instance.new("UICorner"),
+	eff1dhg58h7164h50g11g8a88gf5 = Instance.new("UIAspectRatioConstraint"),
+	h9e3ed124b5g893ad5df98d3447b2 = Instance.new("UIAspectRatioConstraint"),
+	g69a9g4804d1 = Instance.new("Frame"),
+	h0744a9005b271e = Instance.new("UICorner"),
+	gah40ed0aca10a8ed1he4 = Instance.new("ScrollingFrame"),
+	c41a74c2 = Instance.new("ScrollingFrame"),
+	ge67857155g3d17bbggc4b8fa1143e2f = Instance.new("TextBox"),
+	bd6g1858be67dc5207325ad8 = Instance.new("RemoteEvent"),
+	d89fb69e904defaa3bf = Instance.new("TextLabel"),
+	fh21eb3bfd0ed = Instance.new("TextLabel"),
+	e6a0h1706eb6d28h1e0ab60ch4c9 = Instance.new("TextLabel"),
+	haead90706b3hh7 = Instance.new("TextLabel"),
+	eha1h09hhf5h38b4g1a1a = Instance.new("TextLabel"),
+	d8c3f827c8b32725g = Instance.new("TextLabel"),
+	g6ch8c35c98cf1c1189c4g21d5acd = Instance.new("TextLabel"),
+	e2gde5b21ba2g = Instance.new("StringValue"),
+	g4b54 = Instance.new("UIListLayout"),
+	gdghg9e05 = Instance.new("TextLabel"),
+	g3g33c797bebggb4h200 = Instance.new("UIAspectRatioConstraint"),
+	ce2e4 = Instance.new("TextButton"),
+	c0f876 = Instance.new("UICorner"),
+	h44ad4829hh05hb69h1h = Instance.new("TextButton"),
+	a35hhfed5fdf7b9hbh = Instance.new("UICorner"),
+	cg6065de9039716f6835884e8ec = Instance.new("Frame"),
+	h3a70fc0487dh9b3ge1e97a65c10 = Instance.new("UICorner"),
+	a2a7f15188865f0fe512g40214 = Instance.new("UIListLayout"),
+	he0693b36fh37fg7g59ad9a = Instance.new("TextLabel"),
+	gfaedfg293e59ccbbdg358fadc66 = Instance.new("UIAspectRatioConstraint"),
+	b609963hgfch7g7g84d18535a = Instance.new("UICorner"),
+	a227b61 = Instance.new("Frame"),
+	gd4dggdb = Instance.new("UICorner"),
+	bha9f468ecdee5a1gfhb63c05c4 = Instance.new("TextButton"),
+	ac320ddc6df5a3 = Instance.new("UICorner"),
+};
+
+fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d.Name = "Falcon";
+fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d.IgnoreGuiInset = true;
+fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets;
+fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d.Parent = game:GetService("CoreGui");
+
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.Name = "Overlay";
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.ZIndex = 100;
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.Size = UDim2.new(0, 678, 0, 286);
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.BorderSizePixel = 0;
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.Position = UDim2.new(0.0299657788, 0, 0.0206936635, 0);
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d170aa95g8129dd6d5b26.Parent = fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d;
+
+fg19gc2fh0fhg39.hffca6359ff1ah3.Name = "ImageButton";
+fg19gc2fh0fhg39.hffca6359ff1ah3.AutoButtonColor = true;
+fg19gc2fh0fhg39.hffca6359ff1ah3.ZIndex = 101;
+fg19gc2fh0fhg39.hffca6359ff1ah3.Size = UDim2.new(0, 49, 0, 38);
+fg19gc2fh0fhg39.hffca6359ff1ah3.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.hffca6359ff1ah3.BorderSizePixel = 0;
+fg19gc2fh0fhg39.hffca6359ff1ah3.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.hffca6359ff1ah3.Position = UDim2.new(0, 9, 0, 13);
+fg19gc2fh0fhg39.hffca6359ff1ah3.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.hffca6359ff1ah3.Image = "rbxassetid://95230561681172";
+fg19gc2fh0fhg39.hffca6359ff1ah3.ImageContent = Content;
+fg19gc2fh0fhg39.hffca6359ff1ah3.ScaleType = Enum.ScaleType.Fit;
+fg19gc2fh0fhg39.hffca6359ff1ah3.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.Name = "exec";
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.AnchorPoint = Vector2.new(0.5, 0.5);
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.ZIndex = 101;
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.Size = UDim2.new(0, 31, 0, 30);
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.ClipsDescendants = true;
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.BorderSizePixel = 0;
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.BackgroundTransparency = 0.8999999761581421;
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.Position = UDim2.new(0, 32, 0, 103);
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.b0fb6f4742b93ac549h.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.c3bh3dc46431hehbg3ebbb6.Name = "UICorner";
+fg19gc2fh0fhg39.c3bh3dc46431hehbg3ebbb6.Parent = fg19gc2fh0fhg39.b0fb6f4742b93ac549h;
+
+fg19gc2fh0fhg39.g838ae42fdg.Name = "ImageButton";
+fg19gc2fh0fhg39.g838ae42fdg.AutoButtonColor = true;
+fg19gc2fh0fhg39.g838ae42fdg.AnchorPoint = Vector2.new(0.5, 0.5);
+fg19gc2fh0fhg39.g838ae42fdg.ZIndex = 101;
+fg19gc2fh0fhg39.g838ae42fdg.Size = UDim2.new(0, 21, 0, 21);
+fg19gc2fh0fhg39.g838ae42fdg.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.g838ae42fdg.BorderSizePixel = 0;
+fg19gc2fh0fhg39.g838ae42fdg.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.g838ae42fdg.Position = UDim2.new(0, 15, 0, 15);
+fg19gc2fh0fhg39.g838ae42fdg.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.g838ae42fdg.Image = "rbxassetid://16499078293";
+fg19gc2fh0fhg39.g838ae42fdg.ImageContent = Content;
+fg19gc2fh0fhg39.g838ae42fdg.ScaleType = Enum.ScaleType.Crop;
+fg19gc2fh0fhg39.g838ae42fdg.Parent = fg19gc2fh0fhg39.b0fb6f4742b93ac549h;
+
+fg19gc2fh0fhg39.a2804.Name = "UICorner";
+fg19gc2fh0fhg39.a2804.Parent = fg19gc2fh0fhg39.g838ae42fdg;
+
+fg19gc2fh0fhg39.faa1g9c184906f79e4ehf10833hh7g.Name = "UIAspectRatioConstraint";
+fg19gc2fh0fhg39.faa1g9c184906f79e4ehf10833hh7g.AspectRatio = 1.0145562887191772;
+fg19gc2fh0fhg39.faa1g9c184906f79e4ehf10833hh7g.Parent = fg19gc2fh0fhg39.g838ae42fdg;
+
+fg19gc2fh0fhg39.faae48dh056060e40b.Name = "Scripts";
+fg19gc2fh0fhg39.faae48dh056060e40b.AnchorPoint = Vector2.new(0.5, 0.5);
+fg19gc2fh0fhg39.faae48dh056060e40b.ZIndex = 101;
+fg19gc2fh0fhg39.faae48dh056060e40b.Size = UDim2.new(0, 31, 0, 30);
+fg19gc2fh0fhg39.faae48dh056060e40b.ClipsDescendants = true;
+fg19gc2fh0fhg39.faae48dh056060e40b.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.faae48dh056060e40b.BorderSizePixel = 0;
+fg19gc2fh0fhg39.faae48dh056060e40b.BackgroundTransparency = 0.8999999761581421;
+fg19gc2fh0fhg39.faae48dh056060e40b.Position = UDim2.new(0, 31, 0, 150);
+fg19gc2fh0fhg39.faae48dh056060e40b.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.faae48dh056060e40b.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.a5af206fg0gea05f1.Name = "UICorner";
+fg19gc2fh0fhg39.a5af206fg0gea05f1.Parent = fg19gc2fh0fhg39.faae48dh056060e40b;
+
+fg19gc2fh0fhg39.d5dbe62ga5569.Name = "ImageButton";
+fg19gc2fh0fhg39.d5dbe62ga5569.AutoButtonColor = true;
+fg19gc2fh0fhg39.d5dbe62ga5569.AnchorPoint = Vector2.new(0.5, 0.5);
+fg19gc2fh0fhg39.d5dbe62ga5569.ZIndex = 101;
+fg19gc2fh0fhg39.d5dbe62ga5569.Size = UDim2.new(0, 21, 0, 17);
+fg19gc2fh0fhg39.d5dbe62ga5569.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d5dbe62ga5569.BorderSizePixel = 0;
+fg19gc2fh0fhg39.d5dbe62ga5569.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.d5dbe62ga5569.Position = UDim2.new(0, 16, 0, 16);
+fg19gc2fh0fhg39.d5dbe62ga5569.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.d5dbe62ga5569.Image = "rbxassetid://16499094223";
+fg19gc2fh0fhg39.d5dbe62ga5569.ImageContent = Content;
+fg19gc2fh0fhg39.d5dbe62ga5569.ScaleType = Enum.ScaleType.Crop;
+fg19gc2fh0fhg39.d5dbe62ga5569.Parent = fg19gc2fh0fhg39.faae48dh056060e40b;
+
+fg19gc2fh0fhg39.aeg0d40fa6c9d1gbc31.Name = "UICorner";
+fg19gc2fh0fhg39.aeg0d40fa6c9d1gbc31.Parent = fg19gc2fh0fhg39.d5dbe62ga5569;
+
+fg19gc2fh0fhg39.eff1dhg58h7164h50g11g8a88gf5.Name = "UIAspectRatioConstraint";
+fg19gc2fh0fhg39.eff1dhg58h7164h50g11g8a88gf5.AspectRatio = 1.268195390701294;
+fg19gc2fh0fhg39.eff1dhg58h7164h50g11g8a88gf5.Parent = fg19gc2fh0fhg39.d5dbe62ga5569;
+
+fg19gc2fh0fhg39.h9e3ed124b5g893ad5df98d3447b2.Name = "UIAspectRatioConstraint";
+fg19gc2fh0fhg39.h9e3ed124b5g893ad5df98d3447b2.AspectRatio = 1.0266343355178833;
+fg19gc2fh0fhg39.h9e3ed124b5g893ad5df98d3447b2.Parent = fg19gc2fh0fhg39.faae48dh056060e40b;
+
+fg19gc2fh0fhg39.g69a9g4804d1.Name = "execframe";
+fg19gc2fh0fhg39.g69a9g4804d1.ZIndex = 101;
+fg19gc2fh0fhg39.g69a9g4804d1.Size = UDim2.new(0, 556, 0, 271);
+fg19gc2fh0fhg39.g69a9g4804d1.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.g69a9g4804d1.BorderSizePixel = 0;
+fg19gc2fh0fhg39.g69a9g4804d1.Position = UDim2.new(0, 61, 0, 0);
+fg19gc2fh0fhg39.g69a9g4804d1.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.g69a9g4804d1.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.h0744a9005b271e.Name = "UICorner";
+fg19gc2fh0fhg39.h0744a9005b271e.Parent = fg19gc2fh0fhg39.g69a9g4804d1;
+
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.Name = "ScrollingFrame";
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.Active = true;
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.ZIndex = 101;
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.Size = UDim2.new(0, 536, 0, 258);
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.BorderSizePixel = 0;
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.ScrollBarImageColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4.Parent = fg19gc2fh0fhg39.g69a9g4804d1;
+
+fg19gc2fh0fhg39.c41a74c2.Name = "TextBox";
+fg19gc2fh0fhg39.c41a74c2.ZIndex = 3;
+fg19gc2fh0fhg39.c41a74c2.Size = UDim2.new(0, 577, 0, 2788);
+fg19gc2fh0fhg39.c41a74c2.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.c41a74c2.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.c41a74c2.Position = UDim2.new(0, 22, 0, 0);
+fg19gc2fh0fhg39.c41a74c2.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.c41a74c2.CanvasSize = UDim2.new(0, 908, 0, 180);
+fg19gc2fh0fhg39.c41a74c2.MidImage = "rbxassetid://148970562";
+fg19gc2fh0fhg39.c41a74c2.TopImage = "rbxassetid://148970562";
+fg19gc2fh0fhg39.c41a74c2.BottomImage = "rbxassetid://148970562";
+fg19gc2fh0fhg39.c41a74c2.ScrollBarThickness = 5;
+fg19gc2fh0fhg39.c41a74c2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar;
+fg19gc2fh0fhg39.c41a74c2.Parent = fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4;
+
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.Name = "Source";
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.ZIndex = 3;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.MultiLine = true;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.CursorPosition = -1;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.PlaceholderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.ClearTextOnFocus = false;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.RichText = true;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.Text = "--[[FalconV1.0]]--";
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f.Parent = fg19gc2fh0fhg39.c41a74c2;
+
+fg19gc2fh0fhg39.bd6g1858be67dc5207325ad8.Name = "RemoteEvent";
+fg19gc2fh0fhg39.bd6g1858be67dc5207325ad8.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.Name = "Tokens_";
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.ZIndex = 5;
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.TextColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.Text = "";
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.d89fb69e904defaa3bf.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.fh21eb3bfd0ed.Name = "Numbers_";
+fg19gc2fh0fhg39.fh21eb3bfd0ed.ZIndex = 4;
+fg19gc2fh0fhg39.fh21eb3bfd0ed.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.fh21eb3bfd0ed.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.fh21eb3bfd0ed.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.fh21eb3bfd0ed.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.fh21eb3bfd0ed.TextColor3 = Color3.new(1, 0, 0);
+fg19gc2fh0fhg39.fh21eb3bfd0ed.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.fh21eb3bfd0ed.Text = "";
+fg19gc2fh0fhg39.fh21eb3bfd0ed.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.fh21eb3bfd0ed.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.fh21eb3bfd0ed.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.Name = "Keywords_";
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.ZIndex = 5;
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.Text = "";
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.e6a0h1706eb6d28h1e0ab60ch4c9.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.haead90706b3hh7.Name = "Globals_";
+fg19gc2fh0fhg39.haead90706b3hh7.ZIndex = 5;
+fg19gc2fh0fhg39.haead90706b3hh7.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.haead90706b3hh7.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.haead90706b3hh7.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.haead90706b3hh7.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.haead90706b3hh7.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.haead90706b3hh7.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.haead90706b3hh7.Text = "";
+fg19gc2fh0fhg39.haead90706b3hh7.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.haead90706b3hh7.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.haead90706b3hh7.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.Name = "Strings_";
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.ZIndex = 5;
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.Text = "";
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.eha1h09hhf5h38b4g1a1a.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.d8c3f827c8b32725g.Name = "Comments_";
+fg19gc2fh0fhg39.d8c3f827c8b32725g.ZIndex = 5;
+fg19gc2fh0fhg39.d8c3f827c8b32725g.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.d8c3f827c8b32725g.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d8c3f827c8b32725g.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.d8c3f827c8b32725g.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.d8c3f827c8b32725g.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.d8c3f827c8b32725g.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.d8c3f827c8b32725g.Text = "";
+fg19gc2fh0fhg39.d8c3f827c8b32725g.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.d8c3f827c8b32725g.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.d8c3f827c8b32725g.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.Name = "Vars_";
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.ZIndex = 5;
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.Size = UDim2.new(0, 908, 0, 2782);
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.Text = "";
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.TextXAlignment = Enum.TextXAlignment.Left;
+fg19gc2fh0fhg39.g6ch8c35c98cf1c1189c4g21d5acd.Parent = fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f;
+
+fg19gc2fh0fhg39.e2gde5b21ba2g.Name = "SourceText";
+fg19gc2fh0fhg39.e2gde5b21ba2g.Parent = fg19gc2fh0fhg39.c41a74c2;
+
+fg19gc2fh0fhg39.g4b54.Name = "UIListLayout";
+fg19gc2fh0fhg39.g4b54.Parent = fg19gc2fh0fhg39.c41a74c2;
+
+fg19gc2fh0fhg39.gdghg9e05.Name = "Lines";
+fg19gc2fh0fhg39.gdghg9e05.Active = true;
+fg19gc2fh0fhg39.gdghg9e05.ZIndex = 4;
+fg19gc2fh0fhg39.gdghg9e05.Size = UDim2.new(0, 21, 0, 28277);
+fg19gc2fh0fhg39.gdghg9e05.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.gdghg9e05.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.gdghg9e05.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.gdghg9e05.TextColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.gdghg9e05.TextYAlignment = Enum.TextYAlignment.Top;
+fg19gc2fh0fhg39.gdghg9e05.Text = "1";
+fg19gc2fh0fhg39.gdghg9e05.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.gdghg9e05.Parent = fg19gc2fh0fhg39.gah40ed0aca10a8ed1he4;
+
+fg19gc2fh0fhg39.g3g33c797bebggb4h200.Name = "UIAspectRatioConstraint";
+fg19gc2fh0fhg39.g3g33c797bebggb4h200.AspectRatio = 0.0007426530355587602;
+fg19gc2fh0fhg39.g3g33c797bebggb4h200.Parent = fg19gc2fh0fhg39.gdghg9e05;
+
+fg19gc2fh0fhg39.ce2e4.Name = "TextButton";
+fg19gc2fh0fhg39.ce2e4.AutoButtonColor = true;
+fg19gc2fh0fhg39.ce2e4.ZIndex = 102;
+fg19gc2fh0fhg39.ce2e4.Size = UDim2.new(0, 75, 0, 18);
+fg19gc2fh0fhg39.ce2e4.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.ce2e4.BorderSizePixel = 0;
+fg19gc2fh0fhg39.ce2e4.Position = UDim2.new(0, 10, 0, 246);
+fg19gc2fh0fhg39.ce2e4.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.ce2e4.TextColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.ce2e4.Text = "Execute";
+fg19gc2fh0fhg39.ce2e4.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.ce2e4.Parent = fg19gc2fh0fhg39.g69a9g4804d1;
+
+fg19gc2fh0fhg39.c0f876.Name = "UICorner";
+fg19gc2fh0fhg39.c0f876.Parent = fg19gc2fh0fhg39.ce2e4;
+
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.Name = "TextButton";
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.AutoButtonColor = true;
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.ZIndex = 102;
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.Size = UDim2.new(0, 75, 0, 18);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.BorderSizePixel = 0;
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.Position = UDim2.new(0, 103, 0, 246);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.TextColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.Text = "Clear";
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.h44ad4829hh05hb69h1h.Parent = fg19gc2fh0fhg39.g69a9g4804d1;
+
+fg19gc2fh0fhg39.a35hhfed5fdf7b9hbh.Name = "UICorner";
+fg19gc2fh0fhg39.a35hhfed5fdf7b9hbh.Parent = fg19gc2fh0fhg39.h44ad4829hh05hb69h1h;
+
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.Name = "scriptsframe";
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.Visible = false;
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.ZIndex = 101;
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.Size = UDim2.new(0, 559, 0, 283);
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.BorderSizePixel = 0;
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.Position = UDim2.new(0, 100, 0, 19);
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.h3a70fc0487dh9b3ge1e97a65c10.Name = "UICorner";
+fg19gc2fh0fhg39.h3a70fc0487dh9b3ge1e97a65c10.Parent = fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec;
+
+fg19gc2fh0fhg39.a2a7f15188865f0fe512g40214.Name = "UIListLayout";
+fg19gc2fh0fhg39.a2a7f15188865f0fe512g40214.Padding = UDim.new(0, 4);
+fg19gc2fh0fhg39.a2a7f15188865f0fe512g40214.Parent = fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec;
+
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.Name = "TextLabel";
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.Size = UDim2.new(0, 182, 0, 43);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.BorderSizePixel = 0;
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.BackgroundTransparency = 1;
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.Position = UDim2.new(0, 0, 0, 19);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.BackgroundColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.TextColor3 = Color3.new(1, 1, 1);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.Text = "Unavailable";
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.FontFace = Font.new("rbxassetid://11702779517", Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a.Parent = fg19gc2fh0fhg39.cg6065de9039716f6835884e8ec;
+
+fg19gc2fh0fhg39.gfaedfg293e59ccbbdg358fadc66.Name = "UIAspectRatioConstraint";
+fg19gc2fh0fhg39.gfaedfg293e59ccbbdg358fadc66.AspectRatio = 4.232558250427246;
+fg19gc2fh0fhg39.gfaedfg293e59ccbbdg358fadc66.Parent = fg19gc2fh0fhg39.he0693b36fh37fg7g59ad9a;
+
+fg19gc2fh0fhg39.b609963hgfch7g7g84d18535a.Name = "UICorner";
+fg19gc2fh0fhg39.b609963hgfch7g7g84d18535a.Parent = fg19gc2fh0fhg39.d170aa95g8129dd6d5b26;
+
+fg19gc2fh0fhg39.a227b61.Name = "Frame";
+fg19gc2fh0fhg39.a227b61.ZIndex = 102;
+fg19gc2fh0fhg39.a227b61.Size = UDim2.new(0, 233, 0, 10);
+fg19gc2fh0fhg39.a227b61.ClipsDescendants = true;
+fg19gc2fh0fhg39.a227b61.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.a227b61.BorderSizePixel = 0;
+fg19gc2fh0fhg39.a227b61.Position = UDim2.new(0, 250, 0, 322);
+fg19gc2fh0fhg39.a227b61.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.a227b61.Parent = fg19gc2fh0fhg39.ebdbafb6d48hbae50c4c29f3d;
+
+fg19gc2fh0fhg39.gd4dggdb.Name = "UICorner";
+fg19gc2fh0fhg39.gd4dggdb.Parent = fg19gc2fh0fhg39.a227b61;
+
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.Name = "TextButton";
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.AutoButtonColor = true;
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.Size = UDim2.new(0, 232, 0, 10);
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.BorderColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.BorderSizePixel = 0;
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.BackgroundColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.TextColor3 = Color3.new(0, 0, 0);
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.Text = "";
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4.Parent = fg19gc2fh0fhg39.a227b61;
+
+fg19gc2fh0fhg39.ac320ddc6df5a3.Name = "UICorner";
+fg19gc2fh0fhg39.ac320ddc6df5a3.Parent = fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4;
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.hffca6359ff1ah3);
+	local main = script.Parent.Parent
+	local main1 = script.Parent.Parent.Parent.Frame
+	local par = script.Parent
+	
+	par.MouseButton1Down:Connect(function()
+		main:TweenPosition(
+			UDim2.new(-0.001, 0,1, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Linear,
+			0.4,
+			false
+		)
+		main1:TweenPosition(
+			UDim2.new(0.327, 0,0.95, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Sine,
+			0.5,
+			false
+		)
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.g838ae42fdg);
+	local btn = script.Parent
+	local enabled = false
+	local frame = btn.Parent
+	local frame2 = btn.Parent.Parent.Scripts
+	local tab1 = btn.Parent.Parent.execframe
+	local tab2 = btn.Parent.Parent.scriptsframe
+	
+	
+	btn.MouseButton1Down:Connect(function()
+		if not enabled then
+			frame:TweenSize(
+				UDim2.new(0, 45,0, 45),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			frame2:TweenSize(
+				UDim2.new(0, 35,0, 35),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			tab1.Visible = true
+			tab1:TweenPosition(
+				UDim2.new(0.134, 0,0.058, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			tab2:TweenPosition(
+				UDim2.new(0.936, 0,0.045, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			wait(0.1)
+			tab2.Visible = false
+			enabled = true
+		else
+			frame:TweenSize(
+				UDim2.new(0, 35,0, 35),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			tab2.Visible = true
+			tab2:TweenPosition(
+				UDim2.new(0.134, 0,0.058, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			tab1:TweenPosition(
+				UDim2.new(0.936, 0,0.045, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			wait(0.1)
+			tab1.Visible = false
+			frame2:TweenSize(
+				UDim2.new(0, 45,0, 45),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			enabled = false
+		end
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.d5dbe62ga5569);
+	local btn = script.Parent
+	local enabled = false
+	local frame = btn.Parent
+	local frame2 = btn.Parent.Parent.exec
+	local tab1 = btn.Parent.Parent.execframe
+	local tab2 = btn.Parent.Parent.scriptsframe
+	
+	btn.MouseButton1Down:Connect(function()
+		if not enabled then
+			frame:TweenSize(
+				UDim2.new(0, 45,0, 45),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			frame2:TweenSize(
+				UDim2.new(0, 35,0, 35),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			tab2.Visible = true
+			tab2:TweenPosition(
+				UDim2.new(0.134, 0,0.058, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			tab1:TweenPosition(
+				UDim2.new(0.936, 0,0.045, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			wait(0.1)
+			tab1.Visible = false
+			enabled = true
+		else
+			frame:TweenSize(
+				UDim2.new(0, 35,0, 35),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			frame2:TweenSize(
+				UDim2.new(0, 45,0, 45),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Quad,
+				0.2,
+				false
+			)
+			tab1.Visible = true
+			tab1:TweenPosition(
+				UDim2.new(0.134, 0,0.058, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			tab2:TweenPosition(
+				UDim2.new(0.936, 0,0.045, 0),
+				Enum.EasingDirection.Out,
+				Enum.EasingStyle.Linear,
+				0.4,
+				false
+			)
+			wait(0.1)
+			tab2.Visible = false
+			enabled = false
+		end
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("Script", fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f);
+	script.Parent.RemoteEvent.OnServerEvent:Connect(function(_,text)
+		script.Parent.Parent.SourceText.Value = text
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.ge67857155g3d17bbggc4b8fa1143e2f);
+	script.Parent.Changed:Connect(function()
+		script.Parent.RemoteEvent:FireServer(script.Parent.Text)
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.c41a74c2);
+	local settings = {
+		Highlight = true; -- Highlight like you know. Script Text color?
+		Lines =true; -- The textbox will have some lines like when you press enter.
+		Scroll = true; -- So if it has alot of lines and that it gets off the screen this will help.
+		HighlightVariables=false;--Highlights the local and global enviorments
+		SplitScanLines=false;-- This trick is used to Scan lines instead of the whole source (Breaks multilined strings and comments) 
+		WaitIfRendered=true;-- This trick will reduce lag by waiting if the game has rendered
+		AutomaticSettingChange=true;--Automatically changes the settings for the best experience
+		LoadLexer=true;--Makes one token and creates highlights out of it instead of many tokens (reduce lag)
+	}
+	local RunService = game:GetService("RunService")
+	local Fps=0
+	local TimeFunction = RunService:IsRunning() and time or os.clock
+	
+	local LastIteration, Start
+	local FrameUpdateTable = {}
+	
+	local function HeartbeatUpdate()
+		LastIteration = TimeFunction()
+		for Index = #FrameUpdateTable, 1, -1 do
+			FrameUpdateTable[Index + 1] = FrameUpdateTable[Index] >= LastIteration - 1 and FrameUpdateTable[Index] or nil
+		end
+	
+		FrameUpdateTable[1] = LastIteration
+		Fps = tonumber(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start)))
+	end
+	
+	Start = TimeFunction()
+	RunService.Heartbeat:Connect(HeartbeatUpdate)
+	
+	--[==[
+	This syntax is the best syntax on the marketplace
+	Only created by MiAiHsIs1226
+	-- Credits
+	Credits to the lexer module creator
+	Credits to MikePetar for scroll
+	Credits to me for literally doing nothing
+	]==]
+	local function parse(tokens)
+		local localvarables = {}
+		local whitespacecharactersfound=0
+		local readabletokens = {}
+		local tokennumbers = {}
+		for i,v in pairs(tokens) do
+			if v.Source == " " then
+				whitespacecharactersfound+=1
+				continue
+			end
+			if v.Type=="space" then
+				whitespacecharactersfound+=1
+				continue
+			end
+	
+			table.insert(readabletokens,v)
+			table.insert(tokennumbers,{i})
+		end
+	
+	
+		for i,v in pairs(readabletokens) do
+			pcall(function()
+				if v.Source == "local" then
+					local _,name =pcall(function()return readabletokens[i+1].Source;end)
+					if _==false then
+						error("Syntax Error: Expected more code")
+					end
+					if name == "function" then
+						_,name =pcall(function()return readabletokens[i+2].Source;end)
+						if _==false then
+							error("Syntax Error: Expected more code")
+						end
+						if readabletokens[i+2].Type~="iden" then
+							error("Syntax Error: Name isnt an idient")
+						end
+						table.insert(localvarables,{Name = name,Type="Local",Source = "function",number = tokennumbers[i][1]+4})
+					else
+						table.insert(localvarables,{Name = name,Type="Local",Source = readabletokens[i+3].Source,number = tokennumbers[i]
+							[1]+1})
+					end
+				elseif v.Type == "iden"  then
+	
+					if readabletokens[i-1] then
+						if readabletokens[i-1].Type ~= "keyword" and readabletokens[i-1].Type ~= "symbol"  then
+							local source = readabletokens[i+2].Source
+							table.insert(localvarables,{Name = v.Source,Type="Global",Source = source;number = tokennumbers[i]
+								[1]})  
+						elseif readabletokens[i-1].Source=="function" then
+							local source = "function"
+							table.insert(localvarables,{Name = v.Source,Type="Global",Source = source;number = tokennumbers[i]
+								[1]})  
+	
+						end
+					else
+						local source = readabletokens[i+2].Source
+						table.insert(localvarables,{Name = v.Source,Type="Global",Source = source,number = tokennumbers[i][1]})  
+					end
+				end
+			end)
+		end
+	
+		return (localvarables)
+	end
+	local function lexerscan(text)
+		local lexer = coroutine.wrap(function()
+	
+			local lexer = {}
+	
+			local yield, wrap  = coroutine.yield, coroutine.wrap
+			local strfind      = string.find
+			local strsub       = string.sub
+			local append       = table.insert
+			local type         = type
+	
+			local NUMBER1	= "^[%+%-]?%d+%.?%d*[eE][%+%-]?%d+"
+			local NUMBER2	= "^[%+%-]?%d+%.?%d*"
+			local NUMBER3	= "^0x[%da-fA-F]+"
+			local NUMBER4	= "^%d+%.?%d*[eE][%+%-]?%d+"
+			local NUMBER5	= "^%d+%.?%d*"
+			local IDEN		= "^[%a_][%w_]*"
+			local WSPACE	= "^%s+"
+			local STRING1	= "^(['\"])%1"							
+			local STRING2	= [[^(['"])(\*)%2%1]]
+			local STRING3	= [[^(['"]).-[^\](\*)%2%1]]
+			local STRING4	= "^(['\"]).-.*"						
+			local STRING5	= "^%[(=*)%[.-%]%1%]"					
+			local STRING6	= "^%[%[.-.*"							
+			local CHAR1		= "^''"
+			local CHAR2		= [[^'(\*)%1']]
+			local CHAR3		= [[^'.-[^\](\*)%1']]
+			local PREPRO	= "^#.-[^\\]\n"
+			local MCOMMENT1	= "^%-%-%[(=*)%[.-%]%1%]"				
+			local MCOMMENT2	= "^%-%-%[%[.-.*"						
+			local SCOMMENT1	= "^%-%-.-\n"							
+			local SCOMMENT2	= "^%-%-.-.*"							
+	
+			local lua_keyword = {
+				["and"] = true,  ["break"] = true,  ["do"] = true,      ["else"] = true,      ["elseif"] = true,
+				["end"] = true,  ["false"] = true,  ["for"] = true,     ["function"] = true,  ["if"] = true,
+				["in"] = true,   ["local"] = true,  ["nil"] = true,     ["not"] = true,       ["while"] = true,
+				["or"] = true,   ["repeat"] = true, ["return"] = true,  ["then"] = true,      ["true"] = true,
+				["self"] = true, ["until"] = true
+			}
+	
+			local lua_builtin = {
+				["assert"] = true;["collectgarbage"] = true;["error"] = true;["_G"] = true;
+				["gcinfo"] = true;["getfenv"] = true;["getmetatable"] = true;["ipairs"] = true;
+				["loadstring"] = true;["newproxy"] = true;["next"] = true;["pairs"] = true;
+				["pcall"] = true;["print"] = true;["rawequal"] = true;["rawget"] = true;["rawset"] = true;
+				["select"] = true;["setfenv"] = true;["setmetatable"] = true;["tonumber"] = true;
+				["tostring"] = true;["type"] = true;["unpack"] = true;["_VERSION"] = true;["xpcall"] = true;
+				["delay"] = true;["elapsedTime"] = true;["require"] = true;["spawn"] = true;["tick"] = true;
+				["time"] = true;["typeof"] = true;["UserSettings"] = true;["wait"] = true;["warn"] = true;
+				["game"] = true;["Enum"] = true;["script"] = true;["shared"] = true;["workspace"] = true;
+				["Axes"] = true;["BrickColor"] = true;["CFrame"] = true;["Color3"] = true;["ColorSequence"] = true;
+				["ColorSequenceKeypoint"] = true;["Faces"] = true;["Instance"] = true;["NumberRange"] = true;
+				["NumberSequence"] = true;["NumberSequenceKeypoint"] = true;["PhysicalProperties"] = true;
+				["Random"] = true;["Ray"] = true;["Rect"] = true;["Region3"] = true;["Region3int16"] = true;
+				["TweenInfo"] = true;["UDim"] = true;["UDim2"] = true;["Vector2"] = true;["Vector3"] = true;
+				["Vector3int16"] = true;["next"] = true;
+				["os"] = true;
+				["os.time"] = true;["os.date"] = true;["os.difftime"] = true;
+				["debug"] = true;
+				["debug.traceback"] = true;["debug.profilebegin"] = true;["debug.profileend"] = true;
+				["math"] = true;
+				["math.abs"] = true;["math.acos"] = true;["math.asin"] = true;["math.atan"] = true;["math.atan2"] = true;["math.ceil"] = true;["math.clamp"] = true;["math.cos"] = true;["math.cosh"] = true;["math.deg"] = true;["math.exp"] = true;["math.floor"] = true;["math.fmod"] = true;["math.frexp"] = true;["math.ldexp"] = true;["math.log"] = true;["math.log10"] = true;["math.max"] = true;["math.min"] = true;["math.modf"] = true;["math.noise"] = true;["math.pow"] = true;["math.rad"] = true;["math.random"] = true;["math.randomseed"] = true;["math.sign"] = true;["math.sin"] = true;["math.sinh"] = true;["math.sqrt"] = true;["math.tan"] = true;["math.tanh"] = true;
+				["coroutine"] = true;
+				["coroutine.create"] = true;["coroutine.resume"] = true;["coroutine.running"] = true;["coroutine.status"] = true;["coroutine.wrap"] = true;["coroutine.yield"] = true;
+				["string"] = true;
+				["string.byte"] = true;["string.char"] = true;["string.dump"] = true;["string.find"] = true;["string.format"] = true;["string.len"] = true;["string.lower"] = true;["string.match"] = true;["string.rep"] = true;["string.reverse"] = true;["string.sub"] = true;["string.upper"] = true;["string.gmatch"] = true;["string.gsub"] = true;
+				["table"] = true;
+				["table.concat"] = true;["table.insert"] = true;["table.remove"] = true;["table.sort"] = true;
+			}
+	
+			local function tdump(tok)
+				return yield(tok, tok)
+			end
+	
+			local function ndump(tok)
+				return yield("number", tok)
+			end
+	
+			local function sdump(tok)
+				return yield("string", tok)
+			end
+	
+			local function cdump(tok)
+				return yield("comment", tok)
+			end
+	
+			local function wsdump(tok)
+				return yield("space", tok)
+			end
+	
+			local function lua_vdump(tok)
+				if (lua_keyword[tok]) then
+					return yield("keyword", tok)
+				elseif (lua_builtin[tok]) then
+					return yield("builtin", tok)
+				else
+					return yield("iden", tok)
+				end
+			end
+	
+			local lua_matches = {
+				{IDEN,      lua_vdump},        -- Indentifiers
+				{WSPACE,    wsdump},           -- Whitespace
+				{NUMBER3,   ndump},            -- Numbers
+				{NUMBER4,   ndump},
+				{NUMBER5,   ndump},
+				{STRING1,   sdump},            -- Strings
+				{STRING2,   sdump},
+				{STRING3,   sdump},
+				{STRING4,   sdump},
+				{STRING5,   sdump},            -- Multiline-Strings
+				{STRING6,   sdump},            -- Multiline-Strings
+	
+				{MCOMMENT1, cdump},            -- Multiline-Comments
+				{MCOMMENT2, cdump},			
+				{SCOMMENT1, cdump},            -- Singleline-Comments
+				{SCOMMENT2, cdump},
+	
+				{"^==",     tdump},            -- Operators
+				{"^~=",     tdump},
+				{"^<=",     tdump},
+				{"^>=",     tdump},
+				{"^%.%.%.", tdump},
+				{"^%.%.",   tdump},
+				{"^.",      tdump}
+			}
+	
+			local num_lua_matches = #lua_matches
+	
+	
+			--- Create a plain token iterator from a string.
+			-- @tparam string s a string.
+			function lexer.scan(s)
+	
+				local function lex(first_arg)
+	
+					local line_nr = 0
+					local sz = #s
+					local idx = 1
+	
+					-- res is the value used to resume the coroutine.
+					local function handle_requests(res)
+						while (res) do
+							local tp = type(res)
+							-- Insert a token list:
+							if (tp == "table") then
+								res = yield("", "")
+								for i = 1,#res do
+									local t = res[i]
+									res = yield(t[1], t[2])
+								end
+							elseif (tp == "string") then -- Or search up to some special pattern:
+								local i1, i2 = strfind(s, res, idx)
+								if (i1) then
+									local tok = strsub(s, i1, i2)
+									idx = (i2 + 1)
+									res = yield("", tok)
+								else
+									res = yield("", "")
+									idx = (sz + 1)
+								end
+							else
+								res = yield(line_nr, idx)
+							end
+						end
+					end
+	
+					handle_requests(first_arg)
+					line_nr = 1
+	
+					while (true) do
+	
+						if (idx > sz) then
+							while (true) do
+								handle_requests(yield())
+							end
+						end
+	
+						for i = 1,num_lua_matches do
+							local m = lua_matches[i]
+							local pat = m[1]
+							local fun = m[2]
+							local findres = {strfind(s, pat, idx)}
+							local i1, i2 = findres[1], findres[2]
+							if (i1) then
+								local tok = strsub(s, i1, i2)
+								idx = (i2 + 1)
+								lexer.finished = (idx > sz)
+								local res = fun(tok, findres)
+								if (tok:find("\n")) then
+									-- Update line number:
+									local _,newlines = tok:gsub("\n", {})
+									line_nr = (line_nr + newlines)
+								end
+								handle_requests(res)
+								break
+							end
+						end
+	
+					end
+	
+				end
+	
+				return wrap(lex)
+	
+			end
+	
+			return lexer
+		end)()
+		local function doesvalueexist(value,tab)
+			for i,v in pairs(tab) do
+				if v == value then
+					return true
+				end
+			end
+			return false or nil
+		end
+		local symbols = {
+			";";
+			"^";
+			"(";
+			")";
+			"%";
+			"/";
+			":";
+			"#";
+			"-";
+			"=";
+			"+";
+			"{";
+			"}";
+			"~";
+			"<";
+			">";
+			"*";
+			",";
+			".";
+			"\""}
+		local t={}
+		local split=text:split("\n")
+		if settings.SplitScanLines==true then
+			for _, splitv in pairs(text:split("\n")) do 
+				for i,v in (lexer.scan(splitv)) do
+					local type= i
+					if doesvalueexist(type,symbols)  then-- makes the type "symbol" if it is a symbol
+						type="symbol"
+					end
+					table.insert(t,{Type=type,Source=v})
+				end
+				table.insert(t,{Type="space",Source="\n"})--dont remove this unless you know what you're doing
+				if settings.WaitIfRendered then
+					game:GetService("RunService").RenderStepped:Wait()
+				end
+			end
+		else
+	
+			for i,v in (lexer.scan(text)) do
+				local type= i
+				if doesvalueexist(type,symbols)  then-- makes the type "symbol" if it is a symbol
+					type="symbol"
+				end
+				table.insert(t,{Type=type,Source=v})
+				if settings.WaitIfRendered then
+					game:GetService("RunService").RenderStepped:Wait()
+				end
+			end
+	
+	
+	
+		end
+		return(t)
+	end
+	local GetTypeToMakeSyntax=function(s,t)
+		if type(s)=="string" then
+			if t=="var" then
+				local tokens=lexerscan(s)
+				local r=""
+				local variables=parse(tokens)
+				local s={}
+				for i,v in pairs(variables) do
+					s[v.Name]=v
+				end
+				for i,v in pairs(tokens) do
+					if s[v.Source] then
+						if tokens[i-1] then
+							if tokens[i-1].Source~="." then
+								r=r..v.Source
+							else
+								continue
+							end
+						else
+							r=r..v.Source
+						end
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			else
+				local tokens=lexerscan(s)
+				local r=""
+				for i,v in pairs(tokens) do
+					if v.Type==t then
+						r=r..v.Source
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			end
+		elseif type(s)=="table" then
+			if t=="var" then
+				local tokens=s
+				local r=""
+				local variables=parse(tokens)
+				local s={}
+				for i,v in pairs(variables) do
+					s[v.Name]=v
+				end
+				for i,v in pairs(tokens) do
+					if s[v.Source] then
+						if tokens[i-1] then
+							if tokens[i-1].Source~="." then
+								r=r..v.Source
+							else
+								continue
+							end
+						else
+							r=r..v.Source
+						end
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			else
+				local tokens=s
+				local r=""
+				for i,v in pairs(tokens) do
+					if v.Type==t then
+						r=r..v.Source
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			end
+		end
+	end
+	
+	local L_1_ = script.Parent.Source
+	local L_2_ = Vector2.new(0, 0)  
+	local L_3_Org = {      "getrawmetatable",       "game",       "workspace",       "script",       "math",       "string",       "table",       "print",       "wait",       "BrickColor",       "Color3",       "next",       "pairs",       "ipairs",       "select",       "unpack",       "Instance",       "Vector2",       "Vector3",       "CFrame",       "Ray",       "UDim2",       "Enum",       "assert",       "error",       "warn",       "tick",       "loadstring",       "_G",       "shared",       "getfenv",       "setfenv",       "newproxy",       "setmetatable",       "getmetatable",       "os",       "debug",       "pcall",       "ypcall",       "xpcall",       "rawequal",       "rawset",       "rawget",       "tonumber",       "tostring",       "type",       "typeof",       "_VERSION",       "coroutine",       "delay",       "require",       "spawn",       "LoadLibrary",       "settings",       "stats",       "time",       "UserSettings",       "version",       "Axes",       "ColorSequence",       "Faces",       "ColorSequenceKeypoint",       "NumberRange",       "NumberSequence",       "NumberSequenceKeypoint",       "gcinfo",       "elapsedTime",       "collectgarbage",       "PhysicalProperties",       "Rect",       "Region3",       "Region3int16",       "UDim",       "Vector2int16",       "Vector3int16" } 
+	local L_3_ = {      "getrawmetatable",       "game",       "workspace",       "script",       "math",       "string",       "table",       "print",       "wait",       "BrickColor",       "Color3",       "next",       "pairs",       "ipairs",       "select",       "unpack",       "Instance",       "Vector2",       "Vector3",       "CFrame",       "Ray",       "UDim2",       "Enum",       "assert",       "error",       "warn",       "tick",       "loadstring",       "_G",       "shared",       "getfenv",       "setfenv",       "newproxy",       "setmetatable",       "getmetatable",       "os",       "debug",       "pcall",       "ypcall",       "xpcall",       "rawequal",       "rawset",       "rawget",       "tonumber",       "tostring",       "type",       "typeof",       "_VERSION",       "coroutine",       "delay",       "require",       "spawn",       "LoadLibrary",       "settings",       "stats",       "time",       "UserSettings",       "version",       "Axes",       "ColorSequence",       "Faces",       "ColorSequenceKeypoint",       "NumberRange",       "NumberSequence",       "NumberSequenceKeypoint",       "gcinfo",       "elapsedTime",       "collectgarbage",       "PhysicalProperties",       "Rect",       "Region3",       "Region3int16",       "UDim",       "Vector2int16",       "Vector3int16" } 
+	local L_4_ = {       "and",       "break",       "do",       "else",       "elseif",       "end",       "false",       "for",       "function",       "goto",       "if",       "in",       "local",       "nil",       "not",       "or",       "repeat",       "return",       "then",       "true",       "until",       "while" } 
+	
+	local function L_5_func(L_49_arg1)       
+		local L_50_, L_51_ = L_49_arg1.CanvasSize.Y.Offset, L_49_arg1.AbsoluteWindowSize.Y       
+		local L_52_ = L_50_ - L_51_       
+		if L_52_ < 0 then             
+			L_52_ = 0
+		end       
+		local L_53_ = Vector2.new(L_49_arg1.CanvasPosition.X, L_52_)       
+		return L_53_ 
+	end 
+	local function ofodguisgfhjjksfghkgh(L_49_arg1)       
+		local L_50_, L_51_ = L_49_arg1.CanvasSize.X.Offset, L_49_arg1.AbsoluteWindowSize.X       
+		local L_52_ = L_50_ - L_51_       
+		if L_52_ < 0 then             
+			L_52_ = 0
+		end       
+		local L_53_ = Vector2.new(L_52_,L_49_arg1.CanvasPosition.Y)       
+		return L_53_ 
+	end 
+	local function GetLineSelected(s)
+		local text =  s.Text
+		local p = s.CursorPosition
+		local text2 = ""
+		for i = p,1,-1 do
+			local c = text:sub(i,i)
+			if c == "\n" then
+				break
+			else
+				text2 = text2 .. c
+			end
+		end
+	
+		return (text2:reverse())
+	end
+	
+	wait(.2) 
+	local L_6_ = 20 
+	L_1_:GetPropertyChangedSignal("Text"):Connect(function()
+		if settings.Highlight then
+			local L_54_ = L_1_.Comments_       
+			local L_56_ = L_1_.Tokens_       
+			local L_57_ = L_1_.Numbers_       
+			local L_58_ = L_1_.Strings_             
+			local L_61_ = L_1_.Keywords_       
+			local L_62_ = L_1_.Globals_  
+			local L_90_ = L_1_.Vars_  
+			if settings.LoadLexer then
+				local tokens= lexerscan(L_1_.Text) 
+				L_54_.Text=GetTypeToMakeSyntax(tokens,"comment")
+	
+				L_58_.Text=GetTypeToMakeSyntax(tokens,"string")
+	
+				L_57_.Text=GetTypeToMakeSyntax(tokens,"number")
+	
+				L_62_.Text=GetTypeToMakeSyntax(tokens,"builtin")
+	
+				L_56_.Text=GetTypeToMakeSyntax(tokens,"symbol")
+	
+				L_61_.Text=GetTypeToMakeSyntax(tokens,"keyword")
+	
+				if settings.HighlightVariables then
+					L_90_.Text=GetTypeToMakeSyntax(tokens,"var")
+				end
+	
+			else
+				spawn(function()
+					L_54_.Text=GetTypeToMakeSyntax(L_1_.Text,"comment")
+				end)
+				spawn(function()
+					L_58_.Text=GetTypeToMakeSyntax(L_1_.Text,"string")
+				end)
+				spawn(function()
+					L_57_.Text=GetTypeToMakeSyntax(L_1_.Text,"number")
+				end)
+				spawn(function()
+					L_62_.Text=GetTypeToMakeSyntax(L_1_.Text,"builtin")
+				end)
+				spawn(function()
+					L_56_.Text=GetTypeToMakeSyntax(L_1_.Text,"symbol")
+				end)
+				spawn(function()
+					L_61_.Text=GetTypeToMakeSyntax(L_1_.Text,"keyword")
+				end)
+				spawn(function()
+					if settings.HighlightVariables then
+						L_90_.Text=GetTypeToMakeSyntax(L_1_.Text,"var")
+					end
+				end)
+	
+			end
+		end
+		local L_63_ = 1    
+		if settings.Scroll then
+			local X = L_1_.TextBounds.X
+			L_1_.Parent.CanvasSize = (UDim2.new(0, L_1_.TextBounds.X + 55 + 5, 0, L_1_.TextBounds.Y))   
+		end
+		if settings.Lines then
+			L_1_.Text:gsub('\n', function()             
+				L_63_ = L_63_ + 1       end)      
+			L_1_.Parent.Parent.Lines.Text = ""       
+			for L_64_forvar1 = 1, L_63_ do             
+				L_1_.Parent.Parent.Lines.Text = L_1_.Parent.Parent.Lines.Text..L_64_forvar1.."\n"       
+			end       
+		end
+		if settings.Scroll then
+			spawn(function()
+				if L_1_.Parent.CanvasPosition.X == L_2_.X then
+					L_1_.Parent.CanvasPosition = ofodguisgfhjjksfghkgh(L_1_.Parent)  
+				else             
+					L_2_ = ofodguisgfhjjksfghkgh(L_1_.Parent)   
+				end 
+			end)
+			wait()
+			if L_1_.Text:sub(#L_1_.Text,#L_1_.Text) == "\n" then
+				L_1_.Parent.CanvasPosition = Vector2.new()
+			end
+	
+			if L_1_.Parent.CanvasPosition.Y == L_2_.Y then
+				L_1_.Parent.CanvasPosition = L_5_func(L_1_.Parent)       
+			else             
+				L_2_ = L_5_func(L_1_.Parent)       
+			end 
+		end
+	
+	
+	
+	end) 
+	if settings.Scroll then
+		L_1_.MouseWheelBackward:Connect(function(L_65_arg1, L_66_arg2)       
+			wait(.1)      
+			game.TweenService:Create(L_1_.Parent, TweenInfo.new(.5, Enum.EasingStyle.Quint), {CanvasPosition = L_1_.Parent.CanvasPosition + Vector2.new(0, L_6_)}):Play()
+			L_6_ = L_6_ + 5       
+			wait(1)       
+			L_6_ = L_6_ - 5 	
+		end) 
+		L_1_.MouseWheelForward:Connect(function(L_67_arg1, L_68_arg2)    
+			wait(.1)      
+			game.TweenService:Create(L_1_.Parent, TweenInfo.new(.5, Enum.EasingStyle.Quint), {CanvasPosition = L_1_.Parent.CanvasPosition + Vector2.new(0,-L_6_)}):Play()
+			L_6_ = L_6_ + 5       
+			wait(1)       
+			L_6_ = L_6_ - 5 
+		end)
+	end
+	if settings.Lines then
+		L_1_.Parent.Parent.Lines.Text.Visible = true
+		L_1_.Parent.Parent.Lines.Text.Position = UDim2.new(0, 0,0, 0)
+		L_1_.Position = UDim2.new(0,30,0,0)
+	else
+		L_1_.Position = UDim2.new()
+	end
+	if settings.AutomaticSettingChange== true then
+		
+		spawn(function()
+			pcall(function()
+				while wait(10) do
+					settings.Highlight=true
+					if Fps>50 then
+						settings.SplitScanLines=false
+						settings.LoadLexer=false
+						settings.WaitIfRendered=false
+						
+					elseif Fps<60 and Fps>40 then
+						settings.SplitScanLines=false
+						settings.LoadLexer=true
+						settings.WaitIfRendered=true
+						settings.HighlightVariables=false
+						
+					elseif Fps<35 then
+						settings.SplitScanLines=true
+						settings.LoadLexer=true
+						settings.WaitIfRendered=true
+						settings.HighlightVariables=false
+						
+					elseif Fps>10 then
+						settings.Highlight=false
+					end
+				end
+			end)
+		end)
+	end
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.ce2e4);
+	local textbox = script.Parent.Parent.ScrollingFrame.TextBox.Source
+	local btn = script.Parent
+	
+	btn.MouseButton1Down:Connect(function()
+		--Insert Execute Code Here
+		assert(loadstring(textbox.Text))() -- change to what u need it to be 
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.h44ad4829hh05hb69h1h);
+	local textbox = script.Parent.Parent.ScrollingFrame.TextBox.Source
+	local btn = script.Parent
+	
+	btn.MouseButton1Down:Connect(function()
+		textbox.Text = ""
+	end)
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.d170aa95g8129dd6d5b26);
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	
+end)();
+
+coroutine.wrap(function()
+	local script = Instance.new("LocalScript", fg19gc2fh0fhg39.bha9f468ecdee5a1gfhb63c05c4);
+	local main = script.Parent.Parent
+	local main2 = script.Parent.Parent.Parent.Overlay
+	local par = script.Parent
+	
+	par.MouseButton1Down:Connect(function()
+		main:TweenPosition(
+			UDim2.new(0.327, 0,0.982, 10),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Sine,
+			0.2,
+			false
+		)
+		main2:TweenPosition(
+			UDim2.new(-0.001, 0,0, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Sine,
+			0.3,
+			false
+		)
+	end)
+end)();
