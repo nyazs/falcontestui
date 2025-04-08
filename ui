@@ -286,7 +286,7 @@ TR["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 TR["23"]["Size"] = UDim2.new(0, 144, 0, 21);
 TR["23"]["Name"] = [[Open]];
 TR["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["23"]["Text"] = [[Open Gui]];
+TR["23"]["Text"] = [[Open]];
 TR["23"]["BackgroundTransparency"] = 1;
 
 
