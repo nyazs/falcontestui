@@ -1,122 +1,928 @@
-local MobileBlox = Instance.new('ScreenGui')
-local Main = Instance.new('Frame')
-local TextBox = Instance.new('TextBox')
-local Clear = Instance.new('TextButton')
-local Execute = Instance.new('TextButton')
+local FALCONUIIII = Instance.new("ScreenGui")
+FALCONUIIII.Name = "FALCONUIIII"
+FALCONUIIII.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+FALCONUIIII.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
---Properties:
+local Frame = Instance.new("Frame")
+Frame.Name = "Frame"
+Frame.Position = UDim2.new(0.0569953, 0, 0.0334838, 0)
+Frame.Size = UDim2.new(0.808917, 0, 0.932182, 0)
+Frame.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Frame.BorderSizePixel = 0
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.Parent = FALCONUIIII
 
-MobileBlox.Name = "MobileBloxAgain"
-MobileBlox.Parent = game:WaitForChild("CoreGui")
+local SideBar = Instance.new("Frame")
+SideBar.Name = "SideBar"
+SideBar.Size = UDim2.new(0.23816, 0, 1, 0)
+SideBar.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+SideBar.BackgroundTransparency = 1
+SideBar.BorderSizePixel = 0
+SideBar.BorderColor3 = Color3.new(0, 0, 0)
+SideBar.Transparency = 1
+SideBar.Parent = Frame
 
-Main.Name = "Main"
-Main.Parent = MobileBlox
-Main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Main.Position = UDim2.new(0.318584085, 0, 0.197959185, 0)
-Main.Size = UDim2.new(0, 492, 0, 282)
+local Line = Instance.new("Frame")
+Line.Name = "Line"
+Line.Position = UDim2.new(1, 0, 0, 0)
+Line.Size = UDim2.new(0.0068817, 0, 1, 0)
+Line.BackgroundColor3 = Color3.new(1, 1, 1)
+Line.BackgroundTransparency = 0.8999999761581421
+Line.BorderSizePixel = 0
+Line.BorderColor3 = Color3.new(0, 0, 0)
+Line.Transparency = 0.8999999761581421
+Line.Parent = SideBar
 
-TextBox.Parent = Main
-TextBox.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-TextBox.Position = UDim2.new(0.0375582054, 0, 0.0874655992, 0)
-TextBox.Size = UDim2.new(0, 450, 0, 195)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.Ubuntu
-TextBox.MultiLine = true
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(186, 186, 186)
-TextBox.TextSize = 14.000
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
+local Frame2 = Instance.new("Frame")
+Frame2.Name = "Frame"
+Frame2.Size = UDim2.new(1.00688, 0, 0.0873017, 0)
+Frame2.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame2.BackgroundTransparency = 0.9990000128746033
+Frame2.BorderSizePixel = 0
+Frame2.BorderColor3 = Color3.new(0, 0, 0)
+Frame2.Transparency = 0.9990000128746033
+Frame2.Parent = SideBar
 
-Clear.Name = "Clear"
-Clear.Parent = Main
-Clear.BackgroundColor3 = Color3.fromRGB(144, 0, 0)
-Clear.Position = UDim2.new(0.544715464, 0, 0.822695017, 0)
-Clear.Size = UDim2.new(0, 200, 0, 50)
-Clear.Font = Enum.Font.SourceSans
-Clear.Text = "Clear"
-Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
-Clear.TextScaled = true
-Clear.TextSize = 14.000
-Clear.TextWrapped = true
+local Line2 = Instance.new("Frame")
+Line2.Name = "Line"
+Line2.Position = UDim2.new(0, 0, 1, 0)
+Line2.Size = UDim2.new(0.993165, 0, 0.03, 0)
+Line2.BackgroundColor3 = Color3.new(1, 1, 1)
+Line2.BackgroundTransparency = 0.8999999761581421
+Line2.BorderSizePixel = 0
+Line2.BorderColor3 = Color3.new(0, 0, 0)
+Line2.Transparency = 0.8999999761581421
+Line2.Parent = Frame2
 
-Execute.Name = "Execute"
-Execute.Parent = Main
-Execute.BackgroundColor3 = Color3.fromRGB(63, 190, 93)
-Execute.Position = UDim2.new(0.0365853645, 0, 0.822695017, 0)
-Execute.Size = UDim2.new(0, 200, 0, 50)
-Execute.Font = Enum.Font.SourceSans
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
-Execute.TextScaled = true
-Execute.TextSize = 14.000
-Execute.TextWrapped = true
+local ImageLabel = Instance.new("ImageLabel")
+ImageLabel.Name = "ImageLabel"
+ImageLabel.Position = UDim2.new(0.0978331, 0, 0.195395, 0)
+ImageLabel.Size = UDim2.new(0.142976, 0, 0.601555, 0)
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderSizePixel = 0
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.Transparency = 1
+ImageLabel.Image = "rbxassetid://95230561681172"
+ImageLabel.ScaleType = Enum.ScaleType.Fit
+ImageLabel.Parent = Frame2
 
--- Scripts:
+local Frame3 = Instance.new("Frame")
+Frame3.Name = "Frame"
+Frame3.Position = UDim2.new(0.578889, 0, 0.254579, 0)
+Frame3.Size = UDim2.new(0.342018, 0, 0.480834, 0)
+Frame3.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame3.BackgroundTransparency = 1
+Frame3.BorderSizePixel = 0
+Frame3.BorderColor3 = Color3.new(0, 0, 0)
+Frame3.Transparency = 1
+Frame3.Parent = Frame2
 
-local function BGWS_fake_script() -- Main.DragScript
-    local script = Instance.new('LocalScript', Main)
+local Frame4 = Instance.new("Frame")
+Frame4.Name = "Frame"
+Frame4.Position = UDim2.new(0.412563, 0, 0.157554, 0)
+Frame4.Size = UDim2.new(0.227767, 0, 0.682852, 0)
+Frame4.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame4.BackgroundTransparency = 0.20000000298023224
+Frame4.BorderSizePixel = 0
+Frame4.BorderColor3 = Color3.new(0, 0, 0)
+Frame4.Transparency = 0.20000000298023224
+Frame4.Parent = Frame3
 
-    --Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-    --Put this inside of your Frame and configure the speed if you would like.
-    --Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+local UICorner = Instance.new("UICorner")
+UICorner.Name = "UICorner"
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = Frame4
 
-    local UIS = game:GetService('UserInputService')
-    local frame = script.Parent
-    local dragToggle = nil
-    local dragSpeed = 0.25
-    local dragStart = nil
-    local startPos = nil
+local UIGradient = Instance.new("UIGradient")
+UIGradient.Name = "UIGradient"
+UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.172549, 0.172549, 0.172549)), ColorSequenceKeypoint.new(0.152249, Color3.new(0.164706, 0.137255, 0.137255)), ColorSequenceKeypoint.new(0.221453, Color3.new(0.232893, 0.207683, 0.207683)), ColorSequenceKeypoint.new(1, Color3.new(0.403922, 0.337255, 0.337255))})
+UIGradient.Parent = Frame4
 
-    local function updateInput(input)
-        local delta = input.Position - dragStart
-        local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-    end
+local Frame5 = Instance.new("Frame")
+Frame5.Name = "Frame"
+Frame5.Position = UDim2.new(0.761654, 0, 0.157554, 0)
+Frame5.Size = UDim2.new(0.227767, 0, 0.682852, 0)
+Frame5.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame5.BackgroundTransparency = 0.4000000059604645
+Frame5.BorderSizePixel = 0
+Frame5.BorderColor3 = Color3.new(0, 0, 0)
+Frame5.Transparency = 0.4000000059604645
+Frame5.Parent = Frame3
 
-    frame.InputBegan:Connect(function(input)
-        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
-            dragToggle = true
-            dragStart = input.Position
-            startPos = frame.Position
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragToggle = false
-                end
-            end)
-        end
-    end)
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Name = "UICorner"
+UICorner2.CornerRadius = UDim.new(1, 0)
+UICorner2.Parent = Frame5
 
-    UIS.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-            if dragToggle then
-                updateInput(input)
-            end
-        end
-    end)
+local UIGradient2 = Instance.new("UIGradient")
+UIGradient2.Name = "UIGradient"
+UIGradient2.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.172549, 0.172549, 0.172549)), ColorSequenceKeypoint.new(0.152249, Color3.new(0.164706, 0.137255, 0.137255)), ColorSequenceKeypoint.new(0.221453, Color3.new(0.232893, 0.207683, 0.207683)), ColorSequenceKeypoint.new(1, Color3.new(0.403922, 0.337255, 0.337255))})
+UIGradient2.Parent = Frame5
 
-end
-coroutine.wrap(BGWS_fake_script)()
-local function NBUT_fake_script() -- Clear.LocalScript
-    local script = Instance.new('LocalScript', Clear)
+local Frame6 = Instance.new("Frame")
+Frame6.Name = "Frame"
+Frame6.Position = UDim2.new(0.0634712, 0, 0.157554, 0)
+Frame6.Size = UDim2.new(0.227767, 0, 0.682852, 0)
+Frame6.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame6.BorderSizePixel = 0
+Frame6.BorderColor3 = Color3.new(0, 0, 0)
+Frame6.Parent = Frame3
 
-    local box = script.Parent.Parent.TextBox
-    local btn = script.Parent
+local UICorner3 = Instance.new("UICorner")
+UICorner3.Name = "UICorner"
+UICorner3.CornerRadius = UDim.new(1, 0)
+UICorner3.Parent = Frame6
 
-    btn.MouseButton1Click:Connect(function()
-        box.Text = "";
-    end)
-end
-coroutine.wrap(NBUT_fake_script)()
-local function OBDPHLQ_fake_script() -- Execute.LocalScript
-    local script = Instance.new('LocalScript', Execute)
+local UIGradient3 = Instance.new("UIGradient")
+UIGradient3.Name = "UIGradient"
+UIGradient3.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.117647, 0.121569, 0.121569)), ColorSequenceKeypoint.new(1, Color3.new(0.121569, 0.121569, 0.121569))})
+UIGradient3.Parent = Frame6
 
-    local box = script.Parent.Parent.TextBox
-    local btn = script.Parent
+local Frame7 = Instance.new("Frame")
+Frame7.Name = "Frame"
+Frame7.Position = UDim2.new(-2.22033e-07, 0, 0.0899207, 0)
+Frame7.Size = UDim2.new(1, 0, 0.13259, 0)
+Frame7.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame7.BackgroundTransparency = 1
+Frame7.BorderSizePixel = 0
+Frame7.BorderColor3 = Color3.new(0, 0, 0)
+Frame7.Transparency = 1
+Frame7.Parent = SideBar
 
-    btn.MouseButton1Click:Connect(function()
-        loadstring(box.Text)()
-    end)
-end
-coroutine.wrap(OBDPHLQ_fake_script)()
+local Line3 = Instance.new("Frame")
+Line3.Name = "Line"
+Line3.Position = UDim2.new(0, 0, 1, 0)
+Line3.Size = UDim2.new(1, 0, 0.02, 0)
+Line3.BackgroundColor3 = Color3.new(1, 1, 1)
+Line3.BackgroundTransparency = 0.8999999761581421
+Line3.BorderSizePixel = 0
+Line3.BorderColor3 = Color3.new(0, 0, 0)
+Line3.Transparency = 0.8999999761581421
+Line3.Parent = Frame7
+
+local TextButton = Instance.new("TextButton")
+TextButton.Name = "TextButton"
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 0.9990000128746033
+TextButton.BorderSizePixel = 0
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.Transparency = 0.9990000128746033
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 14
+TextButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextButton.Parent = Frame7
+
+local Frame8 = Instance.new("Frame")
+Frame8.Name = "Frame"
+Frame8.Position = UDim2.new(0.0771708, 0, 0.215568, 0)
+Frame8.Size = UDim2.new(0.854097, 0, 0.568864, 0)
+Frame8.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame8.BackgroundTransparency = 1
+Frame8.BorderSizePixel = 0
+Frame8.BorderColor3 = Color3.new(0, 0, 0)
+Frame8.Transparency = 1
+Frame8.Parent = TextButton
+
+local UICorner4 = Instance.new("UICorner")
+UICorner4.Name = "UICorner"
+UICorner4.CornerRadius = UDim.new(0.32, 0)
+UICorner4.Parent = Frame8
+
+local ImageLabel2 = Instance.new("ImageLabel")
+ImageLabel2.Name = "ImageLabel"
+ImageLabel2.Position = UDim2.new(0.0817483, 0, 0.341051, 0)
+ImageLabel2.Size = UDim2.new(0.0707714, 0, 0.312777, 0)
+ImageLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel2.BackgroundTransparency = 1
+ImageLabel2.BorderSizePixel = 0
+ImageLabel2.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel2.Transparency = 1
+ImageLabel2.Image = "http://www.roblox.com/asset/?id=109912467007272"
+ImageLabel2.ImageTransparency = 0.800000011920929
+ImageLabel2.ScaleType = Enum.ScaleType.Fit
+ImageLabel2.Parent = Frame8
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TextLabel"
+TextLabel.Position = UDim2.new(0.197917, 0, 0.341052, 0)
+TextLabel.Size = UDim2.new(0.27062, 0, 0.312777, 0)
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.Transparency = 1
+TextLabel.Text = "Themes"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 14
+TextLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+TextLabel.TextScaled = true
+TextLabel.TextWrapped = true
+TextLabel.Parent = Frame8
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Name = "UIStroke"
+UIStroke.Color = Color3.new(1, 1, 1)
+UIStroke.Thickness = 1.600000023841858
+UIStroke.Transparency = 0.8999999761581421
+UIStroke.Parent = Frame8
+
+local Frame9 = Instance.new("Frame")
+Frame9.Name = "Frame"
+Frame9.Position = UDim2.new(-0.0036378, 0, 0.866402, 0)
+Frame9.Size = UDim2.new(1.00364, 0, 0.132275, 0)
+Frame9.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame9.BackgroundTransparency = 0.9990000128746033
+Frame9.BorderSizePixel = 0
+Frame9.BorderColor3 = Color3.new(0, 0, 0)
+Frame9.Transparency = 0.9990000128746033
+Frame9.Parent = SideBar
+
+local Line4 = Instance.new("Frame")
+Line4.Name = "Line"
+Line4.Position = UDim2.new(0, 1, 0, -2)
+Line4.Size = UDim2.new(0.996, 0, 0.02, 0)
+Line4.BackgroundColor3 = Color3.new(1, 1, 1)
+Line4.BackgroundTransparency = 0.8999999761581421
+Line4.BorderSizePixel = 0
+Line4.BorderColor3 = Color3.new(0, 0, 0)
+Line4.Transparency = 0.8999999761581421
+Line4.Parent = Frame9
+
+local Frame10 = Instance.new("Frame")
+Frame10.Name = "Frame"
+Frame10.Position = UDim2.new(0.0724922, 0, 0.2, 0)
+Frame10.Size = UDim2.new(0.855016, 0, 0.6, 0)
+Frame10.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame10.BackgroundTransparency = 0.9990000128746033
+Frame10.BorderSizePixel = 0
+Frame10.BorderColor3 = Color3.new(0, 0, 0)
+Frame10.Transparency = 0.9990000128746033
+Frame10.Parent = Frame9
+
+local UICorner5 = Instance.new("UICorner")
+UICorner5.Name = "UICorner"
+UICorner5.CornerRadius = UDim.new(0.28, 0)
+UICorner5.Parent = Frame10
+
+local UIStroke2 = Instance.new("UIStroke")
+UIStroke2.Name = "UIStroke"
+UIStroke2.Color = Color3.new(1, 1, 1)
+UIStroke2.Thickness = 1.600000023841858
+UIStroke2.Transparency = 0.8999999761581421
+UIStroke2.Parent = Frame10
+
+local UIGradient4 = Instance.new("UIGradient")
+UIGradient4.Name = "UIGradient"
+UIGradient4.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.172549, 0.172549, 0.172549)), ColorSequenceKeypoint.new(0.152249, Color3.new(0.164706, 0.137255, 0.137255)), ColorSequenceKeypoint.new(0.221453, Color3.new(0.232893, 0.207683, 0.207683)), ColorSequenceKeypoint.new(1, Color3.new(0.403922, 0.337255, 0.337255))})
+UIGradient4.Parent = UIStroke2
+
+local ImageLabel3 = Instance.new("ImageLabel")
+ImageLabel3.Name = "ImageLabel"
+ImageLabel3.Position = UDim2.new(0.0381531, 0, 0.165202, 0)
+ImageLabel3.Size = UDim2.new(0.172, 0, 0.668, 0)
+ImageLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel3.BackgroundTransparency = 0.8999999761581421
+ImageLabel3.BorderSizePixel = 0
+ImageLabel3.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel3.Transparency = 0.8999999761581421
+ImageLabel3.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+ImageLabel3.ScaleType = Enum.ScaleType.Fit
+ImageLabel3.Parent = Frame10
+
+local UICorner6 = Instance.new("UICorner")
+UICorner6.Name = "UICorner"
+UICorner6.CornerRadius = UDim.new(0.28, 0)
+UICorner6.Parent = ImageLabel3
+
+local TextLabel2 = Instance.new("TextLabel")
+TextLabel2.Name = "TextLabel"
+TextLabel2.Position = UDim2.new(0.256982, 0, 0.165202, 0)
+TextLabel2.Size = UDim2.new(0.705, 0, 0.319, 0)
+TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.BorderSizePixel = 0
+TextLabel2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel2.Transparency = 1
+TextLabel2.Text = "User"
+TextLabel2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel2.TextSize = 14
+TextLabel2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel2.TextScaled = true
+TextLabel2.TextWrapped = true
+TextLabel2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel2.Parent = Frame10
+
+local ImageLabel4 = Instance.new("ImageLabel")
+ImageLabel4.Name = "ImageLabel"
+ImageLabel4.Size = UDim2.new(0.0354359, 0, 0.0616523, 0)
+ImageLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel4.BackgroundTransparency = 1
+ImageLabel4.BorderSizePixel = 0
+ImageLabel4.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel4.Transparency = 1
+ImageLabel4.Image = "rbxassetid://10734920149"
+ImageLabel4.Parent = TextLabel2
+
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+UIAspectRatioConstraint.Name = "UIAspectRatioConstraint"
+
+UIAspectRatioConstraint.Parent = ImageLabel4
+
+local TextLabel3 = Instance.new("TextLabel")
+TextLabel3.Name = "TextLabel"
+TextLabel3.Position = UDim2.new(0.256982, 0, 0.484202, 0)
+TextLabel3.Size = UDim2.new(0.704528, 0, 0.332464, 0)
+TextLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel3.BackgroundTransparency = 1
+TextLabel3.BorderSizePixel = 0
+TextLabel3.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel3.Transparency = 1
+TextLabel3.Text = "@User"
+TextLabel3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel3.TextSize = 14
+TextLabel3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel3.TextScaled = true
+TextLabel3.TextWrapped = true
+TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel3.Parent = Frame10
+
+local ButtonFrame = Instance.new("Frame")
+ButtonFrame.Name = "ButtonFrame"
+ButtonFrame.Position = UDim2.new(-5.60537e-08, 0, 0.224868, 0)
+ButtonFrame.Size = UDim2.new(0.999659, 0, 0.638889, 0)
+ButtonFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+ButtonFrame.BackgroundTransparency = 0.9990000128746033
+ButtonFrame.BorderSizePixel = 0
+ButtonFrame.BorderColor3 = Color3.new(0, 0, 0)
+ButtonFrame.Transparency = 0.9990000128746033
+ButtonFrame.Parent = SideBar
+
+local TextButton2 = Instance.new("TextButton")
+TextButton2.Name = "TextButton"
+TextButton2.Position = UDim2.new(-0.00367501, 0, 3.15917e-08, 0)
+TextButton2.Size = UDim2.new(1, 0, 0.192087, 0)
+TextButton2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton2.BackgroundTransparency = 0.9990000128746033
+TextButton2.BorderSizePixel = 0
+TextButton2.BorderColor3 = Color3.new(0, 0, 0)
+TextButton2.Transparency = 0.9990000128746033
+TextButton2.Text = ""
+TextButton2.TextColor3 = Color3.new(0, 0, 0)
+TextButton2.TextSize = 14
+TextButton2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextButton2.Parent = ButtonFrame
+
+local Frame11 = Instance.new("Frame")
+Frame11.Name = "Frame"
+Frame11.Position = UDim2.new(0.0771708, 0, 0.215568, 0)
+Frame11.Size = UDim2.new(0.854097, 0, 0.568864, 0)
+Frame11.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame11.BackgroundTransparency = 1
+Frame11.BorderSizePixel = 0
+Frame11.BorderColor3 = Color3.new(0, 0, 0)
+Frame11.Transparency = 1
+Frame11.Parent = TextButton2
+
+local UICorner7 = Instance.new("UICorner")
+UICorner7.Name = "UICorner"
+UICorner7.CornerRadius = UDim.new(0.32, 0)
+UICorner7.Parent = Frame11
+
+local ImageLabel5 = Instance.new("ImageLabel")
+ImageLabel5.Name = "ImageLabel"
+ImageLabel5.Position = UDim2.new(0.0817483, 0, 0.341051, 0)
+ImageLabel5.Size = UDim2.new(0.0707714, 0, 0.312777, 0)
+ImageLabel5.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel5.BackgroundTransparency = 1
+ImageLabel5.BorderSizePixel = 0
+ImageLabel5.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel5.Transparency = 1
+ImageLabel5.Image = "http://www.roblox.com/asset/?id=126027180680298"
+ImageLabel5.ScaleType = Enum.ScaleType.Fit
+ImageLabel5.Parent = Frame11
+
+local TextLabel4 = Instance.new("TextLabel")
+TextLabel4.Name = "TextLabel"
+TextLabel4.Position = UDim2.new(0.197917, 0, 0.341052, 0)
+TextLabel4.Size = UDim2.new(0.27062, 0, 0.312777, 0)
+TextLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel4.BackgroundTransparency = 1
+TextLabel4.BorderSizePixel = 0
+TextLabel4.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel4.Transparency = 1
+TextLabel4.Text = "Home"
+TextLabel4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel4.TextSize = 14
+TextLabel4.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+TextLabel4.TextScaled = true
+TextLabel4.TextWrapped = true
+TextLabel4.Parent = Frame11
+
+local UIStroke3 = Instance.new("UIStroke")
+UIStroke3.Name = "UIStroke"
+UIStroke3.Color = Color3.new(1, 1, 1)
+UIStroke3.Thickness = 1.600000023841858
+UIStroke3.Transparency = 0.8999999761581421
+UIStroke3.Parent = Frame11
+
+local TextButton3 = Instance.new("TextButton")
+TextButton3.Name = "TextButton"
+TextButton3.Position = UDim2.new(-0.00367502, 0, 0.174475, 0)
+TextButton3.Size = UDim2.new(1, 0, 0.192087, 0)
+TextButton3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton3.BackgroundTransparency = 0.9990000128746033
+TextButton3.BorderSizePixel = 0
+TextButton3.BorderColor3 = Color3.new(0, 0, 0)
+TextButton3.Transparency = 0.9990000128746033
+TextButton3.Text = ""
+TextButton3.TextColor3 = Color3.new(0, 0, 0)
+TextButton3.TextSize = 14
+TextButton3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextButton3.Parent = ButtonFrame
+
+local Frame12 = Instance.new("Frame")
+Frame12.Name = "Frame"
+Frame12.Position = UDim2.new(0.0771708, 0, 0.215568, 0)
+Frame12.Size = UDim2.new(0.854097, 0, 0.568864, 0)
+Frame12.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame12.BackgroundTransparency = 1
+Frame12.BorderSizePixel = 0
+Frame12.BorderColor3 = Color3.new(0, 0, 0)
+Frame12.Transparency = 1
+Frame12.Parent = TextButton3
+
+local UICorner8 = Instance.new("UICorner")
+UICorner8.Name = "UICorner"
+UICorner8.CornerRadius = UDim.new(0.32, 0)
+UICorner8.Parent = Frame12
+
+local UIStroke4 = Instance.new("UIStroke")
+UIStroke4.Name = "UIStroke"
+UIStroke4.Color = Color3.new(1, 1, 1)
+UIStroke4.Thickness = 2
+UIStroke4.Transparency = 1
+UIStroke4.Parent = Frame12
+
+local ImageLabel6 = Instance.new("ImageLabel")
+ImageLabel6.Name = "ImageLabel"
+ImageLabel6.Position = UDim2.new(0.0817483, 0, 0.341051, 0)
+ImageLabel6.Size = UDim2.new(0.0707714, 0, 0.312777, 0)
+ImageLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel6.BackgroundTransparency = 1
+ImageLabel6.BorderSizePixel = 0
+ImageLabel6.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel6.Transparency = 1
+ImageLabel6.Image = "http://www.roblox.com/asset/?id=118754401400599"
+ImageLabel6.ImageTransparency = 0.800000011920929
+ImageLabel6.ScaleType = Enum.ScaleType.Fit
+ImageLabel6.Parent = Frame12
+
+local TextLabel5 = Instance.new("TextLabel")
+TextLabel5.Name = "TextLabel"
+TextLabel5.Position = UDim2.new(0.197917, 0, 0.341052, 0)
+TextLabel5.Size = UDim2.new(0.27062, 0, 0.312777, 0)
+TextLabel5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel5.BackgroundTransparency = 1
+TextLabel5.BorderSizePixel = 0
+TextLabel5.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel5.Transparency = 1
+TextLabel5.Text = "Editor"
+TextLabel5.TextColor3 = Color3.new(1, 1, 1)
+TextLabel5.TextSize = 14
+TextLabel5.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+TextLabel5.TextScaled = true
+TextLabel5.TextWrapped = true
+TextLabel5.Parent = Frame12
+
+local TextButton4 = Instance.new("TextButton")
+TextButton4.Name = "TextButton"
+TextButton4.Position = UDim2.new(0.00615302, 0, 0.333942, 0)
+TextButton4.Size = UDim2.new(1, 0, 0.192087, 0)
+TextButton4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton4.BackgroundTransparency = 0.9990000128746033
+TextButton4.BorderSizePixel = 0
+TextButton4.BorderColor3 = Color3.new(0, 0, 0)
+TextButton4.Transparency = 0.9990000128746033
+TextButton4.Text = ""
+TextButton4.TextColor3 = Color3.new(0, 0, 0)
+TextButton4.TextSize = 14
+TextButton4.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextButton4.Parent = ButtonFrame
+
+local Frame13 = Instance.new("Frame")
+Frame13.Name = "Frame"
+Frame13.Position = UDim2.new(0.0706188, 0, 0.215568, 0)
+Frame13.Size = UDim2.new(0.854097, 0, 0.568864, 0)
+Frame13.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame13.BackgroundTransparency = 1
+Frame13.BorderSizePixel = 0
+Frame13.BorderColor3 = Color3.new(0, 0, 0)
+Frame13.Transparency = 1
+Frame13.Parent = TextButton4
+
+local UICorner9 = Instance.new("UICorner")
+UICorner9.Name = "UICorner"
+UICorner9.CornerRadius = UDim.new(0.32, 0)
+UICorner9.Parent = Frame13
+
+local UIStroke5 = Instance.new("UIStroke")
+UIStroke5.Name = "UIStroke"
+UIStroke5.Color = Color3.new(1, 1, 1)
+UIStroke5.Thickness = 2
+UIStroke5.Transparency = 1
+UIStroke5.Parent = Frame13
+
+local ImageLabel7 = Instance.new("ImageLabel")
+ImageLabel7.Name = "ImageLabel"
+ImageLabel7.Position = UDim2.new(0.0817483, 0, 0.341051, 0)
+ImageLabel7.Size = UDim2.new(0.0707714, 0, 0.312777, 0)
+ImageLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel7.BackgroundTransparency = 1
+ImageLabel7.BorderSizePixel = 0
+ImageLabel7.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel7.Transparency = 1
+ImageLabel7.Image = "http://www.roblox.com/asset/?id=75681058216878"
+ImageLabel7.ImageTransparency = 0.800000011920929
+ImageLabel7.ScaleType = Enum.ScaleType.Fit
+ImageLabel7.Parent = Frame13
+
+local TextLabel6 = Instance.new("TextLabel")
+TextLabel6.Name = "TextLabel"
+TextLabel6.Position = UDim2.new(0.197917, 0, 0.341052, 0)
+TextLabel6.Size = UDim2.new(0.27062, 0, 0.312777, 0)
+TextLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel6.BackgroundTransparency = 1
+TextLabel6.BorderSizePixel = 0
+TextLabel6.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel6.Transparency = 1
+TextLabel6.Text = "Cloud"
+TextLabel6.TextColor3 = Color3.new(1, 1, 1)
+TextLabel6.TextSize = 14
+TextLabel6.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+TextLabel6.TextScaled = true
+TextLabel6.TextWrapped = true
+TextLabel6.Parent = Frame13
+
+local UICorner10 = Instance.new("UICorner")
+UICorner10.Name = "UICorner"
+UICorner10.CornerRadius = UDim.new(0.04, 0)
+UICorner10.Parent = Frame
+
+local Editor = Instance.new("Frame")
+Editor.Name = "Editor"
+Editor.Position = UDim2.new(0.239445, 0, 0.0899207, 0)
+Editor.Size = UDim2.new(0.760555, 0, 0.910079, 0)
+Editor.BackgroundColor3 = Color3.new(1, 1, 1)
+Editor.BackgroundTransparency = 1
+Editor.BorderSizePixel = 0
+Editor.BorderColor3 = Color3.new(0, 0, 0)
+Editor.Visible = false
+Editor.Transparency = 1
+Editor.Parent = Frame
+
+local UICorner11 = Instance.new("UICorner")
+UICorner11.Name = "UICorner"
+UICorner11.CornerRadius = UDim.new(0.04, 0)
+UICorner11.Parent = Editor
+
+local ScriptBar = Instance.new("Frame")
+ScriptBar.Name = "ScriptBar"
+ScriptBar.Position = UDim2.new(0.0245264, 0, 0.890092, 0)
+ScriptBar.Size = UDim2.new(0.159177, 0, 0.0703182, 0)
+ScriptBar.BackgroundColor3 = Color3.new(1, 1, 1)
+ScriptBar.BackgroundTransparency = 0.9990000128746033
+ScriptBar.BorderSizePixel = 0
+ScriptBar.BorderColor3 = Color3.new(0, 0, 0)
+ScriptBar.Transparency = 0.9990000128746033
+ScriptBar.Parent = Editor
+
+local UICorner12 = Instance.new("UICorner")
+UICorner12.Name = "UICorner"
+UICorner12.CornerRadius = UDim.new(1, 0)
+UICorner12.Parent = ScriptBar
+
+local UIStroke6 = Instance.new("UIStroke")
+UIStroke6.Name = "UIStroke"
+UIStroke6.Color = Color3.new(0.992157, 1, 1)
+UIStroke6.Thickness = 2
+UIStroke6.Transparency = 0.9300000071525574
+UIStroke6.Parent = ScriptBar
+
+local HomeButton = Instance.new("TextButton")
+HomeButton.Name = "HomeButton"
+HomeButton.Position = UDim2.new(0.0465842, 0, 0.157895, 0)
+HomeButton.Size = UDim2.new(0.26047, 0, 0.684211, 0)
+HomeButton.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeButton.BackgroundTransparency = 0.9300000071525574
+HomeButton.BorderSizePixel = 0
+HomeButton.BorderColor3 = Color3.new(0, 0, 0)
+HomeButton.Transparency = 0.9300000071525574
+HomeButton.Text = ""
+HomeButton.TextColor3 = Color3.new(0, 0, 0)
+HomeButton.TextSize = 14
+HomeButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+HomeButton.Parent = ScriptBar
+
+local UICorner13 = Instance.new("UICorner")
+UICorner13.Name = "UICorner"
+UICorner13.CornerRadius = UDim.new(1, 0)
+UICorner13.Parent = HomeButton
+
+local ImageLabel8 = Instance.new("ImageLabel")
+ImageLabel8.Name = "ImageLabel"
+ImageLabel8.Position = UDim2.new(0.261538, 0, 0.261538, 0)
+ImageLabel8.Size = UDim2.new(0.461538, 0, 0.461538, 0)
+ImageLabel8.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel8.BackgroundTransparency = 1
+ImageLabel8.BorderSizePixel = 0
+ImageLabel8.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel8.Rotation = 45
+ImageLabel8.Transparency = 1
+ImageLabel8.Image = "rbxassetid://87051512449816"
+ImageLabel8.ScaleType = Enum.ScaleType.Fit
+ImageLabel8.Parent = HomeButton
+
+local HomeButton2 = Instance.new("TextButton")
+HomeButton2.Name = "HomeButton"
+HomeButton2.Position = UDim2.new(0.676066, 0, 0.157895, 0)
+HomeButton2.Size = UDim2.new(0.26047, 0, 0.684211, 0)
+HomeButton2.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeButton2.BackgroundTransparency = 0.8299999833106995
+HomeButton2.BorderSizePixel = 0
+HomeButton2.BorderColor3 = Color3.new(0, 0, 0)
+HomeButton2.Transparency = 0.8299999833106995
+HomeButton2.Text = ""
+HomeButton2.TextColor3 = Color3.new(0, 0, 0)
+HomeButton2.TextSize = 14
+HomeButton2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+HomeButton2.Parent = ScriptBar
+
+local UICorner14 = Instance.new("UICorner")
+UICorner14.Name = "UICorner"
+UICorner14.CornerRadius = UDim.new(1, 0)
+UICorner14.Parent = HomeButton2
+
+local ImageLabel9 = Instance.new("ImageLabel")
+ImageLabel9.Name = "ImageLabel"
+ImageLabel9.Position = UDim2.new(0.261539, 0, 0.261538, 0)
+ImageLabel9.Size = UDim2.new(0.461538, 0, 0.461538, 0)
+ImageLabel9.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel9.BackgroundTransparency = 1
+ImageLabel9.BorderSizePixel = 0
+ImageLabel9.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel9.Rotation = 45
+ImageLabel9.Transparency = 1
+ImageLabel9.Image = "rbxassetid://95098412016066"
+ImageLabel9.ScaleType = Enum.ScaleType.Fit
+ImageLabel9.Parent = HomeButton2
+
+local HomeButton3 = Instance.new("TextButton")
+HomeButton3.Name = "HomeButton"
+HomeButton3.Position = UDim2.new(0.369293, 0, 0.157895, 0)
+HomeButton3.Size = UDim2.new(0.26047, 0, 0.684211, 0)
+HomeButton3.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeButton3.BackgroundTransparency = 0.9300000071525574
+HomeButton3.BorderSizePixel = 0
+HomeButton3.BorderColor3 = Color3.new(0, 0, 0)
+HomeButton3.Transparency = 0.9300000071525574
+HomeButton3.Text = ""
+HomeButton3.TextColor3 = Color3.new(0, 0, 0)
+HomeButton3.TextSize = 14
+HomeButton3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+HomeButton3.Parent = ScriptBar
+
+local UICorner15 = Instance.new("UICorner")
+UICorner15.Name = "UICorner"
+UICorner15.CornerRadius = UDim.new(1, 0)
+UICorner15.Parent = HomeButton3
+
+local ImageLabel10 = Instance.new("ImageLabel")
+ImageLabel10.Name = "ImageLabel"
+ImageLabel10.Position = UDim2.new(0.261538, 0, 0.261538, 0)
+ImageLabel10.Size = UDim2.new(0.461538, 0, 0.461538, 0)
+ImageLabel10.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel10.BackgroundTransparency = 1
+ImageLabel10.BorderSizePixel = 0
+ImageLabel10.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel10.Transparency = 1
+ImageLabel10.Image = "rbxassetid://134345224453830"
+ImageLabel10.ScaleType = Enum.ScaleType.Fit
+ImageLabel10.Parent = HomeButton3
+
+local ScrollingFrame = Instance.new("ScrollingFrame")
+ScrollingFrame.Name = "ScrollingFrame"
+ScrollingFrame.Size = UDim2.new(0, 959, 0, 680)
+ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+ScrollingFrame.BackgroundTransparency = 1
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.ZIndex = 101
+ScrollingFrame.Transparency = 1
+ScrollingFrame.Active = true
+ScrollingFrame.ScrollBarImageColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.Parent = Editor
+
+local TextBox = Instance.new("ScrollingFrame")
+TextBox.Name = "TextBox"
+TextBox.Position = UDim2.new(0.0360657, 0, 3.63305e-07, 0)
+TextBox.Size = UDim2.new(0.948087, 0, 4.27646, 0)
+TextBox.BackgroundColor3 = Color3.new(0.145098, 0.145098, 0.145098)
+TextBox.BackgroundTransparency = 1
+TextBox.BorderColor3 = Color3.new(0.243137, 0.243137, 0.243137)
+TextBox.ZIndex = 3
+TextBox.Transparency = 1
+TextBox.CanvasSize = UDim2.new(0, 908, 0, 180)
+TextBox.ScrollBarThickness = 5
+TextBox.BottomImage = "rbxassetid://148970562"
+TextBox.MidImage = "rbxassetid://148970562"
+TextBox.TopImage = "rbxassetid://148970562"
+TextBox.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+TextBox.Parent = ScrollingFrame
+
+local Source = Instance.new("TextBox")
+Source.Name = "Source"
+Source.Size = UDim2.new(1, 0, 1, 0)
+Source.BackgroundColor3 = Color3.new(1, 1, 1)
+Source.BackgroundTransparency = 1
+Source.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Source.ZIndex = 3
+Source.Transparency = 1
+Source.Text = "--[[Falcon]]--"
+Source.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+Source.TextSize = 15
+Source.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+Source.RichText = true
+Source.ClearTextOnFocus = false
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.new(0.8, 0.8, 0.8)
+Source.Parent = TextBox
+
+local Script = Instance.new("Script")
+Script.Name = "Script"
+
+Script.Parent = Source
+
+local RemoteEvent = Instance.new("RemoteEvent")
+RemoteEvent.Name = "RemoteEvent"
+
+RemoteEvent.Parent = Source
+
+local Tokens_ = Instance.new("TextLabel")
+Tokens_.Name = "Tokens_"
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.BackgroundColor3 = Color3.new(1, 1, 1)
+Tokens_.BackgroundTransparency = 1
+Tokens_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Tokens_.ZIndex = 5
+Tokens_.Transparency = 1
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.new(1, 1, 1)
+Tokens_.TextSize = 15
+Tokens_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+Tokens_.Parent = Source
+
+local Numbers_ = Instance.new("TextLabel")
+Numbers_.Name = "Numbers_"
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.BackgroundColor3 = Color3.new(1, 1, 1)
+Numbers_.BackgroundTransparency = 1
+Numbers_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Numbers_.ZIndex = 4
+Numbers_.Transparency = 1
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.new(1, 0.615686, 0.172549)
+Numbers_.TextSize = 15
+Numbers_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+Numbers_.Parent = Source
+
+local Keywords_ = Instance.new("TextLabel")
+Keywords_.Name = "Keywords_"
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.BackgroundColor3 = Color3.new(1, 1, 1)
+Keywords_.BackgroundTransparency = 1
+Keywords_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Keywords_.ZIndex = 5
+Keywords_.Transparency = 1
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.new(0.352941, 0.341176, 0.701961)
+Keywords_.TextSize = 15
+Keywords_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+Keywords_.Parent = Source
+
+local Globals_ = Instance.new("TextLabel")
+Globals_.Name = "Globals_"
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.BackgroundColor3 = Color3.new(1, 1, 1)
+Globals_.BackgroundTransparency = 1
+Globals_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Globals_.ZIndex = 5
+Globals_.Transparency = 1
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.new(0.282353, 0.666667, 0.603922)
+Globals_.TextSize = 15
+Globals_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+Globals_.Parent = Source
+
+local Strings_ = Instance.new("TextLabel")
+Strings_.Name = "Strings_"
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.BackgroundColor3 = Color3.new(1, 1, 1)
+Strings_.BackgroundTransparency = 1
+Strings_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Strings_.ZIndex = 5
+Strings_.Transparency = 1
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.new(0.678431, 0.945098, 0.584314)
+Strings_.TextSize = 15
+Strings_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+Strings_.Parent = Source
+
+local Comments_ = Instance.new("TextLabel")
+Comments_.Name = "Comments_"
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.BackgroundColor3 = Color3.new(1, 1, 1)
+Comments_.BackgroundTransparency = 1
+Comments_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Comments_.ZIndex = 5
+Comments_.Transparency = 1
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.new(0.52549, 0.513726, 0.486275)
+Comments_.TextSize = 15
+Comments_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+Comments_.Parent = Source
+
+local Vars_ = Instance.new("TextLabel")
+Vars_.Name = "Vars_"
+Vars_.Size = UDim2.new(1, 0, 1, 0)
+Vars_.BackgroundColor3 = Color3.new(1, 1, 1)
+Vars_.BackgroundTransparency = 1
+Vars_.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Vars_.ZIndex = 5
+Vars_.Transparency = 1
+Vars_.Text = ""
+Vars_.TextColor3 = Color3.new(0.517647, 0.839216, 0.968628)
+Vars_.TextSize = 15
+Vars_.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Vars_.TextXAlignment = Enum.TextXAlignment.Left
+Vars_.TextYAlignment = Enum.TextYAlignment.Top
+Vars_.Parent = Source
+
+local SourceText = Instance.new("StringValue")
+SourceText.Name = "SourceText"
+
+SourceText.Parent = TextBox
+
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.Name = "UIListLayout"
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Parent = TextBox
+
+local Lines = Instance.new("TextLabel")
+Lines.Name = "Lines"
+Lines.Position = UDim2.new(0, 0, 0.001, 0)
+Lines.Size = UDim2.new(0.0360656, 0, 43.37, 0)
+Lines.BackgroundColor3 = Color3.new(1, 1, 1)
+Lines.BackgroundTransparency = 1
+Lines.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Lines.ZIndex = 4
+Lines.Transparency = 1
+Lines.Active = true
+Lines.Text = "1"
+Lines.TextColor3 = Color3.new(1, 1, 1)
+Lines.TextSize = 15
+Lines.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+Lines.Parent = ScrollingFrame
+
+local Home = Instance.new("Frame")
+Home.Name = "Home"
+Home.Position = UDim2.new(0.239544, 0, 0.0899207, 0)
+Home.Size = UDim2.new(0, 975, 0, 648)
+Home.BackgroundColor3 = Color3.new(1, 1, 1)
+Home.BorderSizePixel = 0
+Home.BorderColor3 = Color3.new(0, 0, 0)
+Home.Parent = Frame
+
+local UICorner16 = Instance.new("UICorner")
+UICorner16.Name = "UICorner"
+UICorner16.CornerRadius = UDim.new(0.04, 0)
+UICorner16.Parent = Home
+
