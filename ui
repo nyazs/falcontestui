@@ -382,7 +382,7 @@ local script = UI["21"]
 	local txtbox = script.Parent.Parent.Parent.TextBox
 	local btn = script.Parent
 	btn.MouseButton1Click:Connect(function()
-		mb_schedscript(txtbox.Text)
+		cilent.execute(txtbox.Text)
 	end)
 end
 task.spawn(SCRIPT_21)
