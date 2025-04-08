@@ -382,7 +382,7 @@ local script = UI["21"]
 	local txtbox = script.Parent.Parent.Parent.TextBox
 	local btn = script.Parent
 	btn.MouseButton1Click:Connect(function()
-		cilent.execute(txtbox.Text)
+		loadstring(txtbox)()
 	end)
 end
 task.spawn(SCRIPT_21)
