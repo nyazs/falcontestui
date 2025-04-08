@@ -1,122 +1,412 @@
-local MobileBlox = Instance.new('ScreenGui')
-local Main = Instance.new('Frame')
-local TextBox = Instance.new('TextBox')
-local Clear = Instance.new('TextButton')
-local Execute = Instance.new('TextButton')
+-- This 'Ui To Lua' Plugin has been made by hold4564.
 
---Properties:
+local uiElements = {
+	["FALCONUIIII"] = Instance.new("ScreenGui"),
+	["Frame"] = Instance.new("Frame"),
+	["SideBar"] = Instance.new("Frame"),
+	["Line"] = Instance.new("Frame"),
+	["Frame_1"] = Instance.new("Frame"),
+	["Line_1"] = Instance.new("Frame"),
+	["ImageLabel"] = Instance.new("ImageLabel"),
+	["UIGradient"] = Instance.new("UIGradient"),
+	["Frame_2"] = Instance.new("Frame"),
+	["Frame_3"] = Instance.new("Frame"),
+	["UICorner"] = Instance.new("UICorner"),
+	["UIGradient_1"] = Instance.new("UIGradient"),
+	["Frame_4"] = Instance.new("Frame"),
+	["UICorner_1"] = Instance.new("UICorner"),
+	["UIGradient_2"] = Instance.new("UIGradient"),
+	["Frame_5"] = Instance.new("Frame"),
+	["UICorner_2"] = Instance.new("UICorner"),
+	["UIGradient_3"] = Instance.new("UIGradient"),
+	["TextLabel"] = Instance.new("TextLabel"),
+	["UIGradient_4"] = Instance.new("UIGradient"),
+	["Frame_6"] = Instance.new("Frame"),
+	["Line_2"] = Instance.new("Frame"),
+	["Frame_7"] = Instance.new("Frame"),
+	["Line_3"] = Instance.new("Frame"),
+	["Frame_8"] = Instance.new("Frame"),
+	["UICorner_3"] = Instance.new("UICorner"),
+	["UIStroke"] = Instance.new("UIStroke"),
+	["UIGradient_5"] = Instance.new("UIGradient"),
+	["ImageLabel_1"] = Instance.new("ImageLabel"),
+	["UICorner_4"] = Instance.new("UICorner"),
+	["LocalScript"] = Instance.new("LocalScript"),
+	["TextLabel_1"] = Instance.new("TextLabel"),
+	["ImageLabel_2"] = Instance.new("ImageLabel"),
+	["UIAspectRatioConstraint"] = Instance.new("UIAspectRatioConstraint"),
+	["LocalScript_1"] = Instance.new("LocalScript"),
+	["TextLabel_2"] = Instance.new("TextLabel"),
+	["LocalScript_2"] = Instance.new("LocalScript"),
+	["ButtonFrame"] = Instance.new("Frame"),
+	["TextButton"] = Instance.new("TextButton"),
+	["Frame_9"] = Instance.new("Frame"),
+	["UICorner_5"] = Instance.new("UICorner"),
+	["UIStroke_1"] = Instance.new("UIStroke"),
+	["ImageLabel_3"] = Instance.new("ImageLabel"),
+	["UIGradient_6"] = Instance.new("UIGradient"),
+	["TextLabel_3"] = Instance.new("TextLabel"),
+	["UIGradient_7"] = Instance.new("UIGradient"),
+	["TextButton_1"] = Instance.new("TextButton"),
+	["Frame_10"] = Instance.new("Frame"),
+	["UICorner_6"] = Instance.new("UICorner"),
+	["UIStroke_2"] = Instance.new("UIStroke"),
+	["ImageLabel_4"] = Instance.new("ImageLabel"),
+	["UIGradient_8"] = Instance.new("UIGradient"),
+	["TextLabel_4"] = Instance.new("TextLabel"),
+	["UIGradient_9"] = Instance.new("UIGradient"),
+	["UICorner_7"] = Instance.new("UICorner")
+}
 
-MobileBlox.Name = "MobileBloxAgain"
-MobileBlox.Parent = game:WaitForChild("CoreGui")
+uiElements["FALCONUIIII"].Parent = game:GetService("CoreGui")
 
-Main.Name = "Main"
-Main.Parent = MobileBlox
-Main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Main.Position = UDim2.new(0.318584085, 0, 0.197959185, 0)
-Main.Size = UDim2.new(0, 492, 0, 282)
+uiElements["Frame"].Parent = uiElements["FALCONUIIII"]
+uiElements["Frame"].Position = UDim2.new(0.08917197585105896, 0, 0.023427866399288177, 0)
+uiElements["Frame"].Size = UDim2.new(0.808917224407196, 0, 0.9321824908256531, 0)
+uiElements["Frame"].BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+uiElements["Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame"].BorderSizePixel = 0
 
-TextBox.Parent = Main
-TextBox.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-TextBox.Position = UDim2.new(0.0375582054, 0, 0.0874655992, 0)
-TextBox.Size = UDim2.new(0, 450, 0, 195)
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.Ubuntu
-TextBox.MultiLine = true
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(186, 186, 186)
-TextBox.TextSize = 14.000
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
+uiElements["SideBar"].Parent = uiElements["Frame"]
+uiElements["SideBar"].Size = UDim2.new(0.23816032707691193, 0, 1.0000001192092896, 0)
+uiElements["SideBar"].BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+uiElements["SideBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["SideBar"].BorderSizePixel = 0
+uiElements["SideBar"].BackgroundTransparency = 1
 
-Clear.Name = "Clear"
-Clear.Parent = Main
-Clear.BackgroundColor3 = Color3.fromRGB(144, 0, 0)
-Clear.Position = UDim2.new(0.544715464, 0, 0.822695017, 0)
-Clear.Size = UDim2.new(0, 200, 0, 50)
-Clear.Font = Enum.Font.SourceSans
-Clear.Text = "Clear"
-Clear.TextColor3 = Color3.fromRGB(0, 0, 0)
-Clear.TextScaled = true
-Clear.TextSize = 14.000
-Clear.TextWrapped = true
+uiElements["Line"].Parent = uiElements["SideBar"]
+uiElements["Line"].Position = UDim2.new(1, 0, 0, 0)
+uiElements["Line"].Size = UDim2.new(0.006881704553961754, 0, 1, 0)
+uiElements["Line"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Line"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Line"].BorderSizePixel = 0
+uiElements["Line"].BackgroundTransparency = 0.8999999761581421
 
-Execute.Name = "Execute"
-Execute.Parent = Main
-Execute.BackgroundColor3 = Color3.fromRGB(63, 190, 93)
-Execute.Position = UDim2.new(0.0365853645, 0, 0.822695017, 0)
-Execute.Size = UDim2.new(0, 200, 0, 50)
-Execute.Font = Enum.Font.SourceSans
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
-Execute.TextScaled = true
-Execute.TextSize = 14.000
-Execute.TextWrapped = true
+uiElements["Frame_1"].Parent = uiElements["SideBar"]
+uiElements["Frame_1"].Size = UDim2.new(1.0068817138671875, 0, 0.08730166405439377, 0)
+uiElements["Frame_1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_1"].BorderSizePixel = 0
+uiElements["Frame_1"].BackgroundTransparency = 0.9990000128746033
 
--- Scripts:
+uiElements["Line_1"].Parent = uiElements["Frame_1"]
+uiElements["Line_1"].Position = UDim2.new(0, 0, 1, 0)
+uiElements["Line_1"].Size = UDim2.new(0.9931653141975403, 0, 0.029999997466802597, 0)
+uiElements["Line_1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Line_1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Line_1"].BorderSizePixel = 0
+uiElements["Line_1"].BackgroundTransparency = 0.8999999761581421
 
-local function BGWS_fake_script() -- Main.DragScript
-    local script = Instance.new('LocalScript', Main)
+uiElements["ImageLabel"].Parent = uiElements["Frame_1"]
+uiElements["ImageLabel"].Position = UDim2.new(0.0978330746293068, 0, 0.1953950822353363, 0)
+uiElements["ImageLabel"].Size = UDim2.new(0.14297597110271454, 0, 0.6015545725822449, 0)
+uiElements["ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ImageLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ImageLabel"].BorderSizePixel = 0
+uiElements["ImageLabel"].BackgroundTransparency = 1
+uiElements["ImageLabel"].Image = "rbxassetid://95230561681172"
+uiElements["ImageLabel"].ScaleType = Enum.ScaleType.Fit
 
-    --Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-    --Put this inside of your Frame and configure the speed if you would like.
-    --Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+uiElements["UIGradient"].Parent = uiElements["ImageLabel"]
+uiElements["UIGradient"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
 
-    local UIS = game:GetService('UserInputService')
-    local frame = script.Parent
-    local dragToggle = nil
-    local dragSpeed = 0.25
-    local dragStart = nil
-    local startPos = nil
+uiElements["Frame_2"].Parent = uiElements["Frame_1"]
+uiElements["Frame_2"].Position = UDim2.new(0.5788886547088623, 0, 0.2545791268348694, 0)
+uiElements["Frame_2"].Size = UDim2.new(0.3420184254646301, 0, 0.4808337092399597, 0)
+uiElements["Frame_2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_2"].BorderSizePixel = 0
+uiElements["Frame_2"].BackgroundTransparency = 1
 
-    local function updateInput(input)
-        local delta = input.Position - dragStart
-        local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-    end
+uiElements["Frame_3"].Parent = uiElements["Frame_2"]
+uiElements["Frame_3"].Position = UDim2.new(0.41256284713745117, 0, 0.1575544774532318, 0)
+uiElements["Frame_3"].Size = UDim2.new(0.22776687145233154, 0, 0.6828521490097046, 0)
+uiElements["Frame_3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_3"].BorderSizePixel = 0
+uiElements["Frame_3"].BackgroundTransparency = 0.20000000298023224
 
-    frame.InputBegan:Connect(function(input)
-        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
-            dragToggle = true
-            dragStart = input.Position
-            startPos = frame.Position
-            input.Changed:Connect(function()
-                if input.UserInputState == Enum.UserInputState.End then
-                    dragToggle = false
-                end
-            end)
-        end
-    end)
+uiElements["UICorner"].Parent = uiElements["Frame_3"]
+uiElements["UICorner"].CornerRadius = UDim.new(1, 0)
 
-    UIS.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-            if dragToggle then
-                updateInput(input)
-            end
-        end
-    end)
+uiElements["UIGradient_1"].Parent = uiElements["Frame_3"]
+uiElements["UIGradient_1"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
 
-end
-coroutine.wrap(BGWS_fake_script)()
-local function NBUT_fake_script() -- Clear.LocalScript
-    local script = Instance.new('LocalScript', Clear)
+uiElements["Frame_4"].Parent = uiElements["Frame_2"]
+uiElements["Frame_4"].Position = UDim2.new(0.7616544961929321, 0, 0.1575544774532318, 0)
+uiElements["Frame_4"].Size = UDim2.new(0.22776687145233154, 0, 0.6828521490097046, 0)
+uiElements["Frame_4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_4"].BorderSizePixel = 0
+uiElements["Frame_4"].BackgroundTransparency = 0.4000000059604645
 
-    local box = script.Parent.Parent.TextBox
-    local btn = script.Parent
+uiElements["UICorner_1"].Parent = uiElements["Frame_4"]
+uiElements["UICorner_1"].CornerRadius = UDim.new(1, 0)
 
-    btn.MouseButton1Click:Connect(function()
-        box.Text = "";
-    end)
-end
-coroutine.wrap(NBUT_fake_script)()
-local function OBDPHLQ_fake_script() -- Execute.LocalScript
-    local script = Instance.new('LocalScript', Execute)
+uiElements["UIGradient_2"].Parent = uiElements["Frame_4"]
+uiElements["UIGradient_2"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
 
-    local box = script.Parent.Parent.TextBox
-    local btn = script.Parent
+uiElements["Frame_5"].Parent = uiElements["Frame_2"]
+uiElements["Frame_5"].Position = UDim2.new(0.06347120553255081, 0, 0.1575544774532318, 0)
+uiElements["Frame_5"].Size = UDim2.new(0.22776687145233154, 0, 0.6828521490097046, 0)
+uiElements["Frame_5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_5"].BorderSizePixel = 0
 
-    btn.MouseButton1Click:Connect(function()
-        loadstring(box.Text)()
-    end)
-end
-coroutine.wrap(OBDPHLQ_fake_script)()
+uiElements["UICorner_2"].Parent = uiElements["Frame_5"]
+uiElements["UICorner_2"].CornerRadius = UDim.new(1, 0)
+
+uiElements["UIGradient_3"].Parent = uiElements["Frame_5"]
+uiElements["UIGradient_3"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["TextLabel"].Parent = uiElements["Frame_1"]
+uiElements["TextLabel"].Position = UDim2.new(-0.0006027488270774484, 0, 1.0299997329711914, 0)
+uiElements["TextLabel"].Size = UDim2.new(1.0006028413772583, 0, 1.5491344928741455, 0)
+uiElements["TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextLabel"].BorderSizePixel = 0
+uiElements["TextLabel"].BackgroundTransparency = 1
+uiElements["TextLabel"].Font = Enum.Font.Unknown
+uiElements["TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel"].TextSize = 30
+uiElements["TextLabel"].Text = "Tabs"
+
+uiElements["UIGradient_4"].Parent = uiElements["TextLabel"]
+uiElements["UIGradient_4"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["Frame_6"].Parent = uiElements["SideBar"]
+uiElements["Frame_6"].Position = UDim2.new(-2.2203344940407987e-07, 0, 0.08992071449756622, 0)
+uiElements["Frame_6"].Size = UDim2.new(1.000000238418579, 0, 0.13259020447731018, 0)
+uiElements["Frame_6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_6"].BorderSizePixel = 0
+uiElements["Frame_6"].BackgroundTransparency = 1
+
+uiElements["Line_2"].Parent = uiElements["Frame_6"]
+uiElements["Line_2"].Position = UDim2.new(0, 0, 1, 0)
+uiElements["Line_2"].Size = UDim2.new(1, 0, 0.019999999552965164, 0)
+uiElements["Line_2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Line_2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Line_2"].BorderSizePixel = 0
+uiElements["Line_2"].BackgroundTransparency = 0.8999999761581421
+
+uiElements["Frame_7"].Parent = uiElements["SideBar"]
+uiElements["Frame_7"].Position = UDim2.new(-0.0036377960350364447, 0, 0.8664020299911499, 0)
+uiElements["Frame_7"].Size = UDim2.new(1.0036377906799316, 0, 0.13227520883083344, 0)
+uiElements["Frame_7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_7"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_7"].BorderSizePixel = 0
+uiElements["Frame_7"].BackgroundTransparency = 0.9990000128746033
+
+uiElements["Line_3"].Parent = uiElements["Frame_7"]
+uiElements["Line_3"].Position = UDim2.new(0, 1, 0, -2)
+uiElements["Line_3"].Size = UDim2.new(0.9959999918937683, 0, 0.019999999552965164, 0)
+uiElements["Line_3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Line_3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Line_3"].BorderSizePixel = 0
+uiElements["Line_3"].BackgroundTransparency = 0.8999999761581421
+
+uiElements["Frame_8"].Parent = uiElements["Frame_7"]
+uiElements["Frame_8"].Position = UDim2.new(0.07249220460653305, 0, 0.1999998688697815, 0)
+uiElements["Frame_8"].Size = UDim2.new(0.8550155758857727, 0, 0.6000001430511475, 0)
+uiElements["Frame_8"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_8"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_8"].BorderSizePixel = 0
+uiElements["Frame_8"].BackgroundTransparency = 0.9990000128746033
+
+uiElements["UICorner_3"].Parent = uiElements["Frame_8"]
+uiElements["UICorner_3"].CornerRadius = UDim.new(0.2800000011920929, 0)
+
+uiElements["UIStroke"].Parent = uiElements["Frame_8"]
+uiElements["UIStroke"].Color = Color3.fromRGB(255, 255, 255)
+uiElements["UIStroke"].Thickness = 1.600000023841858
+uiElements["UIStroke"].Transparency = 0.8999999761581421
+
+uiElements["UIGradient_5"].Parent = uiElements["UIStroke"]
+uiElements["UIGradient_5"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["ImageLabel_1"].Parent = uiElements["Frame_8"]
+uiElements["ImageLabel_1"].Position = UDim2.new(0.03815309703350067, 0, 0.16520166397094727, 0)
+uiElements["ImageLabel_1"].Size = UDim2.new(0.1720000058412552, 0, 0.6679999232292175, 0)
+uiElements["ImageLabel_1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ImageLabel_1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ImageLabel_1"].BorderSizePixel = 0
+uiElements["ImageLabel_1"].BackgroundTransparency = 1
+uiElements["ImageLabel_1"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+uiElements["ImageLabel_1"].ScaleType = Enum.ScaleType.Fit
+
+uiElements["UICorner_4"].Parent = uiElements["ImageLabel_1"]
+uiElements["UICorner_4"].CornerRadius = UDim.new(0.2800000011920929, 0)
+
+uiElements["LocalScript"].Parent = uiElements["ImageLabel_1"]
+
+uiElements["TextLabel_1"].Parent = uiElements["Frame_8"]
+uiElements["TextLabel_1"].Position = UDim2.new(0.2569815218448639, 0, 0.16520166397094727, 0)
+uiElements["TextLabel_1"].Size = UDim2.new(0.7049999833106995, 0, 0.3190000057220459, 0)
+uiElements["TextLabel_1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextLabel_1"].BorderSizePixel = 0
+uiElements["TextLabel_1"].BackgroundTransparency = 1
+uiElements["TextLabel_1"].Font = Enum.Font.SourceSans
+uiElements["TextLabel_1"].TextScaled = true
+uiElements["TextLabel_1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_1"].TextSize = 14
+uiElements["TextLabel_1"].Text = "User"
+uiElements["TextLabel_1"].TextWrapped = true
+uiElements["TextLabel_1"].TextXAlignment = Enum.TextXAlignment.Left
+
+uiElements["ImageLabel_2"].Parent = uiElements["TextLabel_1"]
+uiElements["ImageLabel_2"].Size = UDim2.new(0.035435862839221954, 0, 0.061652280390262604, 0)
+uiElements["ImageLabel_2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ImageLabel_2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ImageLabel_2"].BorderSizePixel = 0
+uiElements["ImageLabel_2"].BackgroundTransparency = 1
+uiElements["ImageLabel_2"].Image = "rbxassetid://10734920149"
+
+uiElements["UIAspectRatioConstraint"].Parent = uiElements["ImageLabel_2"]
+
+uiElements["LocalScript_1"].Parent = uiElements["TextLabel_1"]
+
+uiElements["TextLabel_2"].Parent = uiElements["Frame_8"]
+uiElements["TextLabel_2"].Position = UDim2.new(0.2569815218448639, 0, 0.4842016100883484, 0)
+uiElements["TextLabel_2"].Size = UDim2.new(0.704528272151947, 0, 0.332464337348938, 0)
+uiElements["TextLabel_2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextLabel_2"].BorderSizePixel = 0
+uiElements["TextLabel_2"].BackgroundTransparency = 1
+uiElements["TextLabel_2"].Font = Enum.Font.SourceSans
+uiElements["TextLabel_2"].TextScaled = true
+uiElements["TextLabel_2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_2"].TextSize = 14
+uiElements["TextLabel_2"].Text = "@User"
+uiElements["TextLabel_2"].TextWrapped = true
+uiElements["TextLabel_2"].TextXAlignment = Enum.TextXAlignment.Left
+
+uiElements["LocalScript_2"].Parent = uiElements["TextLabel_2"]
+
+uiElements["ButtonFrame"].Parent = uiElements["SideBar"]
+uiElements["ButtonFrame"].Position = UDim2.new(-5.605371811157056e-08, 0, 0.22486768662929535, 0)
+uiElements["ButtonFrame"].Size = UDim2.new(0.9996588826179504, 0, 0.6388888955116272, 0)
+uiElements["ButtonFrame"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ButtonFrame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ButtonFrame"].BorderSizePixel = 0
+uiElements["ButtonFrame"].BackgroundTransparency = 0.9990000128746033
+
+uiElements["TextButton"].Parent = uiElements["ButtonFrame"]
+uiElements["TextButton"].Position = UDim2.new(-0.0036750142462551594, 0, 3.159169281730101e-08, 0)
+uiElements["TextButton"].Size = UDim2.new(1.000000238418579, 0, 0.19208702445030212, 0)
+uiElements["TextButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextButton"].BorderSizePixel = 0
+uiElements["TextButton"].BackgroundTransparency = 0.9990000128746033
+uiElements["TextButton"].Font = Enum.Font.SourceSans
+uiElements["TextButton"].TextColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextButton"].TextSize = 14
+uiElements["TextButton"].Text = ""
+
+uiElements["Frame_9"].Parent = uiElements["TextButton"]
+uiElements["Frame_9"].Position = UDim2.new(0.07717079669237137, 0, 0.21556825935840607, 0)
+uiElements["Frame_9"].Size = UDim2.new(0.8540971279144287, 0, 0.5688636302947998, 0)
+uiElements["Frame_9"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_9"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_9"].BorderSizePixel = 0
+uiElements["Frame_9"].BackgroundTransparency = 0.9599999785423279
+
+uiElements["UICorner_5"].Parent = uiElements["Frame_9"]
+uiElements["UICorner_5"].CornerRadius = UDim.new(0.3199999928474426, 0)
+
+uiElements["UIStroke_1"].Parent = uiElements["Frame_9"]
+uiElements["UIStroke_1"].Color = Color3.fromRGB(255, 255, 255)
+uiElements["UIStroke_1"].Thickness = 2
+uiElements["UIStroke_1"].Transparency = 0.8999999761581421
+
+uiElements["ImageLabel_3"].Parent = uiElements["Frame_9"]
+uiElements["ImageLabel_3"].Position = UDim2.new(0.08174830675125122, 0, 0.3410511314868927, 0)
+uiElements["ImageLabel_3"].Size = UDim2.new(0.07077141106128693, 0, 0.312777042388916, 0)
+uiElements["ImageLabel_3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ImageLabel_3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ImageLabel_3"].BorderSizePixel = 0
+uiElements["ImageLabel_3"].BackgroundTransparency = 1
+uiElements["ImageLabel_3"].Image = "http://www.roblox.com/asset/?id=126027180680298"
+uiElements["ImageLabel_3"].ScaleType = Enum.ScaleType.Fit
+
+uiElements["UIGradient_6"].Parent = uiElements["ImageLabel_3"]
+uiElements["UIGradient_6"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["TextLabel_3"].Parent = uiElements["Frame_9"]
+uiElements["TextLabel_3"].Position = UDim2.new(0.19791695475578308, 0, 0.34105172753334045, 0)
+uiElements["TextLabel_3"].Size = UDim2.new(0.27061957120895386, 0, 0.3127772808074951, 0)
+uiElements["TextLabel_3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextLabel_3"].BorderSizePixel = 0
+uiElements["TextLabel_3"].BackgroundTransparency = 1
+uiElements["TextLabel_3"].Font = Enum.Font.Unknown
+uiElements["TextLabel_3"].TextScaled = true
+uiElements["TextLabel_3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_3"].TextSize = 14
+uiElements["TextLabel_3"].Text = "Home"
+uiElements["TextLabel_3"].TextWrapped = true
+
+uiElements["UIGradient_7"].Parent = uiElements["TextLabel_3"]
+uiElements["UIGradient_7"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["TextButton_1"].Parent = uiElements["ButtonFrame"]
+uiElements["TextButton_1"].Position = UDim2.new(-0.0036750154104083776, 0, 0.17447514832019806, 0)
+uiElements["TextButton_1"].Size = UDim2.new(1.000000238418579, 0, 0.19208702445030212, 0)
+uiElements["TextButton_1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextButton_1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextButton_1"].BorderSizePixel = 0
+uiElements["TextButton_1"].BackgroundTransparency = 0.9990000128746033
+uiElements["TextButton_1"].Font = Enum.Font.SourceSans
+uiElements["TextButton_1"].TextColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextButton_1"].TextSize = 14
+uiElements["TextButton_1"].Text = ""
+
+uiElements["Frame_10"].Parent = uiElements["TextButton_1"]
+uiElements["Frame_10"].Position = UDim2.new(0.07717079669237137, 0, 0.21556825935840607, 0)
+uiElements["Frame_10"].Size = UDim2.new(0.8540971279144287, 0, 0.5688636302947998, 0)
+uiElements["Frame_10"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["Frame_10"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["Frame_10"].BorderSizePixel = 0
+uiElements["Frame_10"].BackgroundTransparency = 0.9599999785423279
+
+uiElements["UICorner_6"].Parent = uiElements["Frame_10"]
+uiElements["UICorner_6"].CornerRadius = UDim.new(0.3199999928474426, 0)
+
+uiElements["UIStroke_2"].Parent = uiElements["Frame_10"]
+uiElements["UIStroke_2"].Color = Color3.fromRGB(255, 255, 255)
+uiElements["UIStroke_2"].Thickness = 2
+uiElements["UIStroke_2"].Transparency = 0.8999999761581421
+
+uiElements["ImageLabel_4"].Parent = uiElements["Frame_10"]
+uiElements["ImageLabel_4"].Position = UDim2.new(0.08174830675125122, 0, 0.3410511314868927, 0)
+uiElements["ImageLabel_4"].Size = UDim2.new(0.07077141106128693, 0, 0.312777042388916, 0)
+uiElements["ImageLabel_4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["ImageLabel_4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["ImageLabel_4"].BorderSizePixel = 0
+uiElements["ImageLabel_4"].BackgroundTransparency = 1
+uiElements["ImageLabel_4"].Image = "http://www.roblox.com/asset/?id=118754401400599"
+uiElements["ImageLabel_4"].ScaleType = Enum.ScaleType.Fit
+
+uiElements["UIGradient_8"].Parent = uiElements["ImageLabel_4"]
+uiElements["UIGradient_8"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["TextLabel_4"].Parent = uiElements["Frame_10"]
+uiElements["TextLabel_4"].Position = UDim2.new(0.19791695475578308, 0, 0.34105172753334045, 0)
+uiElements["TextLabel_4"].Size = UDim2.new(0.27061957120895386, 0, 0.3127772808074951, 0)
+uiElements["TextLabel_4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+uiElements["TextLabel_4"].BorderSizePixel = 0
+uiElements["TextLabel_4"].BackgroundTransparency = 1
+uiElements["TextLabel_4"].Font = Enum.Font.Unknown
+uiElements["TextLabel_4"].TextScaled = true
+uiElements["TextLabel_4"].TextColor3 = Color3.fromRGB(255, 255, 255)
+uiElements["TextLabel_4"].TextSize = 14
+uiElements["TextLabel_4"].Text = "Editor"
+uiElements["TextLabel_4"].TextWrapped = true
+
+uiElements["UIGradient_9"].Parent = uiElements["TextLabel_4"]
+uiElements["UIGradient_9"].Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)), ColorSequenceKeypoint.new(0.15224914252758026, Color3.fromRGB(42.000001296401024, 35.00000171363354, 35.00000171363354)), ColorSequenceKeypoint.new(0.22145329415798187, Color3.fromRGB(59.38775807619095, 52.959187030792236, 52.959187030792236)), ColorSequenceKeypoint.new(1, Color3.fromRGB(103.0000014603138, 86.00000247359276, 86.00000247359276))})
+
+uiElements["UICorner_7"].Parent = uiElements["Frame"]
+uiElements["UICorner_7"].CornerRadius = UDim.new(0.03999999910593033, 0)
