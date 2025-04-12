@@ -1,4 +1,4 @@
 {
-  "ui": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/nyazs/falcontestui/refs/heads/main/ui"))()",
+  "ui": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/nyazs/falcontestui/refs/heads/main/ui\"))()",
   "version": "2.667.668"
 }
