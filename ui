@@ -79,23 +79,45 @@ local function generateNonce()
     return str
 end
 
+local function getSavedKey()
+    if readfile and isfile and isfile("falcon_key_data.json") then
+        local success, data = pcall(function()
+            return lDecode(readfile("falcon_key_data.json"))
+        end)
+        if success and data.key and data.timestamp then
+            return data
+        end
+    end
+    return nil
+end
+
+local function saveKeyWithTimestamp(key)
+    if writefile then
+        local data = { key = key, timestamp = fOsTime() }
+        pcall(function()
+            writefile("falcon_key_data.json", lEncode(data))
+        end)
+    end
+end
+
 local function verifyKey(key)
+    local saved = getSavedKey()
+    if saved and saved.key == key and (fOsTime() - saved.timestamp) < 172800 then
+        return true
+    end
+
     local nonce = generateNonce()
     local url = host .. "/public/whitelist/" .. service .. "?identifier=" .. lDigest(fGetHwid()) .. "&key=" .. key
     if useNonce then url = url .. "&nonce=" .. nonce end
-
-    -- Save the key
-    if writefile then
-        pcall(function()
-            writefile("falcon_key.txt", key)
-        end)
-    end
 
     local res = fRequest({ Url = url, Method = "GET" })
     if not res then return false end
     if res.StatusCode == 200 then
         local body = lDecode(res.Body)
-        return body.success and body.data.valid
+        if body.success and body.data.valid then
+            saveKeyWithTimestamp(key)
+            return true
+        end
     end
     return false
 end
@@ -221,10 +243,43 @@ task.spawn(function()
 
             loadingGui:Destroy()
 
-            -- Load your actual script
+            -- Load actual script
             loadstring(game:HttpGet("https://raw.githubusercontent.com/nyazs/falcontestui/refs/heads/main/falconui"))()
         else
-            status.Text = "Invalid key!"
+            status.Text = "Invalid or expired key!"
         end
     end)
+
+    -- auto-load if saved and valid
+    local auto = getSavedKey()
+    if auto and (fOsTime() - auto.timestamp) < 172800 and verifyKey(auto.key) then
+        gui:Destroy()
+        blur:Destroy()
+        local loadingGui = Instance.new("ScreenGui", Player:WaitForChild("PlayerGui"))
+        loadingGui.IgnoreGuiInset = true
+        loadingGui.ResetOnSpawn = false
+        loadingGui.Name = "FalconLoading"
+
+        local bg = Instance.new("Frame", loadingGui)
+        bg.Size = UDim2.new(1, 0, 1, 0)
+        bg.BackgroundColor3 = Color3.new(0, 0, 0)
+
+        local text = Instance.new("TextLabel", bg)
+        text.Size = UDim2.new(1, 0, 1, 0)
+        text.Text = "FALCON"
+        text.TextColor3 = Color3.new(1, 1, 1)
+        text.Font = Enum.Font.GothamBlack
+        text.TextScaled = true
+        text.BackgroundTransparency = 1
+        text.TextTransparency = 0
+
+        for i = 0, 1, 0.05 do
+            bg.BackgroundTransparency = i
+            text.TextTransparency = i
+            task.wait(0.07)
+        end
+
+        loadingGui:Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/nyazs/falcontestui/refs/heads/main/falconui"))()
+    end
 end)
