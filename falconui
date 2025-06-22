@@ -1,356 +1,168 @@
---[=[
-C REATED BY URDAD
-]=]
+-- FrostWare Executor UI (Blue Themed)
 
-local TR = {};
+-- Services
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local TextService = game:GetService("TextService")
 
--- StarterGui.ScreenGui
-TR["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"), game:WaitForChild("CoreGui"));
-TR["1"]["IgnoreGuiInset"] = true;
-TR["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-TR["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-TR["1"]["ClipToDeviceSafeArea"] = false;
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
 
--- StarterGui.ScreenGui.BG
-TR["2"] = Instance.new("Frame", TR["1"]);
-TR["2"]["BorderSizePixel"] = 0;
-TR["2"]["BackgroundColor3"] = Color3.fromRGB(20,20,20);
-TR["2"]["Size"] = UDim2.new(0, 448, 0, 298);
-TR["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["2"]["Position"] = UDim2.new(0.14991925656795502, 0, 0.08368659764528275, 0);
-TR["2"]["Visible"] = false;
-TR["2"]["Name"] = [[BG]];
+-- Create ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FrostWareUI"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
 
--- StarterGui.ScreenGui.BG.UICorner
-TR["3"] = Instance.new("UICorner", TR["2"]);
-TR["3"]["CornerRadius"] = UDim.new(0, 13);
+-- Main Frame
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 400, 0, 300)
+mainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
+mainFrame.BackgroundColor3 = Color3.fromRGB(20, 90, 200)
+mainFrame.BorderSizePixel = 0
+mainFrame.Parent = screenGui
 
--- StarterGui.ScreenGui.BG.UIStroke
-TR["4"] = Instance.new("UIStroke", TR["2"]);
-TR["4"]["Color"] = Color3.fromRGB(85, 85, 85);
-TR["4"]["Thickness"] = 1.5;
+-- Rounded corners for main frame
+local uicorner = Instance.new("UICorner")
+uicorner.CornerRadius = UDim.new(0, 10)
+uicorner.Parent = mainFrame
 
--- StarterGui.ScreenGui.BG.Line
-TR["5"] = Instance.new("Frame", TR["2"]);
-TR["5"]["BorderSizePixel"] = 0;
-TR["5"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["5"]["Size"] = UDim2.new(0, 435, 0, 2);
-TR["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["5"]["Position"] = UDim2.new(0.013392857275903225, 0, 0.13522738218307495, 0);
-TR["5"]["Name"] = [[Line]];
+-- Title Label "FrostWare"
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 40)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.BackgroundTransparency = 1
+title.Text = "FrostWare"
+title.TextColor3 = Color3.fromRGB(235, 235, 235)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 28
+title.Parent = mainFrame
 
--- StarterGui.ScreenGui.BG.Line.Line #2
-TR["6"] = Instance.new("Frame", TR["5"]);
-TR["6"]["BorderSizePixel"] = 0;
-TR["6"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["6"]["Size"] = UDim2.new(0, 2, 0, 248);
-TR["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["6"]["Position"] = UDim2.new(0.09308292716741562, 0, 0.641937255859375, 0);
-TR["6"]["Name"] = [[Line #2]];
+-- Script TextBox
+local scriptBox = Instance.new("TextBox")
+scriptBox.Size = UDim2.new(1, -20, 1, -100)
+scriptBox.Position = UDim2.new(0, 10, 0, 50)
+scriptBox.BackgroundColor3 = Color3.fromRGB(35, 110, 240)
+scriptBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptBox.TextWrapped = true
+scriptBox.ClearTextOnFocus = false
+scriptBox.MultiLine = true
+scriptBox.Font = Enum.Font.Code
+scriptBox.TextSize = 18
+scriptBox.PlaceholderText = "Write your Lua code here..."
+scriptBox.Parent = mainFrame
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3
-TR["7"] = Instance.new("Frame", TR["6"]);
-TR["7"]["BorderSizePixel"] = 0;
-TR["7"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["7"]["Size"] = UDim2.new(0, 35, 0, 35);
-TR["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["7"]["Position"] = UDim2.new(-20.24553680419922, 0, 0.032258063554763794, 0);
-TR["7"]["Name"] = [[3]];
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.UICorner
-TR["8"] = Instance.new("UICorner", TR["7"]);
-TR["8"]["CornerRadius"] = UDim.new(0, 10);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X
-TR["9"] = Instance.new("ImageButton", TR["7"]);
-TR["9"]["BorderSizePixel"] = 0;
-TR["9"]["ScaleType"] = Enum.ScaleType.Fit;
-TR["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["9"]["Image"] = [[rbxassetid://16898788248]];
-TR["9"]["ImageRectSize"] = Vector2.new(256, 256);
-TR["9"]["Size"] = UDim2.new(0, 17, 0, 34);
-TR["9"]["Name"] = [[X]];
-TR["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["9"]["ImageRectOffset"] = Vector2.new(514, 257);
-TR["9"]["Position"] = UDim2.new(0.2523476779460907, 0, 0, 0);
-TR["9"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display
-TR["a"] = Instance.new("Frame", TR["9"]);
-TR["a"]["BorderSizePixel"] = 0;
-TR["a"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["a"]["Size"] = UDim2.new(0, 385, 0, 200);
-TR["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["a"]["Position"] = UDim2.new(2.3741769790649414, 0, 0, 0);
-TR["a"]["Name"] = [[Textbox Display]];
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.UICorner
-TR["b"] = Instance.new("UICorner", TR["a"]);
-TR["b"]["CornerRadius"] = UDim.new(0, 15);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.TextBox
-TR["c"] = Instance.new("TextBox", TR["a"]);
-TR["c"]["CursorPosition"] = -1;
-TR["c"]["PlaceholderColor3"] = Color3.fromRGB(215, 215, 215);
-TR["c"]["BorderSizePixel"] = 0;
-TR["c"]["TextSize"] = 13;
-TR["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-TR["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-TR["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["c"]["TextColor3"] = Color3.fromRGB(78, 255, 0);
-TR["c"]["FontFace"] = Font.new([[rbxassetid://16658246179]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-TR["c"]["BackgroundTransparency"] = 1;
-TR["c"]["PlaceholderText"] = [[print("FrostWare Is Gay")]];
-TR["c"]["Size"] = UDim2.new(0, 365, 0, 186);
-TR["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["c"]["Text"] = [[]];
-TR["c"]["Position"] = UDim2.new(0.023376623168587685, 0, 0.03414352238178253, 0);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear
-TR["d"] = Instance.new("Frame", TR["a"]);
-TR["d"]["BorderSizePixel"] = 0;
-TR["d"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["d"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["d"]["Position"] = UDim2.new(0, 0, 1.0299999713897705, 0);
-TR["d"]["Name"] = [[Clear]];
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.UICorner
-TR["e"] = Instance.new("UICorner", TR["d"]);
-TR["e"]["CornerRadius"] = UDim.new(0, 10);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN
-TR["f"] = Instance.new("TextButton", TR["d"]);
-TR["f"]["BorderSizePixel"] = 0;
-TR["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["f"]["TextSize"] = 18;
-TR["f"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-TR["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["f"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["f"]["Name"] = [[BTN]];
-TR["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["f"]["Text"] = [[Clear]];
-TR["f"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN.LocalScript
-TR["10"] = Instance.new("LocalScript", TR["f"]);
+local textBoxUICorner = Instance.new("UICorner")
+textBoxUICorner.CornerRadius = UDim.new(0, 6)
+textBoxUICorner.Parent = scriptBox
 
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy
-TR["11"] = Instance.new("Frame", TR["a"]);
-TR["11"]["BorderSizePixel"] = 0;
-TR["11"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["11"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["11"]["Position"] = UDim2.new(0.2103896141052246, 0, 1.0299999713897705, 0);
-TR["11"]["Name"] = [[Copy]];
+local function copyToClipboard(text)
+    if setclipboard then
+        setclipboard(text)
+    else
+        warn("[FWSD] Clipboard function not supported.")
+    end
+end
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.UICorner
-TR["12"] = Instance.new("UICorner", TR["11"]);
-TR["12"]["CornerRadius"] = UDim.new(0, 10);
+-- Buttons container
+local buttonContainer = Instance.new("Frame")
+buttonContainer.Size = UDim2.new(1, -20, 0, 40)
+buttonContainer.Position = UDim2.new(0, 10, 1, -45)
+buttonContainer.BackgroundTransparency = 1
+buttonContainer.Parent = mainFrame
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN
-TR["13"] = Instance.new("TextButton", TR["11"]);
-TR["13"]["BorderSizePixel"] = 0;
-TR["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["13"]["TextSize"] = 18;
-TR["13"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-TR["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["13"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["13"]["Name"] = [[BTN]];
-TR["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["13"]["Text"] = [[Copy]];
-TR["13"]["BackgroundTransparency"] = 1;
+-- Button style creator
+local function createButton(name, posX, text)
+    local btn = Instance.new("TextButton")
+    btn.Name = name
+    btn.Size = UDim2.new(0, 80, 1, 0)
+    btn.Position = UDim2.new(0, posX, 0, 0)
+    btn.BackgroundColor3 = Color3.fromRGB(60, 130, 250)
+    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.Font = Enum.Font.GothamSemibold
+    btn.TextSize = 18
+    btn.Text = text
+    btn.AutoButtonColor = true
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN.LocalScript
-TR["14"] = Instance.new("LocalScript", TR["13"]);
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 6)
+    corner.Parent = btn
 
+    btn.Parent = buttonContainer
+    return btn
+end
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste
-TR["15"] = Instance.new("Frame", TR["a"]);
-TR["15"]["BorderSizePixel"] = 0;
-TR["15"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["15"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["15"]["Position"] = UDim2.new(0.41818180680274963, 0, 1.0299999713897705, 0);
-TR["15"]["Name"] = [[Paste]];
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.UICorner
-TR["16"] = Instance.new("UICorner", TR["15"]);
-TR["16"]["CornerRadius"] = UDim.new(0, 10);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN
-TR["17"] = Instance.new("TextButton", TR["15"]);
-TR["17"]["BorderSizePixel"] = 0;
-TR["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["17"]["TextSize"] = 18;
-TR["17"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-TR["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["17"]["Size"] = UDim2.new(0, 74, 0, 34);
-TR["17"]["Name"] = [[BTN]];
-TR["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["17"]["Text"] = [[Paste]];
-TR["17"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN.LocalScript
-TR["18"] = Instance.new("LocalScript", TR["17"]);
+local btnCopy = createButton("CopyButton", 0, "Copy")
+local btnPaste = createButton("PasteButton", 90, "Paste")
+local btnClear = createButton("ClearButton", 180, "Clear")
+local btnExecute = createButton("ExecuteButton", 270, "Execute")
 
 
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute
-TR["19"] = Instance.new("Frame", TR["a"]);
-TR["19"]["BorderSizePixel"] = 0;
-TR["19"]["BackgroundColor3"] = Color3.fromRGB(85, 85, 85);
-TR["19"]["Size"] = UDim2.new(0, 93, 0, 34);
-TR["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["19"]["Position"] = UDim2.new(0.6259739995002747, 0, 1.0299999713897705, 0);
-TR["19"]["Name"] = [[Execute]];
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.UICorner
-TR["1a"] = Instance.new("UICorner", TR["19"]);
-TR["1a"]["CornerRadius"] = UDim.new(0, 10);
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN
-TR["1b"] = Instance.new("TextButton", TR["19"]);
-TR["1b"]["BorderSizePixel"] = 0;
-TR["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["1b"]["TextSize"] = 18;
-TR["1b"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-TR["1b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["1b"]["Size"] = UDim2.new(0, 93, 0, 34);
-TR["1b"]["Name"] = [[BTN]];
-TR["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["1b"]["Text"] = [[Execute]];
-TR["1b"]["BackgroundTransparency"] = 1;
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN.LocalScript
-TR["1c"] = Instance.new("LocalScript", TR["1b"]);
 
 
--- StarterGui.ScreenGui.BG.Line.Title
-TR["1d"] = Instance.new("TextLabel", TR["5"]);
-TR["1d"]["BorderSizePixel"] = 0;
-TR["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-TR["1d"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-TR["1d"]["TextSize"] = 21;
-TR["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["1d"]["Size"] = UDim2.new(0, 182, 0, 40);
-TR["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["1d"]["Text"] = [[FrostDiddy]];
-TR["1d"]["Name"] = [[Title]];
-TR["1d"]["BackgroundTransparency"] = 1;
-TR["1d"]["Position"] = UDim2.new(0.020756302401423454, 0, -20.153491973876953, 0);
+btnCopy.MouseButton1Click:Connect(function()
+    copyToClipboard(scriptBox.Text)
+end)
 
--- StarterGui.ScreenGui.BG.Line.Title.X
-TR["1e"] = Instance.new("ImageButton", TR["1d"]);
-TR["1e"]["BorderSizePixel"] = 0;
-TR["1e"]["ScaleType"] = Enum.ScaleType.Fit;
-TR["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["1e"]["Image"] = [[rbxassetid://16898791349]];
-TR["1e"]["ImageRectSize"] = Vector2.new(256, 256);
-TR["1e"]["Size"] = UDim2.new(0, 17, 0, 39);
-TR["1e"]["Name"] = [[X]];
-TR["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["1e"]["ImageRectOffset"] = Vector2.new(257, 0);
-TR["1e"]["Position"] = UDim2.new(2.223776340484619, 0, 0.0002305984526174143, 0);
-TR["1e"]["BackgroundTransparency"] = 1;
+btnPaste.MouseButton1Click:Connect(function()
+    if getclipboard then
+        local clip = getclipboard()
+        if type(clip) == "string" then
+            scriptBox.Text = clip
+        end
+    else
+        warn("[FWSD] Paste clipboard not supported.")
+    end
+end)
 
--- StarterGui.ScreenGui.BG.Line.Title.X.LocalScript
-TR["1f"] = Instance.new("LocalScript", TR["1e"]);
+btnClear.MouseButton1Click:Connect(function()
+    scriptBox.Text = ""
+end)
 
+-- Execute button runs the script safely
+btnExecute.MouseButton1Click:Connect(function()
+    local success, err = pcall(function()
+        loadstring(scriptBox.Text)()
+    end)
+    if not success then
+        warn("[FWSD] Error executing script: " .. tostring(err))
+    end
+end)
 
--- StarterGui.ScreenGui.BG.LocalScript
-TR["20"] = Instance.new("LocalScript", TR["2"]);
+local dragging = false
+local dragInput
+local dragStart
+local startPos
 
+mainFrame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
 
--- StarterGui.ScreenGui.Open
-TR["21"] = Instance.new("Frame", TR["1"]);
-TR["21"]["BorderSizePixel"] = 0;
-TR["21"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-TR["21"]["Size"] = UDim2.new(0, 144, 0, 21);
-TR["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["21"]["Position"] = UDim2.new(0.3868548572063446, 0, 0.016713092103600502, 0);
-TR["21"]["Name"] = [[Open]];
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
 
--- StarterGui.ScreenGui.Open.UICorner
-TR["22"] = Instance.new("UICorner", TR["21"]);
-TR["22"]["CornerRadius"] = UDim.new(0, 6);
+mainFrame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
 
--- StarterGui.ScreenGui.Open.Open
-TR["23"] = Instance.new("TextButton", TR["21"]);
-TR["23"]["BorderSizePixel"] = 0;
-TR["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-TR["23"]["TextSize"] = 14;
-TR["23"]["FontFace"] = Font.new([[rbxassetid://12187373327]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-TR["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-TR["23"]["Size"] = UDim2.new(0, 144, 0, 21);
-TR["23"]["Name"] = [[Open]];
-TR["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-TR["23"]["Text"] = [[Open]];
-TR["23"]["BackgroundTransparency"] = 1;
-
-
--- Trench Scripts
--- StarterGui.ScreenGui.Open.Open.LocalScript
-TR["24"] = Instance.new("LocalScript", TR["23"]);
-
-
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Clear.BTN.LocalScript
-local function C_10()
-local script = TR["10"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.TextBox.Text = ""
-	end)
-end;
-task.spawn(C_10);
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Copy.BTN.LocalScript
-local function C_14()
-local script = TR["14"];
-	script.Parent.MouseButton1Click:Connect(function()
-		setclipboard(script.Parent.Parent.Parent.TextBox.Text)
-	end)
-end;
-task.spawn(C_14);
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Paste.BTN.LocalScript
-local function C_18()
-local script = TR["18"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.TextBox.Text = getclipboard()
-	end)
-end;
-task.spawn(C_18);
--- StarterGui.ScreenGui.BG.Line.Line #2.3.X.Textbox Display.Execute.BTN.LocalScript
-local function C_1c()
-local script = TR["1c"];
-	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(script.Parent.Parent.Parent.TextBox.Text)()
-	end)
-end;
-task.spawn(C_1c);
--- StarterGui.ScreenGui.BG.Line.Title.X.LocalScript
-local function C_1f()
-local script = TR["1f"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Parent.BG.Visible = false
-		script.Parent.Parent.Parent.Parent.Parent.Open.Visible = true
-	end)
-end;
-task.spawn(C_1f);
--- StarterGui.ScreenGui.BG.LocalScript
-local function C_20()
-local script = TR["20"];
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-end;
-task.spawn(C_20);
--- StarterGui.ScreenGui.Open.Open.LocalScript
-local function C_24()
-local script = TR["24"];
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.BG.Visible = true
-		script.Parent.Parent.Parent.Open.Visible = false
-	end)
-end;
-task.spawn(C_24);
-
-return TR["1"], require;
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        local delta = input.Position - dragStart
+        mainFrame.Position = UDim2.new(
+            startPos.X.Scale,
+            startPos.X.Offset + delta.X,
+            startPos.Y.Scale,
+            startPos.Y.Offset + delta.Y
+        )
+    end
+end)
