@@ -45,13 +45,26 @@ title.Parent = mainFrame
 local btnClose = Instance.new("TextButton")
 btnClose.Size = UDim2.new(0, 32, 0, 32)
 btnClose.Position = UDim2.new(1, -40, 0, 6)
-btnClose.BackgroundColor3 = Color3.fromRGB(220, 70, 70)
-btnClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+btnClose.BackgroundTransparency = 1
+btnClose.TextColor3 = Color3.fromRGB(235, 70, 70)
 btnClose.Font = Enum.Font.GothamBold
-btnClose.TextSize = 24
+btnClose.TextSize = 26
 btnClose.Text = "✕"
-btnClose.AutoButtonColor = true
+btnClose.AutoButtonColor = false
 btnClose.Parent = mainFrame
+
+local function createShadow(parent)
+    local shadowImg = Instance.new("ImageLabel")
+    shadowImg.Size = UDim2.new(1, 6, 1, 6)
+    shadowImg.Position = UDim2.new(0, -3, 0, -3)
+    shadowImg.BackgroundTransparency = 1
+    shadowImg.Image = "rbxassetid://1316045217"
+    shadowImg.ImageColor3 = Color3.new(0, 0, 0)
+    shadowImg.ImageTransparency = 0.6
+    shadowImg.ZIndex = parent.ZIndex - 1
+    shadowImg.Parent = parent
+    return shadowImg
+end
 
 local scriptBox = Instance.new("TextBox")
 scriptBox.Size = UDim2.new(1, -30, 1, -130)
@@ -81,7 +94,7 @@ local function createButton(name, posX, text)
     btn.Name = name
     btn.Size = UDim2.new(0, 90, 1, 0)
     btn.Position = UDim2.new(0, posX, 0, 0)
-    btn.BackgroundColor3 = Color3.fromRGB(80, 140, 255)
+    btn.BackgroundColor3 = Color3.fromRGB(85, 150, 255)
     btn.TextColor3 = Color3.fromRGB(245, 245, 255)
     btn.Font = Enum.Font.GothamSemibold
     btn.TextSize = 18
@@ -90,6 +103,7 @@ local function createButton(name, posX, text)
     local corner = Instance.new("UICorner")
     corner.CornerRadius = UDim.new(0, 8)
     corner.Parent = btn
+    createShadow(btn)
     btn.Parent = buttonContainer
     return btn
 end
@@ -183,7 +197,7 @@ local btnOpen = Instance.new("TextButton")
 btnOpen.Size = UDim2.new(0, 60, 0, 40)
 btnOpen.Position = UDim2.new(1, -30, 1, -30)
 btnOpen.AnchorPoint = Vector2.new(1, 1)
-btnOpen.BackgroundColor3 = Color3.fromRGB(60, 140, 255)
+btnOpen.BackgroundColor3 = Color3.fromRGB(80, 160, 255)
 btnOpen.TextColor3 = Color3.new(1, 1, 1)
 btnOpen.Font = Enum.Font.GothamBold
 btnOpen.TextSize = 20
@@ -192,6 +206,7 @@ btnOpen.AutoButtonColor = true
 local openCorner = Instance.new("UICorner")
 openCorner.CornerRadius = UDim.new(0, 10)
 openCorner.Parent = btnOpen
+createShadow(btnOpen)
 btnOpen.Parent = screenGui
 
 btnOpen.MouseButton1Click:Connect(function()
