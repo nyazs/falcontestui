@@ -11,43 +11,53 @@ screenGui.ResetOnSpawn = false
 screenGui.Parent = playerGui
 
 local mainFrame = Instance.new("Frame")
-mainFrame.Size = UDim2.new(0, 400, 0, 300)
-mainFrame.Position = UDim2.new(0.5, -200, 1, 50)
-mainFrame.BackgroundColor3 = Color3.fromRGB(20, 90, 200)
+mainFrame.Size = UDim2.new(0, 420, 0, 320)
+mainFrame.Position = UDim2.new(0.5, -210, 1, 50)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 45, 70)
 mainFrame.BorderSizePixel = 0
 mainFrame.BackgroundTransparency = 1
 mainFrame.Visible = false
 mainFrame.Parent = screenGui
 
+local shadow = Instance.new("ImageLabel")
+shadow.Size = UDim2.new(1, 20, 1, 20)
+shadow.Position = UDim2.new(0, -10, 0, -10)
+shadow.BackgroundTransparency = 1
+shadow.Image = "rbxassetid://1316045217"
+shadow.ImageColor3 = Color3.new(0, 0, 0)
+shadow.ImageTransparency = 0.7
+shadow.Parent = mainFrame
+
 local uicorner = Instance.new("UICorner")
-uicorner.CornerRadius = UDim.new(0, 10)
+uicorner.CornerRadius = UDim.new(0, 14)
 uicorner.Parent = mainFrame
 
 local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, 0, 0, 40)
+title.Size = UDim2.new(1, 0, 0, 45)
 title.Position = UDim2.new(0, 0, 0, 0)
 title.BackgroundTransparency = 1
 title.Text = "FrostWare"
-title.TextColor3 = Color3.fromRGB(235, 235, 235)
+title.TextColor3 = Color3.fromRGB(220, 220, 255)
 title.Font = Enum.Font.GothamBold
-title.TextSize = 28
+title.TextSize = 32
 title.Parent = mainFrame
 
 local btnClose = Instance.new("TextButton")
-btnClose.Size = UDim2.new(0, 30, 0, 30)
-btnClose.Position = UDim2.new(1, -35, 0, 5)
-btnClose.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
-btnClose.TextColor3 = Color3.new(1,1,1)
+btnClose.Size = UDim2.new(0, 32, 0, 32)
+btnClose.Position = UDim2.new(1, -40, 0, 6)
+btnClose.BackgroundColor3 = Color3.fromRGB(220, 70, 70)
+btnClose.TextColor3 = Color3.fromRGB(255, 255, 255)
 btnClose.Font = Enum.Font.GothamBold
 btnClose.TextSize = 24
-btnClose.Text = "X"
+btnClose.Text = "✕"
+btnClose.AutoButtonColor = true
 btnClose.Parent = mainFrame
 
 local scriptBox = Instance.new("TextBox")
-scriptBox.Size = UDim2.new(1, -20, 1, -100)
-scriptBox.Position = UDim2.new(0, 10, 0, 50)
-scriptBox.BackgroundColor3 = Color3.fromRGB(35, 110, 240)
-scriptBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptBox.Size = UDim2.new(1, -30, 1, -130)
+scriptBox.Position = UDim2.new(0, 15, 0, 55)
+scriptBox.BackgroundColor3 = Color3.fromRGB(50, 65, 90)
+scriptBox.TextColor3 = Color3.fromRGB(230, 230, 255)
 scriptBox.TextWrapped = true
 scriptBox.ClearTextOnFocus = false
 scriptBox.MultiLine = true
@@ -57,37 +67,37 @@ scriptBox.PlaceholderText = "Write your Lua code here..."
 scriptBox.Parent = mainFrame
 
 local textBoxUICorner = Instance.new("UICorner")
-textBoxUICorner.CornerRadius = UDim.new(0, 6)
+textBoxUICorner.CornerRadius = UDim.new(0, 8)
 textBoxUICorner.Parent = scriptBox
 
 local buttonContainer = Instance.new("Frame")
-buttonContainer.Size = UDim2.new(1, -20, 0, 40)
-buttonContainer.Position = UDim2.new(0, 10, 1, -45)
+buttonContainer.Size = UDim2.new(1, -30, 0, 42)
+buttonContainer.Position = UDim2.new(0, 15, 1, -65)
 buttonContainer.BackgroundTransparency = 1
 buttonContainer.Parent = mainFrame
 
 local function createButton(name, posX, text)
     local btn = Instance.new("TextButton")
     btn.Name = name
-    btn.Size = UDim2.new(0, 80, 1, 0)
+    btn.Size = UDim2.new(0, 90, 1, 0)
     btn.Position = UDim2.new(0, posX, 0, 0)
-    btn.BackgroundColor3 = Color3.fromRGB(60, 130, 250)
-    btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    btn.BackgroundColor3 = Color3.fromRGB(80, 140, 255)
+    btn.TextColor3 = Color3.fromRGB(245, 245, 255)
     btn.Font = Enum.Font.GothamSemibold
     btn.TextSize = 18
     btn.Text = text
     btn.AutoButtonColor = true
     local corner = Instance.new("UICorner")
-    corner.CornerRadius = UDim.new(0, 6)
+    corner.CornerRadius = UDim.new(0, 8)
     corner.Parent = btn
     btn.Parent = buttonContainer
     return btn
 end
 
 local btnCopy = createButton("CopyButton", 0, "Copy")
-local btnPaste = createButton("PasteButton", 90, "Paste")
-local btnClear = createButton("ClearButton", 180, "Clear")
-local btnExecute = createButton("ExecuteButton", 270, "Execute")
+local btnPaste = createButton("PasteButton", 100, "Paste")
+local btnClear = createButton("ClearButton", 200, "Clear")
+local btnExecute = createButton("ExecuteButton", 300, "Execute")
 
 local function copyToClipboard(text)
     if setclipboard then setclipboard(text) end
@@ -156,11 +166,11 @@ local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirectio
 
 local function openUI()
     mainFrame.Visible = true
-    TweenService:Create(mainFrame, tweenInfo, {Position = UDim2.new(0.5, -200, 0.5, -150), BackgroundTransparency = 0}):Play()
+    TweenService:Create(mainFrame, tweenInfo, {Position = UDim2.new(0.5, -210, 0.5, -160), BackgroundTransparency = 0}):Play()
 end
 
 local function closeUI()
-    local tween = TweenService:Create(mainFrame, tweenInfo, {Position = UDim2.new(0.5, -200, 1, 50), BackgroundTransparency = 1})
+    local tween = TweenService:Create(mainFrame, tweenInfo, {Position = UDim2.new(0.5, -210, 1, 50), BackgroundTransparency = 1})
     tween:Play()
     tween.Completed:Connect(function()
         mainFrame.Visible = false
@@ -170,13 +180,13 @@ end
 btnClose.MouseButton1Click:Connect(closeUI)
 
 local btnOpen = Instance.new("TextButton")
-btnOpen.Size = UDim2.new(0, 50, 0, 50)
-btnOpen.Position = UDim2.new(1, -60, 1, -60)
+btnOpen.Size = UDim2.new(0, 60, 0, 40)
+btnOpen.Position = UDim2.new(1, -30, 1, -30)
 btnOpen.AnchorPoint = Vector2.new(1, 1)
-btnOpen.BackgroundColor3 = Color3.fromRGB(60, 130, 250)
+btnOpen.BackgroundColor3 = Color3.fromRGB(60, 140, 255)
 btnOpen.TextColor3 = Color3.new(1, 1, 1)
 btnOpen.Font = Enum.Font.GothamBold
-btnOpen.TextSize = 24
+btnOpen.TextSize = 20
 btnOpen.Text = "Open"
 btnOpen.AutoButtonColor = true
 local openCorner = Instance.new("UICorner")
