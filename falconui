@@ -16,6 +16,7 @@ mainFrame.Position = UDim2.new(0.5, -200, 1, 50)
 mainFrame.BackgroundColor3 = Color3.fromRGB(20, 90, 200)
 mainFrame.BorderSizePixel = 0
 mainFrame.BackgroundTransparency = 1
+mainFrame.Visible = false
 mainFrame.Parent = screenGui
 
 local uicorner = Instance.new("UICorner")
@@ -168,4 +169,23 @@ end
 
 btnClose.MouseButton1Click:Connect(closeUI)
 
-openUI()
+local btnOpen = Instance.new("TextButton")
+btnOpen.Size = UDim2.new(0, 50, 0, 50)
+btnOpen.Position = UDim2.new(1, -60, 1, -60)
+btnOpen.AnchorPoint = Vector2.new(1, 1)
+btnOpen.BackgroundColor3 = Color3.fromRGB(60, 130, 250)
+btnOpen.TextColor3 = Color3.new(1, 1, 1)
+btnOpen.Font = Enum.Font.GothamBold
+btnOpen.TextSize = 24
+btnOpen.Text = "Open"
+btnOpen.AutoButtonColor = true
+local openCorner = Instance.new("UICorner")
+openCorner.CornerRadius = UDim.new(0, 10)
+openCorner.Parent = btnOpen
+btnOpen.Parent = screenGui
+
+btnOpen.MouseButton1Click:Connect(function()
+    if not mainFrame.Visible then
+        openUI()
+    end
+end)
