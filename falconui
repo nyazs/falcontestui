@@ -1,6 +1,4 @@
--- FrostWare Executor UI (Blue Themed)
 
--- Services
 local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local TextService = game:GetService("TextService")
@@ -8,13 +6,13 @@ local TextService = game:GetService("TextService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- Create ScreenGui
+
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "FrostWareUI"
 screenGui.ResetOnSpawn = false
 screenGui.Parent = playerGui
 
--- Main Frame
+
 local mainFrame = Instance.new("Frame")
 mainFrame.Size = UDim2.new(0, 400, 0, 300)
 mainFrame.Position = UDim2.new(0.5, -200, 0.5, -150)
@@ -22,12 +20,12 @@ mainFrame.BackgroundColor3 = Color3.fromRGB(20, 90, 200)
 mainFrame.BorderSizePixel = 0
 mainFrame.Parent = screenGui
 
--- Rounded corners for main frame
+
 local uicorner = Instance.new("UICorner")
 uicorner.CornerRadius = UDim.new(0, 10)
 uicorner.Parent = mainFrame
 
--- Title Label "FrostWare"
+
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 40)
 title.Position = UDim2.new(0, 0, 0, 0)
@@ -38,7 +36,7 @@ title.Font = Enum.Font.GothamBold
 title.TextSize = 28
 title.Parent = mainFrame
 
--- Script TextBox
+
 local scriptBox = Instance.new("TextBox")
 scriptBox.Size = UDim2.new(1, -20, 1, -100)
 scriptBox.Position = UDim2.new(0, 10, 0, 50)
@@ -65,14 +63,14 @@ local function copyToClipboard(text)
     end
 end
 
--- Buttons container
+
 local buttonContainer = Instance.new("Frame")
 buttonContainer.Size = UDim2.new(1, -20, 0, 40)
 buttonContainer.Position = UDim2.new(0, 10, 1, -45)
 buttonContainer.BackgroundTransparency = 1
 buttonContainer.Parent = mainFrame
 
--- Button style creator
+
 local function createButton(name, posX, text)
     local btn = Instance.new("TextButton")
     btn.Name = name
@@ -120,7 +118,7 @@ btnClear.MouseButton1Click:Connect(function()
     scriptBox.Text = ""
 end)
 
--- Execute button runs the script safely
+
 btnExecute.MouseButton1Click:Connect(function()
     local success, err = pcall(function()
         loadstring(scriptBox.Text)()
